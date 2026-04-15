@@ -199,13 +199,76 @@ td strong { color: var(--text-pri); }
 .search-empty { padding: 20px 16px; text-align: center; font-size: 13px; color: var(--text-ter); }
 @media (max-width: 480px) { .search-wrap { max-width: none; margin: 0 8px; } .header-nav-toggle { display: none; } }
 @media (min-width: 900px) { .search-wrap { max-width: 280px; } }
+
+/* ===== UX POLISH ===== */
+/* Cursor pointer on everything clickable */
+.sidebar-brand, .sidebar-item, .day-card, .hero-cta, .nav-btn,
+.header-nav-btn, .code-block-copy, .progress-dot, .search-result-item,
+details.toggle summary, .checklist li, .badge, [onclick] { cursor: pointer; }
+.nav-btn:disabled { cursor: not-allowed; }
+
+/* Smooth hover feedback on cards */
+.card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card-accent { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.card-accent:hover { border-color: var(--accent); }
+
+/* Sidebar brand hover */
+.sidebar-brand:hover { color: var(--accent); }
+.sidebar-brand:hover span { opacity: 0.85; }
+
+/* Toggle expand animation */
+details.toggle summary { transition: color 0.2s; }
+details.toggle summary:hover { color: var(--accent); }
+details.toggle .toggle-content { animation: slideDown 0.25s ease; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Table row hover */
+tbody tr { transition: background 0.15s; }
+tbody tr:hover { background: rgba(227, 107, 46, 0.03); }
+
+/* Code block copy button active state */
+.code-block-copy:active { transform: scale(0.95); }
+
+/* Search input smooth */
+.search-results { animation: dropIn 0.15s ease; }
+@keyframes dropIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Stepper step hover */
+.stepper .step { transition: transform 0.15s; }
+
+/* Progress dots hover */
+.progress-dot:hover { transform: scale(1.3); }
+.progress-dot { transition: all 0.2s, transform 0.15s; }
+
+/* Nav buttons press feedback */
+.nav-btn:active:not(:disabled) { transform: scale(0.97); }
+
+/* Day cards subtle shadow on hover */
+.day-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+/* Links smooth underline */
+a { transition: color 0.15s; }
+a:hover { color: var(--accent-hover); }
+
+/* Callout hover glow */
+.callout { transition: box-shadow 0.2s; }
+.callout:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+
+/* Selection color */
+::selection { background: rgba(227, 107, 46, 0.2); color: var(--text-pri); }
+
+/* Smooth scroll everywhere */
+* { scroll-behavior: smooth; }
+
+/* Focus visible for keyboard nav */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 </style>
 </head>
 <body>
 
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
-  <a class="sidebar-brand" href="javascript:void(0)" onclick="goToSection('home')" style="text-decoration:none; display:block; color:inherit;">IA do Zero ao <span>Ecossistema.</span></a>
+  <div class="sidebar-brand" onclick="goToSection('home')">IA do Zero ao <span>Ecossistema.</span></div>
   <div class="sidebar-group">
     <div class="sidebar-item active" data-target="home" onclick="goToSection('home')">
       <span class="sidebar-item-num">&#9679;</span> Início
