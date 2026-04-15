@@ -1855,49 +1855,169 @@ Supabase  &larr; banco de dados (o site lê/escreve dados)</p></div>
 
   <hr>
 
-  <h2>Componentes que uso nos projetos</h2>
-  <p>Cada componente tem um link pro 21st.dev onde você vê o preview interativo e copia o código. Alguns destaques:</p>
+  <h2>Componentes em ação</h2>
+  <p>Cada componente abaixo é uma peça real que você instala e usa. Veja como ficam funcionando:</p>
 
-  <div class="card">
-    <h4>Hero Section com gradiente animado</h4>
-    <p>Seção de abertura de landing page com título grande, subtítulo e CTA. Animação de gradiente no fundo. O tipo de coisa que leva horas no Figma — aqui instala em 1 comando.</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/originui/hero-section-with-image" target="_blank">21st.dev — Hero Section</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Cria a hero section da minha landing page usando o componente hero do 21st.dev. Título: [seu título]. CTA: [seu botão]."</em></p>
+  <!-- ZIGZAG 1: Hero Section — visual LEFT, text RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap; align-items:center;">
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%); padding:32px 24px; text-align:center; min-height:200px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:radial-gradient(circle, rgba(227,107,46,0.15) 0%, transparent 70%); border-radius:50%;"></div>
+        <div style="font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">Lançamento</div>
+        <div style="font-size:28px; font-weight:900; color:#fff; line-height:1.05; margin-bottom:10px; letter-spacing:-1px;">O futuro da<br>produtividade.</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.5); margin-bottom:16px;">Automatize processos inteiros com IA.</div>
+        <div><span style="display:inline-block; background:var(--accent); color:#fff; font-size:12px; font-weight:700; padding:8px 20px; border-radius:100px;">Começar agora →</span></div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">Hero Section</h3>
+      <p>Abertura de landing page com título, gradiente animado e CTA. O tipo de coisa que leva horas no Figma — aqui instala em 1 comando.</p>
+      <p><strong>Como usar:</strong> <em>"Cria hero section usando 21st.dev. Título: [X]. CTA: [Y]."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/originui/hero-section-with-image" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
   </div>
 
-  <div class="card">
-    <h4>Bento Grid</h4>
-    <p>Layout de cards em grid assimétrico (estilo Apple). Cada card tem tamanho diferente, criando visual dinâmico e moderno pra mostrar features.</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/aceternity/bento-grid" target="_blank">21st.dev — Bento Grid</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Monta uma seção de features com bento grid do 21st.dev. 6 features: [lista]."</em></p>
+  <!-- ZIGZAG 2: Bento Grid — text LEFT, visual RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap-reverse; align-items:center;">
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">Bento Grid</h3>
+      <p>Grid assimétrico estilo Apple. Cards de tamanhos diferentes criando visual dinâmico pra features.</p>
+      <p><strong>Como usar:</strong> <em>"Seção de features com bento grid. 6 features: [lista]."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/aceternity/bento-grid" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:#fafafa; padding:16px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:8px;">
+        <div style="background:#fff; border:1px solid #eee; border-radius:10px; padding:16px; grid-row:span 2;">
+          <div style="width:28px; height:28px; background:var(--accent); border-radius:8px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px;">⚡</div>
+          <div style="font-size:13px; font-weight:700; margin-bottom:4px;">Automação</div>
+          <div style="font-size:11px; color:#888; line-height:1.4;">Processos inteiros rodam sozinhos sem intervenção.</div>
+        </div>
+        <div style="background:#fff; border:1px solid #eee; border-radius:10px; padding:14px;">
+          <div style="width:24px; height:24px; background:#1a1a1a; border-radius:6px; margin-bottom:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px;">🔍</div>
+          <div style="font-size:12px; font-weight:700;">Pesquisa</div>
+          <div style="font-size:10px; color:#999;">Web em tempo real</div>
+        </div>
+        <div style="background:#fff; border:1px solid #eee; border-radius:10px; padding:14px;">
+          <div style="width:24px; height:24px; background:#1a1a1a; border-radius:6px; margin-bottom:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px;">📊</div>
+          <div style="font-size:12px; font-weight:700;">Dashboards</div>
+          <div style="font-size:10px; color:#999;">Visuais interativos</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h4>Animated Tabs</h4>
-    <p>Tabs com animação de transição suave entre conteúdos. Perfeito pra mostrar planos, comparações, antes/depois.</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/originui/tabs-with-badges" target="_blank">21st.dev — Animated Tabs</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Cria seção de planos com tabs animados. 3 planos: básico, pro, enterprise."</em></p>
+  <!-- ZIGZAG 3: Pricing — visual LEFT, text RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap; align-items:center;">
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:#fff; padding:16px; display:flex; gap:8px;">
+        <div style="flex:1; background:#f9f9f9; border:1px solid #eee; border-radius:10px; padding:14px; text-align:center;">
+          <div style="font-size:10px; font-weight:700; color:#999; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Free</div>
+          <div style="font-size:22px; font-weight:900; margin-bottom:4px;">R$0</div>
+          <div style="font-size:10px; color:#bbb; margin-bottom:10px;">pra sempre</div>
+          <div style="font-size:10px; color:#888; line-height:1.6; text-align:left;">✓ 3 projetos<br>✓ Chat básico<br>✗ <span style="color:#ccc;">Skills</span></div>
+        </div>
+        <div style="flex:1; background:var(--accent); border-radius:10px; padding:14px; text-align:center; color:#fff; position:relative;">
+          <div style="position:absolute; top:-1px; right:8px; background:#fff; color:var(--accent); font-size:8px; font-weight:800; padding:2px 8px; border-radius:0 0 6px 6px; letter-spacing:1px;">POPULAR</div>
+          <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; opacity:0.8;">Pro</div>
+          <div style="font-size:22px; font-weight:900; margin-bottom:4px;">R$115</div>
+          <div style="font-size:10px; opacity:0.7; margin-bottom:10px;">/mês</div>
+          <div style="font-size:10px; line-height:1.6; text-align:left; opacity:0.9;">✓ Ilimitado<br>✓ Skills + MCP<br>✓ Claude Code</div>
+        </div>
+        <div style="flex:1; background:#0f0f0f; border-radius:10px; padding:14px; text-align:center; color:#fff;">
+          <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; color:#888;">Max</div>
+          <div style="font-size:22px; font-weight:900; margin-bottom:4px;">R$575</div>
+          <div style="font-size:10px; color:#666; margin-bottom:10px;">/mês</div>
+          <div style="font-size:10px; color:#888; line-height:1.6; text-align:left;">✓ Tudo do Pro<br>✓ 5x mais uso<br>✓ Opus sempre</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">Pricing Table</h3>
+      <p>Tabela de preços com destaque no plano recomendado, badge "popular", e toggle mensal/anual.</p>
+      <p><strong>Como usar:</strong> <em>"Cria seção de preços. 3 planos com esses valores: [lista]."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/search?q=pricing" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
   </div>
 
-  <div class="card">
-    <h4>Testimonial Carousel</h4>
-    <p>Carrossel de depoimentos com foto, nome, cargo e texto. Auto-rotação com controles manuais.</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/originui/testimonial-with-social-link" target="_blank">21st.dev — Testimonials</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Adiciona seção de depoimentos com carousel do 21st.dev. [cole os depoimentos]."</em></p>
+  <!-- ZIGZAG 4: Chat — text LEFT, visual RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap-reverse; align-items:center;">
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">AI Chat Interface</h3>
+      <p>Chat com IA embutida — balões, input, indicador de digitação. Exatamente o que usei no Leeven.</p>
+      <p><strong>Como usar:</strong> <em>"Adiciona chat com 21st.dev. Conecta na API do Claude."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/search?q=chat" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:#0a0a0a; padding:16px;">
+        <div style="display:flex; justify-content:flex-end; margin-bottom:10px;">
+          <div style="background:#1a365d; color:#93c5fd; padding:8px 12px; border-radius:12px 12px 2px 12px; font-size:11px; max-width:65%;">Como aumento minhas vendas?</div>
+        </div>
+        <div style="display:flex; gap:8px; margin-bottom:10px;">
+          <div style="width:24px; height:24px; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; color:#fff; flex-shrink:0;">C</div>
+          <div style="background:#161616; border:1px solid #222; color:#ddd; padding:8px 12px; border-radius:2px 12px 12px 12px; font-size:11px; line-height:1.5;">Analisei seus dados e identifiquei <strong style="color:#fff;">3 oportunidades</strong>:<br>1. Upsell no checkout (+18%)<br>2. Reativação de inativos...</div>
+        </div>
+        <div style="background:#161616; border:1px solid #222; border-radius:10px; padding:10px 12px; display:flex; align-items:center; gap:8px;">
+          <div style="flex:1; font-size:11px; color:#555;">Digite sua mensagem...</div>
+          <div style="width:24px; height:24px; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center;"><span style="color:#fff; font-size:10px;">↑</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h4>AI Chat Interface</h4>
-    <p>Interface de chat com IA embutida — balões de mensagem, campo de input, indicador de digitação. Exatamente o que usei no Leeven pra o chat com IA.</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/search?q=chat" target="_blank">21st.dev — Chat Components</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Adiciona uma interface de chat usando componentes do 21st.dev. Conecta na API do Claude."</em></p>
+  <!-- ZIGZAG 5: Testimonials — visual LEFT, text RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap; align-items:center;">
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:#fff; padding:20px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div style="width:36px; height:36px; background:linear-gradient(135deg, #667eea, #764ba2); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:700;">M</div>
+          <div>
+            <div style="font-size:13px; font-weight:700;">Marina Silva</div>
+            <div style="font-size:10px; color:#999;">CEO @ StartupX</div>
+          </div>
+          <div style="margin-left:auto; font-size:14px; color:#fbbf24;">★★★★★</div>
+        </div>
+        <div style="font-size:12px; color:#555; line-height:1.6; font-style:italic;">"Em 3 semanas automatizei processos que antes precisavam de 2 estagiários. O ROI se pagou no primeiro mês."</div>
+        <div style="display:flex; gap:4px; margin-top:10px;">
+          <span style="width:6px; height:6px; border-radius:50%; background:var(--accent);"></span>
+          <span style="width:6px; height:6px; border-radius:50%; background:#ddd;"></span>
+          <span style="width:6px; height:6px; border-radius:50%; background:#ddd;"></span>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">Testimonial Carousel</h3>
+      <p>Carrossel de depoimentos com foto, nome, cargo e estrelas. Auto-rotação com controles.</p>
+      <p><strong>Como usar:</strong> <em>"Seção de depoimentos com carousel. [cole os textos]."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/originui/testimonial-with-social-link" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
   </div>
 
-  <div class="card">
-    <h4>Pricing Table</h4>
-    <p>Tabela de preços com destaque no plano recomendado, toggle mensal/anual, badges de "popular".</p>
-    <p><strong>Preview:</strong> <a href="https://21st.dev/search?q=pricing" target="_blank">21st.dev — Pricing</a></p>
-    <p style="margin-bottom:0;"><strong>Como usar:</strong> <em>"Cria seção de preços com o pricing do 21st.dev. 3 planos com esses valores: [lista]."</em></p>
+  <!-- ZIGZAG 6: Tabs — text LEFT, visual RIGHT -->
+  <div style="display:flex; gap:24px; margin-bottom:32px; flex-wrap:wrap-reverse; align-items:center;">
+    <div style="flex:1; min-width:240px;">
+      <h3 style="margin-top:0;">Animated Tabs</h3>
+      <p>Tabs com transição suave. Perfeito pra planos, comparações, antes/depois.</p>
+      <p><strong>Como usar:</strong> <em>"Tabs animados pra comparar 3 planos."</em></p>
+      <p style="margin-bottom:0;"><a href="https://21st.dev/originui/tabs-with-badges" target="_blank">Ver no 21st.dev →</a></p>
+    </div>
+    <div style="flex:1; min-width:280px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);">
+      <div style="background:#fff; padding:16px;">
+        <div style="display:flex; background:#f5f5f5; border-radius:8px; padding:3px; margin-bottom:14px;">
+          <div style="flex:1; text-align:center; padding:6px; font-size:11px; font-weight:700; background:#fff; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.08); color:var(--accent);">Mensal</div>
+          <div style="flex:1; text-align:center; padding:6px; font-size:11px; font-weight:600; color:#999;">Anual <span style="background:#dcfce7; color:#16a34a; font-size:9px; padding:1px 5px; border-radius:4px; font-weight:700;">-20%</span></div>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <div style="flex:1; background:#f9f9f9; border-radius:8px; padding:12px; text-align:center;">
+            <div style="font-size:10px; color:#999; font-weight:600;">Starter</div>
+            <div style="font-size:20px; font-weight:900; margin:4px 0;">R$49</div>
+          </div>
+          <div style="flex:1; background:var(--accent); border-radius:8px; padding:12px; text-align:center; color:#fff;">
+            <div style="font-size:10px; font-weight:600; opacity:0.8;">Growth</div>
+            <div style="font-size:20px; font-weight:900; margin:4px 0;">R$149</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -2039,21 +2159,241 @@ Entrega: texto de cada slide + legenda + 15 hashtags relevantes</code></p></div>
 
   <hr>
 
-  <!-- ====== FLUXO 3 — PDF → DASHBOARD ====== -->
-  <h2>3. PDF com dados → dashboard visual</h2>
-  <p>Você recebe um relatório em PDF cheio de números — financeiro, vendas, pesquisa — e precisa apresentar isso de forma visual. Em vez de copiar dado por dado pro Excel e montar gráfico, faz tudo de uma vez.</p>
-  <div class="prompt-block"><span class="code-block-label">Prompt</span><button class="code-block-copy" onclick="copyCode(this)">Copiar</button><p><code class="code-text">Lê esse relatório (relatorio-trimestral.pdf) e transforma os dados em um dashboard visual.
+  <!-- ====== FLUXO 3 — PLANILHA/PDF → DASHBOARD ====== -->
+  <h2>3. Planilha ou PDF → dashboard interativo</h2>
+  <p>Você tem uma planilha de Excel ou PDF com números e precisa transformar em algo visual pra apresentar. Em vez de ficar horas no PowerPoint montando gráficos, o Claude faz em segundos.</p>
+
+  <h3>A planilha de exemplo</h3>
+  <p>Imagine que você recebeu essa planilha de vendas do trimestre:</p>
+
+  <!-- SPREADSHEET PREVIEW -->
+  <div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-bottom:20px;">
+    <div style="background:#217346; padding:6px 16px; display:flex; align-items:center; gap:8px;">
+      <span style="font-size:11px; color:#fff; font-weight:600;">📊 vendas-q1-2026.xlsx</span>
+      <span style="margin-left:auto; font-size:10px; color:rgba(255,255,255,0.6);">Sheet1</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:12px; margin:0;">
+        <thead>
+          <tr style="background:#e8f5e9;">
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:80px;"></th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:70px;">A</th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:90px;">B</th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:80px;">C</th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:70px;">D</th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:70px;">E</th>
+            <th style="padding:8px 12px; border:1px solid #c8e6c9; color:#2e7d32; text-align:left; font-size:11px; font-weight:700; min-width:60px;">F</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">1</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Mês</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Produto</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Receita</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Custo</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Clientes</td><td style="padding:6px 12px; border:1px solid #e0e0e0; font-weight:700;">Canal</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">2</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Jan</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">SaaS Pro</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 45.200</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 12.100</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">128</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Orgânico</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">3</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Jan</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Consultoria</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 28.000</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 8.400</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">12</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Indicação</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">4</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Fev</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">SaaS Pro</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 52.800</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 13.900</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">156</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Ads</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">5</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Fev</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Consultoria</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 35.000</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 10.500</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">15</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Orgânico</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">6</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Mar</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">SaaS Pro</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 61.400</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 15.200</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">189</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Ads</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">7</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Mar</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Consultoria</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 42.000</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 11.800</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">18</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Indicação</td></tr>
+          <tr><td style="padding:6px 12px; border:1px solid #e0e0e0; background:#f5f5f5; color:#999; font-size:10px;">8</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Mar</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Curso Online</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 18.600</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">R$ 3.200</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">93</td><td style="padding:6px 12px; border:1px solid #e0e0e0;">Orgânico</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>Passo a passo</h3>
+  <ol class="stepper">
+    <li class="step"><h4>Manda a planilha pro Claude</h4><p>Arrasta o arquivo .xlsx/.csv pro chat ou pro Claude Code. Pode ser PDF também — ele extrai os números do mesmo jeito.</p></li>
+    <li class="step"><h4>Pede o dashboard</h4><p>Use o prompt abaixo. Seja específico no que quer ver — o Claude vai montar exatamente o que pediu.</p></li>
+    <li class="step"><h4>Recebe o HTML</h4><p>Ele gera um arquivo HTML único com gráficos interativos. Abre no navegador e pronto — dashboard profissional.</p></li>
+    <li class="step"><h4>Itere</h4><p>"Troca o gráfico de pizza por donut", "Adiciona filtro por canal", "Muda a cor pra combinar com minha marca". Cada ajuste leva segundos.</p></li>
+  </ol>
+
+  <div class="prompt-block"><span class="code-block-label">Prompt exato</span><button class="code-block-copy" onclick="copyCode(this)">Copiar</button><p><code class="code-text">Lê essa planilha de vendas (vendas-q1-2026.xlsx) e transforma em um dashboard visual interativo.
 
 Quero:
-1. Resumo executivo no topo (3-4 métricas principais em destaque)
-2. Gráfico de barras comparando os meses
-3. Gráfico de pizza pra distribuição por categoria
-4. Tabela com os dados limpos e formatados
-5. 3 insights que você identificou nos dados
+1. Resumo executivo no topo — receita total, lucro, clientes, margem (cards com destaque)
+2. Gráfico de barras comparando receita vs custo por mês
+3. Gráfico de donut com distribuição de receita por produto
+4. Gráfico de linha mostrando evolução de clientes
+5. Tabela limpa com os dados formatados
+6. 3 insights que você identificou nos dados (tipo: qual produto cresce mais rápido, qual canal converte melhor)
 
-Gera como HTML com design bonito que eu possa abrir no navegador.</code></p></div>
-  <p><strong>O que acontece por trás:</strong> o Claude lê o PDF inteiro, extrai os números, identifica padrões, e gera um arquivo HTML com gráficos interativos usando Chart.js. Você abre no navegador e tem um dashboard profissional.</p>
-  <p><strong>Funciona no:</strong> Cowork (gera HTML) ou Claude Code. No gratuito, ele faz como artefato visual na conversa.</p>
+Design: fundo escuro, moderno, cards com cantos arredondados. Gráficos interativos (hover mostra valor).
+Gera como HTML único que eu abro no navegador.</code></p></div>
+
+  <h3>O resultado — dashboard ao vivo</h3>
+  <p>Isso aqui embaixo é exatamente o que o Claude gera a partir daquela planilha:</p>
+
+  <!-- DASHBOARD INTERATIVO -->
+  <div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-bottom:20px;">
+    <div style="background:var(--card); padding:8px 16px; display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--border);">
+      <span style="width:10px; height:10px; border-radius:50%; background:#FF5F57;"></span>
+      <span style="width:10px; height:10px; border-radius:50%; background:#FEBC2E;"></span>
+      <span style="width:10px; height:10px; border-radius:50%; background:#28C840;"></span>
+      <span style="font-size:11px; color:var(--text-ter); margin-left:8px;">dashboard-vendas-q1.html</span>
+    </div>
+    <div style="background:#0a0a0f; padding:20px; font-family:var(--font);">
+      <!-- Header -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
+        <div>
+          <div style="font-size:18px; font-weight:800; color:#fff;">Dashboard de Vendas</div>
+          <div style="font-size:11px; color:#555;">Q1 2026 · Atualizado em 15/04/2026</div>
+        </div>
+        <div style="display:flex; gap:6px;">
+          <span class="dash-filter active" onclick="this.parentElement.querySelectorAll('.dash-filter').forEach(f=>f.classList.remove('active'));this.classList.add('active');" style="font-size:10px; font-weight:600; padding:5px 12px; border-radius:6px; background:var(--accent); color:#fff; cursor:pointer; transition:all 0.2s;">Todos</span>
+          <span class="dash-filter" onclick="this.parentElement.querySelectorAll('.dash-filter').forEach(f=>f.classList.remove('active'));this.classList.add('active');" style="font-size:10px; font-weight:600; padding:5px 12px; border-radius:6px; background:#1a1a24; color:#666; border:1px solid #222; cursor:pointer; transition:all 0.2s;">SaaS</span>
+          <span class="dash-filter" onclick="this.parentElement.querySelectorAll('.dash-filter').forEach(f=>f.classList.remove('active'));this.classList.add('active');" style="font-size:10px; font-weight:600; padding:5px 12px; border-radius:6px; background:#1a1a24; color:#666; border:1px solid #222; cursor:pointer; transition:all 0.2s;">Consultoria</span>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:20px;">
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:14px;">
+          <div style="font-size:10px; color:#666; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Receita Total</div>
+          <div style="font-size:24px; font-weight:800; color:#fff;">R$ 283K</div>
+          <div style="font-size:11px; color:#4ade80; margin-top:2px;">↑ 36% vs Q4</div>
+        </div>
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:14px;">
+          <div style="font-size:10px; color:#666; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Lucro</div>
+          <div style="font-size:24px; font-weight:800; color:#fff;">R$ 208K</div>
+          <div style="font-size:11px; color:#4ade80; margin-top:2px;">Margem: 73.5%</div>
+        </div>
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:14px;">
+          <div style="font-size:10px; color:#666; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Clientes</div>
+          <div style="font-size:24px; font-weight:800; color:#fff;">611</div>
+          <div style="font-size:11px; color:#4ade80; margin-top:2px;">↑ 48% vs Q4</div>
+        </div>
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:14px;">
+          <div style="font-size:10px; color:#666; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Ticket Médio</div>
+          <div style="font-size:24px; font-weight:800; color:#fff;">R$ 463</div>
+          <div style="font-size:11px; color:#fbbf24; margin-top:2px;">→ estável</div>
+        </div>
+      </div>
+
+      <!-- Charts row -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+        <!-- Bar chart: Receita vs Custo -->
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:16px;">
+          <div style="font-size:11px; font-weight:600; color:#888; margin-bottom:14px;">Receita vs Custo por mês</div>
+          <div style="display:flex; align-items:flex-end; gap:16px; height:120px; padding-bottom:20px; position:relative;">
+            <!-- Jan -->
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; height:100%; justify-content:flex-end;">
+              <div style="font-size:9px; color:#4ade80; font-weight:600;">73K</div>
+              <div style="width:100%; background:var(--accent); border-radius:4px 4px 0 0; height:52%; position:relative; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"></div>
+              <div style="width:100%; background:#ef4444; border-radius:4px 4px 0 0; height:18%; opacity:0.7;"></div>
+              <div style="font-size:9px; color:#555; margin-top:2px;">Jan</div>
+            </div>
+            <!-- Fev -->
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; height:100%; justify-content:flex-end;">
+              <div style="font-size:9px; color:#4ade80; font-weight:600;">88K</div>
+              <div style="width:100%; background:var(--accent); border-radius:4px 4px 0 0; height:68%; position:relative; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"></div>
+              <div style="width:100%; background:#ef4444; border-radius:4px 4px 0 0; height:22%; opacity:0.7;"></div>
+              <div style="font-size:9px; color:#555; margin-top:2px;">Fev</div>
+            </div>
+            <!-- Mar -->
+            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; height:100%; justify-content:flex-end;">
+              <div style="font-size:9px; color:#4ade80; font-weight:600;">122K</div>
+              <div style="width:100%; background:var(--accent); border-radius:4px 4px 0 0; height:95%; position:relative; cursor:pointer; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"></div>
+              <div style="width:100%; background:#ef4444; border-radius:4px 4px 0 0; height:27%; opacity:0.7;"></div>
+              <div style="font-size:9px; color:#555; margin-top:2px;">Mar</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:4px;">
+            <div style="display:flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; border-radius:2px; background:var(--accent);"></span><span style="font-size:9px; color:#666;">Receita</span></div>
+            <div style="display:flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; border-radius:2px; background:#ef4444; opacity:0.7;"></span><span style="font-size:9px; color:#666;">Custo</span></div>
+          </div>
+        </div>
+
+        <!-- Donut chart: Por produto -->
+        <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:16px;">
+          <div style="font-size:11px; font-weight:600; color:#888; margin-bottom:14px;">Receita por produto</div>
+          <div style="display:flex; align-items:center; gap:16px;">
+            <!-- SVG Donut -->
+            <div style="position:relative; width:100px; height:100px; flex-shrink:0;">
+              <svg viewBox="0 0 36 36" style="width:100%; height:100%; transform:rotate(-90deg);">
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#1e1e2e" stroke-width="4"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#E36B2E" stroke-width="4" stroke-dasharray="56.3 31.7" stroke-linecap="round"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#3b82f6" stroke-width="4" stroke-dasharray="37 51" stroke-dashoffset="-56.3" stroke-linecap="round"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#a855f7" stroke-width="4" stroke-dasharray="6.7 81.3" stroke-dashoffset="-93.3" stroke-linecap="round"></circle>
+              </svg>
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <div style="font-size:14px; font-weight:800; color:#fff;">3</div>
+                <div style="font-size:8px; color:#555;">produtos</div>
+              </div>
+            </div>
+            <!-- Legend -->
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="width:8px; height:8px; border-radius:2px; background:var(--accent);"></span>
+                <span style="font-size:11px; color:#ccc;">SaaS Pro</span>
+                <span style="font-size:10px; color:#666; margin-left:auto;">56%</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="width:8px; height:8px; border-radius:2px; background:#3b82f6;"></span>
+                <span style="font-size:11px; color:#ccc;">Consultoria</span>
+                <span style="font-size:10px; color:#666; margin-left:auto;">37%</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="width:8px; height:8px; border-radius:2px; background:#a855f7;"></span>
+                <span style="font-size:11px; color:#ccc;">Curso Online</span>
+                <span style="font-size:10px; color:#666; margin-left:auto;">7%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line chart: Clientes -->
+      <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:16px; margin-bottom:16px;">
+        <div style="font-size:11px; font-weight:600; color:#888; margin-bottom:14px;">Evolução de clientes</div>
+        <div style="position:relative; height:80px; padding:0 4px;">
+          <svg viewBox="0 0 300 80" style="width:100%; height:100%;" preserveAspectRatio="none">
+            <!-- Grid lines -->
+            <line x1="0" y1="20" x2="300" y2="20" stroke="#1e1e2e" stroke-width="0.5"/>
+            <line x1="0" y1="40" x2="300" y2="40" stroke="#1e1e2e" stroke-width="0.5"/>
+            <line x1="0" y1="60" x2="300" y2="60" stroke="#1e1e2e" stroke-width="0.5"/>
+            <!-- Area fill -->
+            <path d="M 0 55 L 100 42 L 200 25 L 300 5 L 300 80 L 0 80 Z" fill="url(#areaGrad)" opacity="0.3"/>
+            <!-- Line -->
+            <polyline points="0,55 100,42 200,25 300,5" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Dots -->
+            <circle cx="0" cy="55" r="3.5" fill="var(--accent)" stroke="#0a0a0f" stroke-width="2"/>
+            <circle cx="100" cy="42" r="3.5" fill="var(--accent)" stroke="#0a0a0f" stroke-width="2"/>
+            <circle cx="200" cy="25" r="3.5" fill="var(--accent)" stroke="#0a0a0f" stroke-width="2"/>
+            <circle cx="300" cy="5" r="3.5" fill="var(--accent)" stroke="#0a0a0f" stroke-width="2"/>
+            <defs><linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.4"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:6px;">
+          <span style="font-size:9px; color:#555;">Jan (140)</span>
+          <span style="font-size:9px; color:#555;">Fev (171)</span>
+          <span style="font-size:9px; color:#555;">Mar (300)</span>
+          <span style="font-size:9px; color:var(--accent); font-weight:700;">Abr (proj.)</span>
+        </div>
+      </div>
+
+      <!-- Insights -->
+      <div style="background:#12121a; border:1px solid #1e1e2e; border-radius:10px; padding:16px;">
+        <div style="font-size:11px; font-weight:600; color:#888; margin-bottom:10px;">💡 Insights identificados pelo Claude</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:flex-start; gap:8px;">
+            <span style="color:#4ade80; font-size:12px; margin-top:1px;">▲</span>
+            <span style="font-size:11px; color:#ccc; line-height:1.5;"><strong style="color:#fff;">SaaS Pro cresceu 36% mês a mês</strong> — é o motor de crescimento. Priorizar aquisição nesse produto.</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:8px;">
+            <span style="color:#fbbf24; font-size:12px; margin-top:1px;">●</span>
+            <span style="font-size:11px; color:#ccc; line-height:1.5;"><strong style="color:#fff;">Consultoria tem margem de 72%</strong> mas não escala. Limite natural de 15-18 clientes/mês.</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:8px;">
+            <span style="color:#a855f7; font-size:12px; margin-top:1px;">★</span>
+            <span style="font-size:11px; color:#ccc; line-height:1.5;"><strong style="color:#fff;">Curso Online apareceu em Março com margem de 83%</strong> — baixo custo operacional, alto potencial de escala.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Isso tudo saiu de 7 linhas de planilha.</strong> O Claude leu, cruzou, calculou margem, identificou tendências, e montou visual. Você abriu no navegador e apresentou. Tempo total: 30 segundos.</p>
+  <p><strong>Funciona no:</strong> Cowork (gera HTML), Claude Code, ou no gratuito (gera como artefato visual na conversa).</p>
 
   <hr>
 
