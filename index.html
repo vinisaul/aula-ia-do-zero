@@ -4759,10 +4759,9 @@ function prevSection() { if (currentIdx > 0) { currentIdx--; render(); } }
 
 function render() {
   const id = SECTIONS[currentIdx];
-  document.querySelectorAll('.section').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+  document.querySelectorAll('.section').forEach(s => { s.classList.remove('active'); s.removeAttribute('style'); });
   const el = document.querySelector(`[data-section="${id}"]`);
   if (el) {
-    el.style.display = 'block';
     el.classList.add('active');
   }
   document.querySelectorAll('.sidebar-item').forEach(s => s.classList.remove('active'));
