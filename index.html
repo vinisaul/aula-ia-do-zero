@@ -381,6 +381,8 @@ a:hover { color: var(--accent-hover); }
 .disc-toggle-replies { font-family: var(--font); font-size: 12px; font-weight: 600; color: var(--accent); background: none; border: none; cursor: pointer; padding: 10px 20px; }
 .disc-delete { font-family: var(--font); font-size: 11px; color: var(--text-ghost); background: none; border: none; cursor: pointer; padding: 2px 6px; }
 .disc-delete:hover { color: #e53e3e; }
+.disc-link, .disc-attachment { display: inline-block; margin-top: 8px; margin-right: 12px; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; padding: 4px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); transition: all 0.2s; word-break: break-all; }
+.disc-link:hover, .disc-attachment:hover { border-color: var(--accent); background: rgba(227,107,46,0.05); }
 </style>
 </head>
 <body>
@@ -4064,7 +4066,14 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
   <div class="disc-compose" id="discCompose">
     <input type="text" id="discTitle" placeholder="Título do tópico">
     <textarea id="discContent" placeholder="Compartilhe uma ideia, dúvida ou descoberta..."></textarea>
-    <button onclick="createDiscussion()">Publicar</button>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <input type="url" id="discLink" placeholder="Link (opcional)" style="flex:1;min-width:180px;">
+      <label style="font-size:12px;font-weight:600;color:var(--text-sec);cursor:pointer;display:flex;align-items:center;gap:4px;padding:8px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg);">
+        <span id="discFileName">Anexar arquivo</span>
+        <input type="file" id="discFile" style="display:none;" onchange="document.getElementById('discFileName').textContent=this.files[0]?.name||'Anexar arquivo'">
+      </label>
+    </div>
+    <button onclick="createDiscussion()" style="margin-top:8px;">Publicar</button>
   </div>
 
   <div id="discList">
@@ -5072,9 +5081,10 @@ async function adminCreateUser() {
     });
     const data = await res.json();
     if (data.error) throw new Error(data.error.message || data.error);
-    if (data.id || data.user?.id) {
-      // Auto-approve via RPC
-      const userId = data.id || data.user.id;
+    const userId = data.id || data.user?.id;
+    if (userId) {
+      // Ensure profile exists (trigger may not fire)
+      await sb.rpc('admin_ensure_profile', { target_id: userId, target_email: email });
       await sb.rpc('admin_set_approved', { target_id: userId, is_approved: true });
       showAdminMsg('Conta criada e aprovada: ' + email, 'success');
       emailInput.value = '';
@@ -5083,9 +5093,7 @@ async function adminCreateUser() {
     } else if (data.identities && data.identities.length === 0) {
       showAdminMsg('Este email ja esta cadastrado', 'error');
     } else {
-      showAdminMsg('Conta criada: ' + email, 'success');
-      emailInput.value = '';
-      await loadAdminUsers();
+      showAdminMsg('Resposta inesperada do servidor', 'error');
     }
   } catch (err) {
     showAdminMsg(err.message || 'Erro ao criar conta', 'error');
@@ -5203,6 +5211,8 @@ async function loadDiscussions() {
         </div>
         <div class="disc-post-title">${escHtml(post.title)}</div>
         <div class="disc-post-content">${escHtml(post.content)}</div>
+        ${post.link_url ? `<a href="${escHtml(post.link_url)}" target="_blank" rel="noopener" class="disc-link">&#128279; ${escHtml(post.link_url)}</a>` : ''}
+        ${post.attachment_url ? `<a href="${escHtml(post.attachment_url)}" target="_blank" rel="noopener" class="disc-attachment">&#128206; Arquivo anexado</a>` : ''}
       </div>
       ${replyCount > 0 ? `<button class="disc-toggle-replies" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">${replyCount} resposta${replyCount>1?'s':''}</button>
       <div class="disc-replies" style="display:none">
@@ -5239,9 +5249,27 @@ async function createDiscussion() {
   const title = document.getElementById('discTitle').value.trim();
   const content = document.getElementById('discContent').value.trim();
   if (!title || !content) return;
-  await sb.from('discussions').insert({ title, content, user_id: currentUser.id });
+
+  let attachment_url = null;
+  let link_url = document.getElementById('discLink').value.trim() || null;
+
+  const fileInput = document.getElementById('discFile');
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const ext = file.name.split('.').pop();
+    const path = `discussions/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
+    const { data: uploadData, error: uploadErr } = await sb.storage.from('attachments').upload(path, file);
+    if (uploadErr) { alert('Erro ao enviar arquivo: ' + uploadErr.message); return; }
+    const { data: urlData } = sb.storage.from('attachments').getPublicUrl(path);
+    attachment_url = urlData.publicUrl;
+  }
+
+  await sb.from('discussions').insert({ title, content, user_id: currentUser.id, link_url, attachment_url });
   document.getElementById('discTitle').value = '';
   document.getElementById('discContent').value = '';
+  document.getElementById('discLink').value = '';
+  fileInput.value = '';
+  document.getElementById('discFileName').textContent = 'Anexar arquivo';
   await loadDiscussions();
 }
 
