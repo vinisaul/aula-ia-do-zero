@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
 :root {
   --bg: #FFFFFF;
@@ -262,9 +263,114 @@ a:hover { color: var(--accent-hover); }
 
 /* Focus visible for keyboard nav */
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ===== AUTH OVERLAY ===== */
+.auth-overlay { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; align-items: center; justify-content: center; }
+.auth-overlay.hidden { display: none; }
+.auth-box { width: 100%; max-width: 400px; padding: 40px 32px; text-align: center; }
+.auth-box h1 { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
+.auth-box .auth-sub { font-size: 14px; color: var(--text-sec); margin-bottom: 32px; }
+.auth-box input { width: 100%; font-family: var(--font); font-size: 15px; padding: 12px 16px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); margin-bottom: 12px; background: var(--bg); color: var(--text-pri); outline: none; transition: border 0.2s; }
+.auth-box input:focus { border-color: var(--accent); }
+.auth-box .auth-btn { width: 100%; font-family: var(--font); font-size: 15px; font-weight: 700; padding: 12px; border: none; border-radius: var(--radius-sm); background: var(--accent); color: #fff; cursor: pointer; transition: background 0.2s; margin-bottom: 12px; }
+.auth-box .auth-btn:hover { background: var(--accent-hover); }
+.auth-box .auth-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.auth-box .auth-toggle { font-size: 13px; color: var(--text-sec); }
+.auth-box .auth-toggle a { color: var(--accent); cursor: pointer; font-weight: 600; }
+.auth-box .auth-error { font-size: 13px; color: #e53e3e; margin-bottom: 12px; display: none; }
+.auth-box .auth-success { font-size: 13px; color: #38a169; margin-bottom: 12px; display: none; }
+.auth-pending { text-align: center; padding: 60px 32px; }
+.auth-pending h2 { font-size: 24px; margin-bottom: 8px; }
+.auth-pending p { color: var(--text-sec); }
+.auth-pending .auth-btn { display: inline-block; margin-top: 20px; font-family: var(--font); font-size: 14px; font-weight: 700; padding: 10px 24px; border: none; border-radius: var(--radius-sm); background: var(--card); color: var(--text-sec); cursor: pointer; }
+
+/* ===== AUTH HEADER BTN ===== */
+.header-auth { display: flex; align-items: center; gap: 8px; }
+.header-user { font-size: 11px; font-weight: 600; color: var(--text-sec); max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-auth-btn { font-family: var(--font); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: 1px solid var(--border); background: transparent; color: var(--text-sec); padding: 5px 12px; border-radius: var(--radius-pill); cursor: pointer; transition: all 0.2s; }
+.header-auth-btn:hover { border-color: var(--accent); color: var(--accent); }
+.header-admin-btn { background: var(--accent); color: #fff; border-color: var(--accent); }
+.header-admin-btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+
+/* ===== ADMIN MODAL ===== */
+.admin-modal { position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+.admin-modal.hidden { display: none; }
+.admin-panel { background: var(--bg); border-radius: var(--radius); max-width: 600px; width: 95%; max-height: 80vh; overflow-y: auto; padding: 32px; }
+.admin-panel h2 { margin-top: 0; margin-bottom: 20px; }
+.admin-user { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.admin-user:last-child { border-bottom: none; }
+.admin-user-info { display: flex; flex-direction: column; gap: 2px; }
+.admin-user-email { font-size: 14px; font-weight: 600; }
+.admin-user-date { font-size: 11px; color: var(--text-ter); }
+.admin-user-status { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.admin-user-status.pending { color: #d69e2e; }
+.admin-user-status.approved { color: #38a169; }
+.admin-actions { display: flex; gap: 8px; }
+.admin-actions button { font-family: var(--font); font-size: 11px; font-weight: 700; padding: 6px 14px; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all 0.2s; }
+.btn-approve { background: #38a169; color: #fff; }
+.btn-approve:hover { background: #2f855a; }
+.btn-revoke { background: var(--card); color: var(--text-sec); }
+.btn-revoke:hover { background: #e53e3e; color: #fff; }
+.admin-close { float: right; font-family: var(--font); font-size: 12px; font-weight: 700; background: var(--card); border: none; padding: 6px 16px; border-radius: var(--radius-sm); cursor: pointer; color: var(--text-sec); }
+
+/* ===== DISCUSSIONS ===== */
+.disc-compose { background: var(--card); border-radius: var(--radius); padding: 20px; margin-bottom: 24px; }
+.disc-compose input, .disc-compose textarea { width: 100%; font-family: var(--font); font-size: 14px; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text-pri); outline: none; margin-bottom: 10px; resize: vertical; }
+.disc-compose input:focus, .disc-compose textarea:focus { border-color: var(--accent); }
+.disc-compose textarea { min-height: 80px; }
+.disc-compose button { font-family: var(--font); font-size: 13px; font-weight: 700; padding: 8px 20px; border: none; border-radius: var(--radius-sm); background: var(--accent); color: #fff; cursor: pointer; }
+.disc-compose button:hover { background: var(--accent-hover); }
+.disc-thread { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+.disc-post { padding: 20px; }
+.disc-post-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.disc-post-author { font-size: 13px; font-weight: 700; color: var(--text-pri); }
+.disc-post-date { font-size: 11px; color: var(--text-ter); }
+.disc-post-title { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+.disc-post-content { font-size: 14px; color: var(--text-sec); line-height: 1.6; white-space: pre-wrap; }
+.disc-replies { border-top: 1px solid var(--border); background: var(--bg); }
+.disc-reply { padding: 14px 20px; border-bottom: 1px solid var(--border); }
+.disc-reply:last-child { border-bottom: none; }
+.disc-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.disc-reply-author { font-size: 12px; font-weight: 700; }
+.disc-reply-date { font-size: 10px; color: var(--text-ter); }
+.disc-reply-content { font-size: 13px; color: var(--text-sec); line-height: 1.5; white-space: pre-wrap; }
+.disc-reply-form { padding: 14px 20px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+.disc-reply-form input { flex: 1; font-family: var(--font); font-size: 13px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); outline: none; }
+.disc-reply-form input:focus { border-color: var(--accent); }
+.disc-reply-form button { font-family: var(--font); font-size: 12px; font-weight: 700; padding: 8px 16px; border: none; border-radius: var(--radius-sm); background: var(--accent); color: #fff; cursor: pointer; white-space: nowrap; }
+.disc-empty { text-align: center; padding: 40px; color: var(--text-ter); font-size: 14px; }
+.disc-toggle-replies { font-family: var(--font); font-size: 12px; font-weight: 600; color: var(--accent); background: none; border: none; cursor: pointer; padding: 10px 20px; }
+.disc-delete { font-family: var(--font); font-size: 11px; color: var(--text-ghost); background: none; border: none; cursor: pointer; padding: 2px 6px; }
+.disc-delete:hover { color: #e53e3e; }
 </style>
 </head>
 <body>
+
+<!-- AUTH OVERLAY -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-box">
+    <h1>IA do Zero</h1>
+    <p class="auth-sub">Acesso exclusivo para participantes</p>
+    <div class="auth-error" id="authError"></div>
+    <div class="auth-success" id="authSuccess"></div>
+    <form id="authForm">
+      <input type="text" id="authName" placeholder="Seu nome" style="display:none;" autocomplete="name">
+      <input type="email" id="authEmail" placeholder="Seu email" required autocomplete="email">
+      <input type="password" id="authPass" placeholder="Senha" required autocomplete="current-password" minlength="6">
+      <button type="submit" class="auth-btn" id="authSubmit">Entrar</button>
+    </form>
+    <p class="auth-toggle" id="authToggle">Não tem conta? <a onclick="toggleAuthMode()">Criar conta</a></p>
+  </div>
+</div>
+
+<!-- ADMIN MODAL -->
+<div class="admin-modal hidden" id="adminModal" onclick="if(event.target===this)this.classList.add('hidden')">
+  <div class="admin-panel">
+    <button class="admin-close" onclick="document.getElementById('adminModal').classList.add('hidden')">Fechar</button>
+    <h2>Gerenciar Usuários</h2>
+    <div id="adminList">Carregando...</div>
+  </div>
+</div>
 
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
@@ -318,6 +424,7 @@ a:hover { color: var(--accent-hover); }
     <div class="sidebar-item" data-target="studio" onclick="goToSection('studio')"><span class="sidebar-item-num">25</span> Studio de imagem</div>
     <div class="sidebar-item" data-target="kit" onclick="goToSection('kit')"><span class="sidebar-item-num">27</span> Kit de Ferramentas</div>
     <div class="sidebar-item" data-target="conectores" onclick="goToSection('conectores')"><span class="sidebar-item-num">28</span> Conectores — Lista completa</div>
+    <div class="sidebar-item" data-target="discussions" onclick="goToSection('discussions')"><span class="sidebar-item-num" style="color:var(--accent)">&#9679;</span> Discussions</div>
     <div class="sidebar-item" data-target="faq" onclick="goToSection('faq')"><span class="sidebar-item-num">FAQ</span> Perguntas frequentes</div>
     <div class="sidebar-item" data-target="troubleshooting" onclick="goToSection('troubleshooting')"><span class="sidebar-item-num">+</span> Troubleshooting</div>
   </div>
@@ -337,6 +444,11 @@ a:hover { color: var(--accent-hover); }
       <button class="header-nav-btn active" data-nav="home" onclick="goToSection('home')">Início</button>
       <button class="header-nav-btn" data-nav="blocks" onclick="goToSection('b1')">Blocos</button>
       <button class="header-nav-btn" data-nav="extras" onclick="goToSection('faq')">Extras</button>
+    </div>
+    <div class="header-auth" id="headerAuth">
+      <span class="header-user" id="headerUser"></span>
+      <button class="header-auth-btn header-admin-btn" id="btnAdmin" style="display:none" onclick="openAdmin()">Admin</button>
+      <button class="header-auth-btn" id="btnLogout" style="display:none" onclick="doLogout()">Sair</button>
     </div>
   </div>
 </header>
@@ -3890,6 +4002,24 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
   </div>
 </div>
 
+<!-- ==================== DISCUSSIONS ==================== -->
+<div class="section" data-section="discussions">
+  <div class="section-kicker">Comunidade</div>
+  <div class="section-title">Discussions.</div>
+  <div class="section-subtitle">Troque ideias com os participantes</div>
+  <hr>
+
+  <div class="disc-compose" id="discCompose">
+    <input type="text" id="discTitle" placeholder="Título do tópico">
+    <textarea id="discContent" placeholder="Compartilhe uma ideia, dúvida ou descoberta..."></textarea>
+    <button onclick="createDiscussion()">Publicar</button>
+  </div>
+
+  <div id="discList">
+    <div class="disc-empty">Carregando discussões...</div>
+  </div>
+</div>
+
 <!-- ==================== FAQ ==================== -->
 <div class="section" data-section="faq">
   <div class="section-kicker">FAQ</div>
@@ -4486,7 +4616,7 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
 </footer>
 
 <script>
-const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','faq','troubleshooting'];
+const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','discussions','faq','troubleshooting'];
 const SECTION_LABELS = {
   'home':'Início',
   'b1':'01 — Engenharia de prompt morreu',
@@ -4516,6 +4646,7 @@ const SECTION_LABELS = {
   'studio':'25 — Studio de produção de imagem',
   'kit':'27 — Kit de Ferramentas',
   'conectores':'28 — Conectores: lista completa',
+  'discussions':'Discussions',
   'faq':'FAQ',
   'troubleshooting':'Troubleshooting'
 };
@@ -4644,6 +4775,7 @@ const SEARCH_INDEX = [
   { section:'versus', title:'Por que não pago nenhum SaaS de IA', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago copy.ai windsurf', desc:'Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar' },
   { section:'studio', title:'Studio de produção de imagem', tags:'studio imagem foto fotografia produto ensaio nano banana câmera iluminação geração ia lifestyle flat lay editorial', desc:'Ensaio fotográfico profissional 100% por IA — agente coordena câmera, luz e cenário' },
   { section:'kit', title:'Kit de Ferramentas', tags:'kit zip download ferramentas skills agentes comandos cerebro setup instalar configurar poder conectar obsidian edp ecommerce', desc:'156 arquivos num ZIP — skills, agentes, comandos, guias EDP, cérebro, dados de demo' },
+  { section:'discussions', title:'Discussions', tags:'discussão comunidade fórum conversa participantes dúvida ideia troca', desc:'Espaço de troca entre participantes — dúvidas, ideias, descobertas' },
   { section:'faq', title:'Perguntas frequentes', tags:'faq pergunta dúvida preciso pagar programar windows dados treinar', desc:'Respostas pras dúvidas mais comuns' },
   { section:'troubleshooting', title:'Problemas comuns', tags:'erro problema instalação não funciona bug command not found', desc:'Soluções pra erros comuns de instalação e uso' },
 ];
@@ -4683,6 +4815,270 @@ function handleSearch(query) {
 document.addEventListener('click', e => {
   if (!e.target.closest('.search-wrap')) document.getElementById('searchResults').classList.remove('open');
 });
+
+// ===== SUPABASE AUTH & DISCUSSIONS =====
+const SUPABASE_URL = 'https://qczahepiemedwvrwkerr.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjemFoZXBpZW1lZHd2cndrZXJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0NTcxNzcsImV4cCI6MjA5MjAzMzE3N30.y2Om8VE71L5lRt9iOHmgpAbt5XsJ4EWZxu-QkW55rc4';
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+let authMode = 'login'; // 'login' | 'register'
+let currentUser = null;
+let currentProfile = null;
+
+function toggleAuthMode() {
+  authMode = authMode === 'login' ? 'register' : 'login';
+  const nameEl = document.getElementById('authName');
+  const submitEl = document.getElementById('authSubmit');
+  const toggleEl = document.getElementById('authToggle');
+  const errEl = document.getElementById('authError');
+  const succEl = document.getElementById('authSuccess');
+  errEl.style.display = 'none';
+  succEl.style.display = 'none';
+  if (authMode === 'register') {
+    nameEl.style.display = 'block';
+    submitEl.textContent = 'Criar conta';
+    toggleEl.innerHTML = 'Já tem conta? <a onclick="toggleAuthMode()">Entrar</a>';
+    document.getElementById('authPass').autocomplete = 'new-password';
+  } else {
+    nameEl.style.display = 'none';
+    submitEl.textContent = 'Entrar';
+    toggleEl.innerHTML = 'Não tem conta? <a onclick="toggleAuthMode()">Criar conta</a>';
+    document.getElementById('authPass').autocomplete = 'current-password';
+  }
+}
+
+document.getElementById('authForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('authEmail').value.trim();
+  const pass = document.getElementById('authPass').value;
+  const name = document.getElementById('authName').value.trim();
+  const errEl = document.getElementById('authError');
+  const succEl = document.getElementById('authSuccess');
+  const btn = document.getElementById('authSubmit');
+  errEl.style.display = 'none';
+  succEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Aguarde...';
+
+  try {
+    if (authMode === 'register') {
+      const { data, error } = await sb.auth.signUp({
+        email,
+        password: pass,
+        options: { data: { name } }
+      });
+      if (error) throw error;
+      succEl.textContent = 'Conta criada! Aguarde aprovação do administrador.';
+      succEl.style.display = 'block';
+      // Sign out immediately — they need approval
+      await sb.auth.signOut();
+      btn.textContent = 'Criar conta';
+      btn.disabled = false;
+    } else {
+      const { data, error } = await sb.auth.signInWithPassword({ email, password: pass });
+      if (error) throw error;
+      await checkSession();
+    }
+  } catch (err) {
+    let msg = err.message;
+    if (msg.includes('Invalid login')) msg = 'Email ou senha incorretos';
+    if (msg.includes('already registered')) msg = 'Email já cadastrado. Faça login.';
+    if (msg.includes('least 6')) msg = 'Senha precisa ter pelo menos 6 caracteres';
+    errEl.textContent = msg;
+    errEl.style.display = 'block';
+    btn.textContent = authMode === 'login' ? 'Entrar' : 'Criar conta';
+    btn.disabled = false;
+  }
+});
+
+async function checkSession() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) {
+    document.getElementById('authOverlay').classList.remove('hidden');
+    document.getElementById('btnLogout').style.display = 'none';
+    document.getElementById('btnAdmin').style.display = 'none';
+    document.getElementById('headerUser').textContent = '';
+    return;
+  }
+
+  currentUser = session.user;
+
+  // Fetch profile
+  const { data: profile } = await sb.from('profiles').select('*').eq('id', currentUser.id).single();
+  currentProfile = profile;
+
+  if (!profile || !profile.approved) {
+    // Show pending screen
+    document.getElementById('authOverlay').innerHTML = `
+      <div class="auth-pending">
+        <h2>Acesso pendente</h2>
+        <p>Sua conta foi criada. O administrador precisa aprovar seu acesso.</p>
+        <p style="margin-top:8px;font-size:13px;color:var(--text-ter);">Email: ${currentUser.email}</p>
+        <button class="auth-btn" onclick="doLogout()" style="margin-top:20px;display:inline-block;padding:10px 24px;border:none;border-radius:8px;background:var(--card);color:var(--text-sec);cursor:pointer;font-family:var(--font);font-weight:700;">Sair</button>
+      </div>`;
+    document.getElementById('authOverlay').classList.remove('hidden');
+    return;
+  }
+
+  // User is approved — show content
+  document.getElementById('authOverlay').classList.add('hidden');
+  document.getElementById('btnLogout').style.display = 'inline-block';
+  document.getElementById('headerUser').textContent = profile.name || currentUser.email;
+
+  if (profile.role === 'admin') {
+    document.getElementById('btnAdmin').style.display = 'inline-block';
+  }
+
+  // Load discussions
+  loadDiscussions();
+}
+
+async function doLogout() {
+  await sb.auth.signOut();
+  currentUser = null;
+  currentProfile = null;
+  location.reload();
+}
+
+// ===== ADMIN =====
+async function openAdmin() {
+  document.getElementById('adminModal').classList.remove('hidden');
+  await loadAdminUsers();
+}
+
+async function loadAdminUsers() {
+  const { data: users } = await sb.from('profiles').select('*').order('created_at', { ascending: false });
+  const container = document.getElementById('adminList');
+  if (!users || users.length === 0) {
+    container.innerHTML = '<p style="color:var(--text-ter)">Nenhum usuário cadastrado.</p>';
+    return;
+  }
+  container.innerHTML = users.map(u => `
+    <div class="admin-user">
+      <div class="admin-user-info">
+        <span class="admin-user-email">${u.name || '(sem nome)'} — ${u.email}</span>
+        <span class="admin-user-date">${new Date(u.created_at).toLocaleDateString('pt-BR')} · <span class="admin-user-status ${u.approved ? 'approved' : 'pending'}">${u.approved ? 'Aprovado' : 'Pendente'}</span>${u.role === 'admin' ? ' · Admin' : ''}</span>
+      </div>
+      <div class="admin-actions">
+        ${!u.approved ? `<button class="btn-approve" onclick="approveUser('${u.id}')">Aprovar</button>` : `<button class="btn-revoke" onclick="revokeUser('${u.id}')">Revogar</button>`}
+      </div>
+    </div>
+  `).join('');
+}
+
+async function approveUser(id) {
+  await sb.from('profiles').update({ approved: true }).eq('id', id);
+  await loadAdminUsers();
+}
+
+async function revokeUser(id) {
+  await sb.from('profiles').update({ approved: false }).eq('id', id);
+  await loadAdminUsers();
+}
+
+// ===== DISCUSSIONS =====
+async function loadDiscussions() {
+  const { data: posts } = await sb.from('discussions')
+    .select('*, profiles(name, email)')
+    .order('created_at', { ascending: false });
+
+  const container = document.getElementById('discList');
+  if (!posts || posts.length === 0) {
+    container.innerHTML = '<div class="disc-empty">Nenhuma discussão ainda. Seja o primeiro a postar!</div>';
+    return;
+  }
+
+  let html = '';
+  for (const post of posts) {
+    const { data: replies } = await sb.from('replies')
+      .select('*, profiles(name, email)')
+      .eq('discussion_id', post.id)
+      .order('created_at', { ascending: true });
+
+    const authorName = post.profiles?.name || post.profiles?.email || 'Anônimo';
+    const date = new Date(post.created_at).toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    const isOwner = currentUser && post.user_id === currentUser.id;
+    const isAdmin = currentProfile && currentProfile.role === 'admin';
+    const replyCount = replies ? replies.length : 0;
+
+    html += `<div class="disc-thread">
+      <div class="disc-post">
+        <div class="disc-post-header">
+          <span class="disc-post-author">${authorName}</span>
+          <span>
+            <span class="disc-post-date">${date}</span>
+            ${isOwner || isAdmin ? `<button class="disc-delete" onclick="deleteDiscussion('${post.id}')" title="Apagar">&#10005;</button>` : ''}
+          </span>
+        </div>
+        <div class="disc-post-title">${escHtml(post.title)}</div>
+        <div class="disc-post-content">${escHtml(post.content)}</div>
+      </div>
+      ${replyCount > 0 ? `<button class="disc-toggle-replies" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">${replyCount} resposta${replyCount>1?'s':''}</button>
+      <div class="disc-replies" style="display:none">
+        ${replies.map(r => {
+          const rName = r.profiles?.name || r.profiles?.email || 'Anônimo';
+          const rDate = new Date(r.created_at).toLocaleDateString('pt-BR', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+          const rOwner = currentUser && r.user_id === currentUser.id;
+          return `<div class="disc-reply">
+            <div class="disc-reply-header">
+              <span class="disc-reply-author">${rName}</span>
+              <span class="disc-reply-date">${rDate}</span>
+              ${rOwner || isAdmin ? `<button class="disc-delete" onclick="deleteReply('${r.id}')" title="Apagar">&#10005;</button>` : ''}
+            </div>
+            <div class="disc-reply-content">${escHtml(r.content)}</div>
+          </div>`;
+        }).join('')}
+      </div>` : ''}
+      <div class="disc-reply-form">
+        <input type="text" placeholder="Responder..." id="reply-${post.id}" onkeydown="if(event.key==='Enter')submitReply('${post.id}')">
+        <button onclick="submitReply('${post.id}')">Enviar</button>
+      </div>
+    </div>`;
+  }
+  container.innerHTML = html;
+}
+
+function escHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+async function createDiscussion() {
+  const title = document.getElementById('discTitle').value.trim();
+  const content = document.getElementById('discContent').value.trim();
+  if (!title || !content) return;
+
+  await sb.from('discussions').insert({ title, content, user_id: currentUser.id });
+  document.getElementById('discTitle').value = '';
+  document.getElementById('discContent').value = '';
+  await loadDiscussions();
+}
+
+async function submitReply(discussionId) {
+  const input = document.getElementById('reply-' + discussionId);
+  const content = input.value.trim();
+  if (!content) return;
+
+  await sb.from('replies').insert({ discussion_id: discussionId, content, user_id: currentUser.id });
+  input.value = '';
+  await loadDiscussions();
+}
+
+async function deleteDiscussion(id) {
+  if (!confirm('Apagar esta discussão?')) return;
+  await sb.from('discussions').delete().eq('id', id);
+  await loadDiscussions();
+}
+
+async function deleteReply(id) {
+  if (!confirm('Apagar esta resposta?')) return;
+  await sb.from('replies').delete().eq('id', id);
+  await loadDiscussions();
+}
+
+// Init auth check
+checkSession();
 </script>
 </body>
 </html>
