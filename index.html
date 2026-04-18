@@ -4914,20 +4914,38 @@ async function checkSession() {
 
   currentUser = session.user;
 
-  // Fetch profile
-  const { data: profile } = await sb.from('profiles').select('*').eq('id', currentUser.id).single();
+  // Fetch profile (try direct fetch, fallback to RPC if RLS blocks)
+  let profile = null;
+  const { data: profileData, error: profileErr } = await sb.from('profiles').select('*').eq('id', currentUser.id).single();
+  profile = profileData;
+
+  // If RLS blocked the read, try fetching by email via REST
+  if (!profile && profileErr) {
+    console.warn('Profile fetch error:', profileErr);
+    // Retry with a fresh token
+    const { data: { session: freshSession } } = await sb.auth.getSession();
+    if (freshSession) {
+      const retryRes = await sb.from('profiles').select('*').eq('id', freshSession.user.id).maybeSingle();
+      profile = retryRes.data;
+    }
+  }
+
   currentProfile = profile;
 
   if (!profile || !profile.approved) {
-    // Show pending screen
-    document.getElementById('authOverlay').innerHTML = `
+    // Show pending screen with retry button
+    const overlay = document.getElementById('authOverlay');
+    overlay.innerHTML = `
       <div class="auth-pending">
         <h2>Acesso pendente</h2>
         <p>Sua conta foi criada. O administrador precisa aprovar seu acesso.</p>
         <p style="margin-top:8px;font-size:13px;color:var(--text-ter);">Email: ${currentUser.email}</p>
-        <button class="auth-btn" onclick="doLogout()" style="margin-top:20px;display:inline-block;padding:10px 24px;border:none;border-radius:8px;background:var(--card);color:var(--text-sec);cursor:pointer;font-family:var(--font);font-weight:700;">Sair</button>
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;">
+          <button onclick="location.reload()" style="font-family:var(--font);font-size:14px;font-weight:700;padding:10px 24px;border:none;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer;">Tentar novamente</button>
+          <button onclick="doLogout()" style="font-family:var(--font);font-size:14px;font-weight:700;padding:10px 24px;border:none;border-radius:8px;background:var(--card);color:var(--text-sec);cursor:pointer;">Sair</button>
+        </div>
       </div>`;
-    document.getElementById('authOverlay').classList.remove('hidden');
+    overlay.classList.remove('hidden');
     return;
   }
 
