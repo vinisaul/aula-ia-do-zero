@@ -306,7 +306,7 @@ a:hover { color: var(--accent-hover); }
   <div class="sidebar-group">
     <div class="sidebar-group-title">Na prática</div>
     <div class="sidebar-item" data-target="b13" onclick="goToSection('b13')"><span class="sidebar-item-num">18</span> Meu setup completo</div>
-    <div class="sidebar-item" data-target="versus" onclick="goToSection('versus')"><span class="sidebar-item-num">19</span> Por que não uso Manus</div>
+    <div class="sidebar-item" data-target="versus" onclick="goToSection('versus')"><span class="sidebar-item-num">19</span> Por que não pago nenhum SaaS</div>
     <div class="sidebar-item" data-target="b14" onclick="goToSection('b14')"><span class="sidebar-item-num">20</span> Fluxos do dia a dia</div>
     <div class="sidebar-item" data-target="vibe" onclick="goToSection('vibe')"><span class="sidebar-item-num">21</span> Vibe Coding</div>
     <div class="sidebar-item" data-target="assistant" onclick="goToSection('assistant')"><span class="sidebar-item-num">22</span> Assistente Pessoal</div>
@@ -390,7 +390,7 @@ a:hover { color: var(--accent-hover); }
     <div class="day-card" onclick="goToSection('b12')"><div class="day-card-num">16</div><div class="day-card-title">API, GitHub, Supabase, Vercel.</div><div class="day-card-desc">As peças do ecossistema.</div></div>
     <div class="day-card" onclick="goToSection('b12b')"><div class="day-card-num">17</div><div class="day-card-title">21st.dev — Componentes.</div><div class="day-card-desc">Peças de design profissional prontas pra usar.</div></div>
     <div class="day-card" onclick="goToSection('b13')"><div class="day-card-num">18</div><div class="day-card-title">Meu setup completo.</div><div class="day-card-desc">Todas as ferramentas que uso no dia a dia.</div></div>
-    <div class="day-card" onclick="goToSection('versus')"><div class="day-card-num">19</div><div class="day-card-title">Por que não uso Manus.</div><div class="day-card-desc">O que ele faz, por que não preciso — e o que construí no lugar.</div></div>
+    <div class="day-card" onclick="goToSection('versus')"><div class="day-card-num">19</div><div class="day-card-title">Por que não pago nenhum SaaS de IA.</div><div class="day-card-desc">Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar.</div></div>
     <div class="day-card" onclick="goToSection('b14')"><div class="day-card-num">20</div><div class="day-card-title">Fluxos do dia a dia.</div><div class="day-card-desc">Exemplos reais combinando tudo.</div></div>
     <div class="day-card" onclick="goToSection('vibe')"><div class="day-card-num">21</div><div class="day-card-title">Vibe Coding.</div><div class="day-card-desc">Como construo coisas com IA do zero.</div></div>
     <div class="day-card" onclick="goToSection('assistant')"><div class="day-card-num">22</div><div class="day-card-title">Assistente Pessoal.</div><div class="day-card-desc">Claude gerencia sua vida inteira.</div></div>
@@ -2377,139 +2377,131 @@ Supabase  &larr; banco de dados (o site lê/escreve dados)</p></div>
   </ul>
 </div>
 
-<!-- ==================== BLOCO VERSUS — POR QUE NÃO USO MANUS ==================== -->
+<!-- ==================== BLOCO VERSUS — POR QUE NÃO PAGO NENHUM SAAS DE IA ==================== -->
 <div class="section" data-section="versus">
   <div class="section-kicker">Bloco 19 — Ecossistema</div>
-  <div class="section-title">Por que não uso Manus (e não pago Obsidian Sync, nem nenhum SaaS de IA).</div>
-  <div class="section-subtitle">Tudo que essas ferramentas vendem, eu construí na mão — e tenho mais controle</div>
+  <div class="section-title">Por que não pago nenhum SaaS de IA — e o que construí no lugar.</div>
+  <div class="section-subtitle">Manus, Lovable, Emergent, Cursor, Zapier — o que são, o que fazem, e por que eu não preciso</div>
   <hr>
 
-  <p>Toda semana aparece uma ferramenta nova prometendo "IA que faz tudo por você". Manus, Devin, Rabbit, Humane — a lista não para. E toda vez a mesma pergunta: <strong>"vale a pena?"</strong></p>
-  <p>A resposta curta: <strong>não, se você construiu o ecossistema certo.</strong></p>
+  <p>Toda semana aparece uma ferramenta nova prometendo "IA que faz tudo por você". O marketing é bom, o vídeo de demo impressiona, e dá vontade de assinar. Mas quando você entende o que essas ferramentas <em>realmente</em> fazem por baixo dos panos, percebe que construiu coisa mais poderosa no terminal.</p>
+  <p>Vou explicar cada uma — o que faz, como faz, e o que eu criei que substitui.</p>
 
-  <h2>O que o Manus faz</h2>
-  <p>O Manus ($20/mês) é um agente autônomo que navega a web, executa código e entrega "deliverables" — PDFs, planilhas, sites simples. Pensa nele como um assistente que faz tarefas completas sozinho: "pesquisa os 10 melhores CRMs e me entrega uma planilha comparativa".</p>
+  <!-- MANUS -->
+  <h2>Manus — $20/mês</h2>
+  <h3>O que é</h3>
+  <p>Um agente autônomo que navega a web, executa código e entrega "deliverables" — PDFs, planilhas, sites simples. Você pede "pesquisa os 10 melhores CRMs do Brasil e me entrega uma planilha comparativa" e ele faz sozinho: abre o navegador, pesquisa, compara, monta o arquivo.</p>
 
   <div class="callout callout-warn">
     <strong>Mito:</strong> Manus não é da Meta. É de uma empresa chinesa (Monica AI). Não tem acesso especial a APIs do Instagram ou Facebook. Quando você vir esse tipo de claim, desconfie.
   </div>
 
-  <h2>O que eu já tenho — e como substitui cada função</h2>
-  <div class="table-wrap"><table>
-    <thead><tr><th style="width:28%;">O que o Manus faz</th><th style="width:32%;">O que eu uso no lugar</th><th style="width:40%;">Por que é melhor</th></tr></thead>
-    <tbody>
-      <tr>
-        <td>Pesquisa na web e consolida</td>
-        <td><strong>Firecrawl</strong> + <strong>Web Search</strong></td>
-        <td>Scraping real de qualquer site, não só busca superficial. Baixo o código fonte, extraio dados estruturados.</td>
-      </tr>
-      <tr>
-        <td>Conecta em apps externos</td>
-        <td><strong>Rube (Composio)</strong> — 1000+ apps</td>
-        <td>Slack, GitHub, Linear, Gmail, Google Sheets, Calendar, Jira, Notion, X/Twitter — tudo conectado direto no Claude.</td>
-      </tr>
-      <tr>
-        <td>Gera relatórios e planilhas</td>
-        <td><strong>Skills</strong> (xlsx, pdf, analytics)</td>
-        <td>Gero Excel, PDF, dashboards com design profissional — não um CSV genérico.</td>
-      </tr>
-      <tr>
-        <td>Navega sites e extrai dados</td>
-        <td><strong>Firecrawl Interact</strong></td>
-        <td>Navega, clica, preenche forms, extrai dados — tudo via MCP.</td>
-      </tr>
-      <tr>
-        <td>Cria sites simples</td>
-        <td><strong>Claude Code</strong> + <strong>Vercel</strong></td>
-        <td>Crio sites completos com Next.js, shadcn, animações — e publico em segundos. Não é "site simples", é produção.</td>
-      </tr>
-      <tr>
-        <td>Conecta em CRMs e ads</td>
-        <td><strong>Windsor.ai</strong> + <strong>HubSpot MCP</strong></td>
-        <td>Dados de Meta Ads, Google Ads, 325+ fontes — direto no Claude, em tempo real.</td>
-      </tr>
-      <tr>
-        <td>Faz apresentações</td>
-        <td><strong>Gamma</strong> + <strong>Skills de apresentação</strong></td>
-        <td>Apresentações, docs, webpages geradas com design real — não slide genérico.</td>
-      </tr>
-    </tbody>
-  </table></div>
+  <h3>O que ele faz por baixo</h3>
+  <p>Manus é basicamente um <strong>navegador controlado por IA + gerador de arquivos</strong>. Ele abre sites, lê conteúdo, processa, e exporta. É isso. Não tem memória entre sessões, não conhece seu projeto, não se conecta nas suas ferramentas. Começa do zero toda vez.</p>
 
-  <h2>O que o Manus NÃO faz (e eu faço)</h2>
+  <h3>O que eu construí no lugar</h3>
+  <p>Isso é o <strong>Cowork</strong> — o modo do Claude que trabalha sozinho em segundo plano. Ele faz exatamente isso: pesquisa, processa, entrega. Mas com uma diferença brutal: ele conhece meu projeto, minhas preferências, meu histórico. Não começa do zero.</p>
+  <p>E quando preciso de mais poder, vou pro <strong>Claude Code no terminal</strong>. Aí não é só navegação — é acesso real ao sistema. O Claude lê meus arquivos, edita código, commita no GitHub, deploya no Vercel. O Manus não chega perto disso.</p>
+  <p>Pra pesquisa e scraping, tenho <strong>Firecrawl</strong> — que não só navega como baixa código fonte inteiro de sites, extrai design systems, preenche formulários. E o <strong>Rube</strong> conecta em 1000+ apps (Slack, Gmail, Notion, Jira, Google Sheets) direto no Claude — sem precisar de um "agente" separado navegando pela web.</p>
+
+  <!-- LOVABLE & EMERGENT -->
+  <h2>Lovable e Emergent — $20/mês cada</h2>
+  <h3>O que são</h3>
+  <p>Geradores de app por prompt. Você descreve "quero um dashboard de vendas com gráficos e login" e eles geram o app inteiro — frontend, backend, banco de dados. Visual bonito, deploy rápido. O Lovable usa React + shadcn + Supabase. O Emergent (YC S24, 3M+ usuários) faz web e mobile.</p>
+
+  <h3>O que fazem por baixo</h3>
+  <p>Pegam seu prompt, geram código com IA, renderizam num preview visual, e hospedam na plataforma deles. Funciona bem pra protótipo. Mas tem dois problemas grandes:</p>
   <ul>
-    <li><strong>Editar código real</strong> — o Manus não abre seu projeto, não commita, não deploya. Claude Code vive dentro do seu terminal.</li>
-    <li><strong>Manter contexto de projeto</strong> — o Manus começa do zero toda vez. Eu tenho memória, skills, CLAUDE.md, cérebro no Obsidian.</li>
-    <li><strong>Construir SaaS</strong> — o Manus entrega artefatos. Eu construo sistemas inteiros (Leeven, PocketSafe) com banco, auth, deploy.</li>
-    <li><strong>Trabalhar com agentes e squads</strong> — múltiplos agentes trabalhando em paralelo, cada um com sua especialidade.</li>
-    <li><strong>Design profissional</strong> — Figma MCP, 21st.dev, Nano Banana. Componentes e imagens de produção, não templates.</li>
+    <li><strong>O código fica preso.</strong> Exportar até dá, mas não é seamless. Você depende da plataforma.</li>
+    <li><strong>Sem contexto.</strong> Cada geração começa do zero. Não sabe nada sobre sua marca, seus componentes, seus padrões.</li>
   </ul>
 
-  <h2>E as outras assinaturas que não pago</h2>
+  <h3>O que eu construí no lugar</h3>
+  <p><strong>Claude Code + shadcn + 21st.dev + Vercel.</strong> Eu peço "cria uma landing page pro PocketSafe com hero, features e checkout" e ele gera — mas no meu repositório, com meus componentes, respeitando minha brand guideline, e publica no meu domínio com <code>git push</code>.</p>
+  <p>A diferença é que o Claude <strong>já conhece meu projeto</strong>. Ele sabe que o PocketSafe usa um bulldog como logo, que a paleta é X, que os componentes seguem Y padrão. Não preciso explicar nada — é contexto acumulado. Por isso a evolução é tão cavalar: cada coisa que eu construo torna a próxima mais rápida.</p>
+  <p>No Lovable, eu teria que re-explicar tudo isso toda vez. 100 créditos por mês no Emergent? Eu gero sem limite.</p>
+
+  <!-- CURSOR / WINDSURF -->
+  <h2>Cursor e Windsurf — $20/mês</h2>
+  <h3>O que são</h3>
+  <p>IDEs (editores de código) turbinadas com IA. O Cursor é um VS Code modificado que entende seu código e sugere edições. O Windsurf é parecido. Você seleciona um trecho, pede pra refatorar ou adicionar feature, e ele edita inline.</p>
+
+  <h3>O que fazem por baixo</h3>
+  <p>Leem seu código, mandam pro modelo de IA junto com contexto do arquivo, e aplicam as sugestões de volta. Autocomplete sofisticado + chat que entende seu projeto.</p>
+
+  <h3>O que eu construí no lugar</h3>
+  <p><strong>Claude Code no terminal faz tudo isso — e mais.</strong> Ele não só edita código: ele roda testes, commita, deploya, acessa banco de dados, gera imagens, pesquisa na web, cria apresentações. É a diferença entre ter um editor inteligente e ter um <strong>funcionário full-stack</strong> morando no seu terminal.</p>
+  <p>E o mais importante: o Claude Code tem acesso a todo o ecossistema. Skills de copywriting, conectores com Figma, geração de imagem com Nano Banana, acesso ao Supabase — tudo no mesmo lugar. O Cursor é só código. O Claude Code é código + tudo mais.</p>
+
+  <!-- JASPER / COPY.AI -->
+  <h2>Jasper e Copy.ai — $39-49/mês</h2>
+  <h3>O que são</h3>
+  <p>Ferramentas de copywriting com IA. Você escolhe um template (e-mail de vendas, post de Instagram, headline de landing page), preenche campos, e elas geram o texto.</p>
+
+  <h3>O que fazem por baixo</h3>
+  <p>Templates pré-definidos + LLM. É um ChatGPT com prompts prontos e uma interface bonita em volta. O "segredo" deles é a curadoria de prompts — que é exatamente o que uma skill faz.</p>
+
+  <h3>O que eu construí no lugar</h3>
+  <p><strong>Skill de copywriting + cérebro no Obsidian.</strong> Minha skill de copy não é um template genérico — ela tem os frameworks que eu estudei (AIDA, PAS, Before-After-Bridge), os exemplos que eu curei, o tom de voz da minha marca. E o cérebro tem arquivos inteiros sobre hooks, estrutura de landing page, sequência de e-mail.</p>
+  <p>Quando peço "escreve o e-mail de lançamento do PocketSafe", o Claude puxa tudo isso automaticamente. O Jasper me pediria pra preencher 6 campos de um template genérico.</p>
+
+  <!-- ZAPIER -->
+  <h2>Zapier Pro — $20-50/mês</h2>
+  <h3>O que é</h3>
+  <p>Automação no-code. Você conecta apps com "se isso acontecer, faça aquilo" — tipo "quando chegar lead no form, manda pro Slack e adiciona na planilha".</p>
+
+  <h3>O que faz por baixo</h3>
+  <p>Webhooks + APIs. Quando um trigger dispara, o Zapier chama a API do próximo app na cadeia. Funciona, mas é limitado: fluxos lineares, lógica simples, e você paga por "zap" (execução).</p>
+
+  <h3>O que eu construí no lugar</h3>
+  <p><strong>Rube (Composio)</strong> — conectado direto no Claude, sem limite de execuções. 1000+ apps: Slack, GitHub, Linear, Gmail, Google Sheets, Calendar, Jira, Notion, X/Twitter. A diferença? Eu não monto fluxos visuais — eu falo "manda pro João no Slack o resumo da reunião e atualiza a planilha de leads" e ele faz. Linguagem natural, sem arrastar bloquinhos.</p>
+
+  <!-- OBSIDIAN SYNC -->
+  <h2>Obsidian Sync — $8/mês</h2>
+  <h3>O que é</h3>
+  <p>Serviço oficial do Obsidian pra sincronizar seu vault entre dispositivos. Mac, iPhone, iPad — tudo atualizado.</p>
+
+  <h3>O que eu construí no lugar</h3>
+  <p><strong>Um sistema inteiro de cérebro externo.</strong> Não é só sync — é captura automática. Salvo um print no celular? Vai pra pasta certa do vault. Copio um link de YouTube? Ele extrai o conteúdo e roteia. Insight no meio da rua? Arquivo de texto que já cai na inbox do Obsidian. Sync via Git — gratuito, ilimitado, com histórico de versão.</p>
+  <p>O Obsidian Sync sincroniza arquivos. Eu construí um <strong>sistema de captura e roteamento inteligente</strong> que alimenta o cérebro automaticamente.</p>
+
+  <hr>
+
+  <h2>A conta final</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th style="width:25%;">Serviço</th><th style="width:18%;">Preço</th><th style="width:57%;">O que construí no lugar</th></tr></thead>
+    <thead><tr><th style="width:30%;">Serviço</th><th style="width:15%;">Preço</th><th style="width:55%;">O que construí no lugar</th></tr></thead>
     <tbody>
-      <tr>
-        <td><strong>Obsidian Sync</strong></td>
-        <td>$8/mês</td>
-        <td>Construí meu próprio sistema de cérebro — captura automática de insights, prints, links do YouTube/Instagram, tudo roteado pra pasta certa do vault. Sync via Git.</td>
-      </tr>
-      <tr>
-        <td><strong>Manus</strong></td>
-        <td>$20/mês</td>
-        <td>Firecrawl + Rube + Skills + MCPs fazem tudo isso e mais.</td>
-      </tr>
-      <tr>
-        <td><strong>Jasper / Copy.ai</strong></td>
-        <td>$39-49/mês</td>
-        <td>Skill de copywriting + cérebro com frameworks de copy = melhor que qualquer template.</td>
-      </tr>
-      <tr>
-        <td><strong>Lovable</strong></td>
-        <td>$20/mês</td>
-        <td>Gera apps bonitos, mas o código fica preso na plataforma. Claude Code + shadcn + 21st.dev = mesmo resultado, no meu repo, no meu Vercel.</td>
-      </tr>
-      <tr>
-        <td><strong>Emergent</strong></td>
-        <td>$20/mês</td>
-        <td>100 créditos/mês pra gerar apps. Eu gero sem limite, com contexto do projeto, memória, e deploy direto.</td>
-      </tr>
-      <tr>
-        <td><strong>Cursor / Windsurf</strong></td>
-        <td>$20/mês</td>
-        <td>Claude Code faz tudo que uma IDE com IA faz — e mais, porque tem acesso a todo o ecossistema.</td>
-      </tr>
-      <tr>
-        <td><strong>Zapier Pro</strong></td>
-        <td>$20-50/mês</td>
-        <td>Rube conecta em 1000+ apps direto. Sem fluxo visual, sem limite de "zaps".</td>
-      </tr>
+      <tr><td><strong>Manus</strong></td><td>$20/mês</td><td>Cowork + Claude Code + Firecrawl + Rube</td></tr>
+      <tr><td><strong>Lovable</strong></td><td>$20/mês</td><td>Claude Code + shadcn + 21st.dev + Vercel</td></tr>
+      <tr><td><strong>Emergent</strong></td><td>$20/mês</td><td>Claude Code + contexto de projeto + deploy direto</td></tr>
+      <tr><td><strong>Cursor / Windsurf</strong></td><td>$20/mês</td><td>Claude Code + ecossistema completo</td></tr>
+      <tr><td><strong>Jasper / Copy.ai</strong></td><td>$39/mês</td><td>Skill de copywriting + cérebro Obsidian</td></tr>
+      <tr><td><strong>Zapier Pro</strong></td><td>$20/mês</td><td>Rube — 1000+ apps, linguagem natural</td></tr>
+      <tr><td><strong>Obsidian Sync</strong></td><td>$8/mês</td><td>Sistema de captura + sync via Git</td></tr>
     </tbody>
   </table></div>
 
   <div class="card card-accent" style="text-align:center; padding:32px;">
-    <p style="font-size:42px; font-weight:900; color:var(--accent); margin-bottom:4px;">~$190/mês</p>
+    <p style="font-size:42px; font-weight:900; color:var(--accent); margin-bottom:4px;">~$170/mês</p>
     <p style="font-size:15px; font-weight:600; color:var(--text-sec); margin-bottom:16px;">em assinaturas que eu não pago</p>
-    <p style="font-size:13px; color:var(--text-ter); margin-bottom:0;">Porque construí o equivalente (ou melhor) com ferramentas que já tenho.</p>
+    <p style="font-size:13px; color:var(--text-ter); margin-bottom:0;">~$2.000/ano economizados. Porque construí o equivalente — ou melhor.</p>
   </div>
 
-  <h2>A lógica por trás</h2>
-  <p>Essas ferramentas vendem <strong>configuração pronta</strong>. É como comprar um PC montado: você paga mais pela conveniência. Mas se você sabe montar, monta melhor, mais barato, e exatamente do jeito que precisa.</p>
+  <h2>Por que a evolução é tão rápida</h2>
+  <p>Quando você usa Lovable, Emergent, ou Manus, cada projeto começa do zero. Você descreve tudo de novo, configura tudo de novo, e o resultado é genérico.</p>
+  <p>Quando você constrói o ecossistema no terminal, acontece algo diferente: <strong>cada projeto torna o próximo mais poderoso.</strong></p>
 
-  <p>O ecossistema Claude é o kit de peças:</p>
   <ol>
-    <li><strong>Skills</strong> — o "treinamento" pra cada tarefa (copywriting, design, análise, apresentação)</li>
-    <li><strong>Conectores (MCPs)</strong> — os "crachás" que dão acesso a ferramentas externas</li>
-    <li><strong>Plugins</strong> — pacotes prontos que juntam skills + conectores</li>
-    <li><strong>Agentes</strong> — funcionários autônomos que executam tarefas sozinhos</li>
-    <li><strong>Cérebro (Obsidian)</strong> — memória persistente que o Claude consulta</li>
-    <li><strong>Infra (GitHub + Supabase + Vercel)</strong> — código, banco e deploy</li>
+    <li><strong>Contexto acumula.</strong> O Claude aprende sua marca, seus padrões, suas preferências. O PocketSafe ensinou ele a respeitar brand guidelines. O Leeven ensinou a construir sistemas complexos. Cada projeto deixa rastro.</li>
+    <li><strong>Skills evoluem.</strong> A skill de copywriting que criei há 3 meses já foi refinada 20 vezes. É um ativo que melhora com uso — não um template estático.</li>
+    <li><strong>Peças se conectam.</strong> Firecrawl + copywriting + frontend-design + Vercel = landing page completa em 30 minutos. Não porque a ferramenta é mágica, mas porque as peças já estão encaixadas.</li>
+    <li><strong>Você é dono de tudo.</strong> Código no seu GitHub, dados no seu Supabase, site no seu domínio. Nenhuma plataforma pode mudar o preço, desligar o serviço, ou prender seu código.</li>
   </ol>
 
-  <p>Quando você junta tudo isso, não precisa de Manus, nem de Devin, nem de nenhum SaaS que promete "IA que faz tudo". <strong>Você já tem a IA que faz tudo.</strong> Só precisa montar.</p>
+  <p>Essas ferramentas vendem <strong>conveniência</strong>. É como comprar um PC montado: funciona, mas você paga mais e não escolhe as peças. Quando você monta, monta melhor, mais barato, e exatamente do jeito que precisa.</p>
 
   <div class="callout callout-tip">
-    <strong>Isso é o workshop.</strong> Eu não ensino a usar uma ferramenta — ensino a montar o ecossistema inteiro. Quando você sai daqui, você tem o setup. Não precisa de mais nenhuma assinatura.
+    <strong>Isso é o workshop.</strong> Eu não ensino a usar uma ferramenta — ensino a montar o ecossistema inteiro. Quando você sai daqui, tem o setup montado. Não precisa de mais nenhuma assinatura.
   </div>
 
   <div style="text-align:center; padding: 48px 0;">
@@ -4111,7 +4103,7 @@ const SECTION_LABELS = {
   'b12':'16 — API, GitHub, Supabase, Vercel',
   'b12b':'17 — 21st.dev — Componentes',
   'b13':'18 — Meu setup completo',
-  'versus':'19 — Por que não uso Manus',
+  'versus':'19 — Por que não pago nenhum SaaS de IA',
   'b14':'20 — Fluxos do dia a dia',
   'vibe':'21 — Vibe Coding',
   'assistant':'22 — Assistente Pessoal',
@@ -4243,7 +4235,7 @@ const SEARCH_INDEX = [
   { section:'b2', title:'Planos e preços', tags:'plano preço pro max free gratuito quanto custa valor', desc:'Free, Pro (~R$115), Max 5x (~R$575), Max 20x (~R$1.150)' },
   { section:'b1', title:'Skills, Plugins, Conectores, Agentes', tags:'vocabulário conceito skill plugin conector agente diferença', desc:'O vocabulário essencial explicado com analogias simples' },
   { section:'b13', title:'Meu setup completo', tags:'setup ferramentas uso diário obsidian github supabase vercel skills conectores', desc:'Todas as ferramentas que uso no dia a dia' },
-  { section:'versus', title:'Por que não uso Manus', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago', desc:'O que o Manus faz, por que não preciso, e o que construí no lugar' },
+  { section:'versus', title:'Por que não pago nenhum SaaS de IA', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago copy.ai windsurf', desc:'Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar' },
   { section:'faq', title:'Perguntas frequentes', tags:'faq pergunta dúvida preciso pagar programar windows dados treinar', desc:'Respostas pras dúvidas mais comuns' },
   { section:'troubleshooting', title:'Problemas comuns', tags:'erro problema instalação não funciona bug command not found', desc:'Soluções pra erros comuns de instalação e uso' },
 ];
