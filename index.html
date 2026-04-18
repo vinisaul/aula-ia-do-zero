@@ -360,6 +360,12 @@ a:hover { color: var(--accent-hover); }
       <button type="submit" class="auth-btn" id="authSubmit">Entrar</button>
     </form>
     <p class="auth-toggle" id="authToggle">Não tem conta? <a onclick="toggleAuthMode()">Criar conta</a></p>
+    <p class="auth-toggle" id="authForgot"><a onclick="forgotPassword()">Esqueceu a senha?</a></p>
+    <!-- Reset password form (hidden by default) -->
+    <div id="resetForm" style="display:none;">
+      <input type="password" id="resetNewPass" placeholder="Nova senha (mínimo 6 caracteres)" minlength="6">
+      <button class="auth-btn" onclick="submitNewPassword()">Definir nova senha</button>
+    </div>
   </div>
 </div>
 
@@ -5076,6 +5082,73 @@ async function deleteReply(id) {
   await sb.from('replies').delete().eq('id', id);
   await loadDiscussions();
 }
+
+// ===== FORGOT / RESET PASSWORD =====
+async function forgotPassword() {
+  const email = document.getElementById('authEmail').value.trim();
+  const errEl = document.getElementById('authError');
+  const succEl = document.getElementById('authSuccess');
+  errEl.style.display = 'none';
+  succEl.style.display = 'none';
+
+  if (!email) {
+    errEl.textContent = 'Digite seu email primeiro';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  try {
+    const { error } = await sb.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + window.location.pathname
+    });
+    if (error) throw error;
+    succEl.textContent = 'Email enviado! Verifique sua caixa de entrada.';
+    succEl.style.display = 'block';
+  } catch (err) {
+    errEl.textContent = err.message || 'Erro ao enviar email';
+    errEl.style.display = 'block';
+  }
+}
+
+async function submitNewPassword() {
+  const pass = document.getElementById('resetNewPass').value;
+  const errEl = document.getElementById('authError');
+  const succEl = document.getElementById('authSuccess');
+  errEl.style.display = 'none';
+  succEl.style.display = 'none';
+
+  if (!pass || pass.length < 6) {
+    errEl.textContent = 'Senha precisa ter pelo menos 6 caracteres';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  try {
+    const { error } = await sb.auth.updateUser({ password: pass });
+    if (error) throw error;
+    succEl.textContent = 'Senha alterada com sucesso!';
+    succEl.style.display = 'block';
+    document.getElementById('resetForm').style.display = 'none';
+    setTimeout(() => checkSession(), 1500);
+  } catch (err) {
+    errEl.textContent = err.message || 'Erro ao alterar senha';
+    errEl.style.display = 'block';
+  }
+}
+
+// Listen for password recovery event
+sb.auth.onAuthStateChange((event, session) => {
+  if (event === 'PASSWORD_RECOVERY') {
+    // Show reset password form
+    document.getElementById('authOverlay').classList.remove('hidden');
+    document.getElementById('authForm').style.display = 'none';
+    document.getElementById('authToggle').style.display = 'none';
+    document.getElementById('authForgot').style.display = 'none';
+    document.getElementById('resetForm').style.display = 'block';
+    document.getElementById('authSuccess').textContent = 'Defina sua nova senha abaixo';
+    document.getElementById('authSuccess').style.display = 'block';
+  }
+});
 
 // Init auth check
 checkSession();
