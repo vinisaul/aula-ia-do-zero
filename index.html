@@ -374,6 +374,11 @@ a:hover { color: var(--accent-hover); }
   <div class="admin-panel">
     <button class="admin-close" onclick="document.getElementById('adminModal').classList.add('hidden')">Fechar</button>
     <h2>Gerenciar Usuários</h2>
+    <div style="display:flex;gap:8px;margin-bottom:20px;">
+      <input type="email" id="adminNewEmail" placeholder="Email do novo participante" style="flex:1;font-family:var(--font);font-size:14px;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);outline:none;">
+      <button class="btn-approve" onclick="adminCreateUser()" style="white-space:nowrap;padding:10px 18px;">Criar conta</button>
+    </div>
+    <div id="adminCreateMsg" style="font-size:13px;margin-bottom:16px;display:none;"></div>
     <div id="adminList">Carregando...</div>
   </div>
 </div>
@@ -4970,6 +4975,42 @@ async function loadAdminUsers() {
       </div>
     </div>
   `).join('');
+}
+
+const DEFAULT_PASS = 'Im3rs4oclaud3$$-saul';
+
+async function adminCreateUser() {
+  const emailInput = document.getElementById('adminNewEmail');
+  const msg = document.getElementById('adminCreateMsg');
+  const email = emailInput.value.trim();
+  if (!email) return;
+
+  msg.style.display = 'block';
+  msg.style.color = 'var(--text-sec)';
+  msg.textContent = 'Criando...';
+
+  try {
+    const res = await fetch(SUPABASE_URL + '/auth/v1/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON },
+      body: JSON.stringify({ email, password: DEFAULT_PASS })
+    });
+    const data = await res.json();
+    if (data.error || data.msg) throw new Error(data.error?.message || data.msg || 'Erro');
+    if (data.id) {
+      // Auto-approve the new user
+      await sb.from('profiles').update({ approved: true }).eq('email', email);
+      msg.style.color = '#38a169';
+      msg.textContent = 'Conta criada e aprovada: ' + email;
+      emailInput.value = '';
+      await loadAdminUsers();
+    } else {
+      throw new Error('Resposta inesperada');
+    }
+  } catch (err) {
+    msg.style.color = '#e53e3e';
+    msg.textContent = err.message || 'Erro ao criar conta';
+  }
 }
 
 async function approveUser(id) {
