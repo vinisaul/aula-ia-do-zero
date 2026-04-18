@@ -437,8 +437,8 @@ a:hover { color: var(--accent-hover); }
     <div class="sidebar-item" data-target="wow" onclick="goToSection('wow')"><span class="sidebar-item-num">08</span> Na prática: Lead Gen</div>
   </div>
   <div class="sidebar-group">
-    <div class="sidebar-group-title">Cowork &amp; Claude Code</div>
-    <div class="sidebar-item" data-target="b3" onclick="goToSection('b3')"><span class="sidebar-item-num">09</span> O que é Cowork</div>
+    <div class="sidebar-group-title">Claude Code</div>
+    <div class="sidebar-item" data-target="b3" onclick="goToSection('b3')"><span class="sidebar-item-num">09</span> Cowork vs Code</div>
     <div class="sidebar-item" data-target="b6" onclick="goToSection('b6')"><span class="sidebar-item-num">10</span> Claude Code</div>
     <div class="sidebar-item" data-target="pratica" onclick="goToSection('pratica')"><span class="sidebar-item-num">11</span> Claude Code na prática</div>
     <div class="sidebar-item" data-target="b8" onclick="goToSection('b8')"><span class="sidebar-item-num">12</span> Agentes</div>
@@ -537,7 +537,7 @@ a:hover { color: var(--accent-hover); }
     <div class="day-card" onclick="goToSection('b5')"><div class="day-card-num">06</div><div class="day-card-title">Conectores (MCP).</div><div class="day-card-desc">O crachá que dá acesso às ferramentas.</div></div>
     <div class="day-card" onclick="goToSection('b4')"><div class="day-card-num">07</div><div class="day-card-title">Plugins.</div><div class="day-card-desc">O pacote que junta tudo.</div></div>
     <div class="day-card" onclick="goToSection('wow')"><div class="day-card-num">08</div><div class="day-card-title">Na prática: Lead Gen.</div><div class="day-card-desc">Tudo junto funcionando — o wow moment.</div></div>
-    <div class="day-card" onclick="goToSection('b3')"><div class="day-card-num">09</div><div class="day-card-title">O que é Cowork.</div><div class="day-card-desc">O Claude vira funcionário autônomo.</div></div>
+    <div class="day-card" onclick="goToSection('b3')"><div class="day-card-num">09</div><div class="day-card-title">Cowork vs Code.</div><div class="day-card-desc">Por que ir direto pro terminal.</div></div>
     <div class="day-card" onclick="goToSection('b6')"><div class="day-card-num">10</div><div class="day-card-title">Claude Code.</div><div class="day-card-desc">O terminal que substituiu tudo.</div></div>
     <div class="day-card" onclick="goToSection('pratica')"><div class="day-card-num">11</div><div class="day-card-title">Claude Code na prática.</div><div class="day-card-desc">Tarefas reais crescentes no terminal.</div></div>
     <div class="day-card" onclick="goToSection('b8')"><div class="day-card-num">12</div><div class="day-card-title">Agentes.</div><div class="day-card-desc">Funcionário que trabalha sozinho.</div></div>
@@ -615,7 +615,7 @@ a:hover { color: var(--accent-hover); }
 
   <div class="callout callout-warn">
     <strong>A diferença fundamental</strong>
-    No ChatGPT, você conversa COM a IA. No Claude (especialmente com Cowork e Claude Code), a IA trabalha PRA você. Essa é a mudança de paradigma.
+    No ChatGPT, você conversa COM a IA. No Claude Code, a IA trabalha PRA você. Essa é a mudança de paradigma.
   </div>
 
   <hr>
@@ -658,7 +658,7 @@ a:hover { color: var(--accent-hover); }
     <thead><tr><th>Interface</th><th>O que é</th><th>Pra quem</th></tr></thead>
     <tbody>
       <tr><td><strong>Claude.ai (web)</strong></td><td>Abre no navegador, igual ChatGPT. Funciona em qualquer computador.</td><td>Acesso rápido, sem instalar nada.</td></tr>
-      <tr><td><strong>Claude Desktop App</strong></td><td>Aplicativo que você instala no computador. Tem Chat, Cowork e Code — tudo visual.</td><td>Uso diário no desktop.</td></tr>
+      <tr><td><strong>Claude Desktop App</strong></td><td>Aplicativo que você instala no computador. Chat visual com acesso a plugins.</td><td>Uso diário no desktop.</td></tr>
       <tr><td><strong>Claude Mobile</strong></td><td>App no celular. Chat por voz e texto.</td><td>Produtividade em qualquer lugar.</td></tr>
       <tr><td><strong>Claude Code (terminal)</strong></td><td>O Claude rodando direto no terminal do computador. Controle total.</td><td>Quem quer o máximo de poder.</td></tr>
     </tbody>
@@ -667,7 +667,7 @@ a:hover { color: var(--accent-hover); }
   <h2>Os 3 modos do Claude</h2>
   <p>O Claude tem 3 modos de trabalho. Cada um faz coisas diferentes:</p>
   <div class="card card-accent"><h3>Chat — pra entender</h3><p style="margin-bottom:0;">Conversas rápidas, brainstorming, perguntas. Como falar com um colega. Inclui modo voz e captura de tela.</p></div>
-  <div class="card card-accent"><h3>Cowork — pra conectar</h3><p style="margin-bottom:0;">Tarefas complexas e autônomas. O Claude trabalha <strong>sozinho</strong> — pesquisa, analisa documentos, gera relatórios, cria arquivos. Você delega e ele entrega. (Vamos explicar em detalhe no Bloco 03.)</p></div>
+  <div class="card card-accent"><h3>Claude Code — pra executar</h3><p style="margin-bottom:0;">Tarefas complexas e autônomas. O Claude trabalha <strong>sozinho</strong> — pesquisa, analisa, cria arquivos, roda código, publica. Tudo no terminal, em linguagem natural. (Vamos explicar nos blocos 09-13.)</p></div>
   <div class="card card-accent"><h3>Code — pra construir</h3><p style="margin-bottom:0;">O próximo nível. Skills customizadas, agentes, times de I.A., apps, dashboards. Tudo pelo terminal. (Bloco 06.)</p></div>
 
   <hr>
@@ -795,7 +795,7 @@ Resumo executivo no final.</code></p></div>
 
   <h2>Planos e preços</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th>Plano</th><th>Preço</th><th>Chat</th><th>Cowork</th><th>Code</th></tr></thead>
+    <thead><tr><th>Plano</th><th>Preço</th><th>Chat</th><th>Desktop</th><th>Code</th></tr></thead>
     <tbody>
       <tr><td><strong>Free</strong></td><td>Grátis</td><td>Limitado (~30-45 msg/dia)</td><td>&#10007;</td><td>&#10007;</td></tr>
       <tr><td><strong>Pro</strong></td><td>~R$115/mês</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr>
@@ -876,7 +876,7 @@ Resumo executivo no final.</code></p></div>
     <li><strong>Calcular e raciocinar</strong> — análises financeiras, comparações, prós e contras</li>
     <li><strong>Pesquisar na web</strong> — informações em tempo real com fontes (Pro)</li>
     <li><strong>Gerar artefatos</strong> — HTML interativo, dashboards, gráficos, apps</li>
-    <li><strong>Criar arquivos</strong> — Excel, Word, PowerPoint, PDF (Cowork/Code)</li>
+    <li><strong>Criar arquivos</strong> — Excel, Word, PowerPoint, PDF (Claude Code)</li>
   </ul>
 
   <p>Nos próximos blocos você vai aprender a <strong>treinar</strong> essas ações (Skills), <strong>dar acesso</strong> a ferramentas externas (Conectores) e <strong>empacotar</strong> tudo junto (Plugins).</p>
@@ -941,79 +941,53 @@ Resumo executivo no final.</code></p></div>
   <hr>
 
   <h2>O que vem depois</h2>
-  <p>Esse artefato é poderoso — mas tá preso no chat. Pra transformar isso num sistema real que roda sozinho, monitora, dispara mensagens, atualiza pipeline... você precisa de mais. É aí que entra o Cowork — e depois, o Claude Code.</p>
+  <p>Esse artefato é poderoso — mas tá preso no chat. Pra transformar isso num sistema real que roda sozinho, monitora, dispara mensagens, atualiza pipeline... você precisa de mais. É aí que entra o Claude Code.</p>
   <div class="callout callout-tip">
     <strong>Guarde esse artefato</strong>
-    Ele vai voltar transformado nos próximos blocos. No Cowork, ele ganha autonomia. No Claude Code, vira um sistema completo.
+    Ele vai voltar transformado nos próximos blocos. No Claude Code, ele ganha autonomia total e vira um sistema completo.
   </div>
 </div>
 
 <!-- ==================== BLOCO 3 — COWORK ==================== -->
 <div class="section" data-section="b3">
-  <div class="section-kicker">Bloco 09 — Cowork &amp; Claude Code</div>
-  <div class="section-title">O que é Cowork: o Claude vira funcionário.</div>
-  <div class="section-subtitle">Ele trabalha sozinho enquanto você faz outra coisa</div>
+  <div class="section-kicker">Bloco 09 — Claude Code</div>
+  <div class="section-title">Cowork existe. Mas vai direto pro Code.</div>
+  <div class="section-subtitle">Por que pular o intermediário e ir direto pra ferramenta completa</div>
   <hr>
 
   <h2>O problema do chat (gratuito ou pago)</h2>
   <p>No modo Chat, o Claude <strong>conversa com você</strong>. Você manda mensagem, ele responde, você manda outra. É ping-pong. Pra perguntas rápidas, ótimo. Mas pra tarefas grandes, você fica preso respondendo a cada passo.</p>
 
-  <h2>O que muda no Cowork</h2>
-  <p>No <strong>Cowork</strong>, você dá uma tarefa inteira e o Claude <strong>sai trabalhando sozinho</strong>. Ele pesquisa na internet, lê seus documentos, cria arquivos, monta relatórios — sem precisar da sua intervenção a cada passo. Você delega e vai fazer outra coisa.</p>
+  <h2>O Cowork existe — mas não é o destino</h2>
+  <p>O Claude Desktop App tem um modo chamado <strong>Cowork</strong>. Nele, você dá uma tarefa inteira e o Claude sai trabalhando sozinho — pesquisa na internet, lê documentos, cria arquivos. Funciona. Mas tem limites sérios:</p>
 
-  <div class="card card-accent">
-    <h3>O que o Cowork faz que o ChatGPT não faz</h3>
-    <ul>
-      <li><strong>Cria arquivos reais no seu computador</strong> — Excel com fórmulas, Word formatado, PowerPoint com slides, PDFs prontos. Não é texto na conversa — é arquivo salvo na sua pasta.</li>
-      <li><strong>Pesquisa na web em tempo real</strong> — com fontes. Não é conhecimento antigo.</li>
-      <li><strong>Acessa ferramentas externas</strong> — Google Drive, Meta Ads, Notion, Slack — via plugins e conectores (vamos explicar nos próximos blocos).</li>
-      <li><strong>Trabalha de forma autônoma</strong> — você delega tarefa complexa e ele executa sozinho, passo a passo.</li>
-    </ul>
-    <p style="margin-bottom:0;">No ChatGPT, mesmo no pago, você fica preso no ping-pong. Não cria arquivos, não conecta em ferramentas, não tem autonomia.</p>
-  </div>
-
-  <h2>Exemplos práticos do Cowork</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th>O que você pede</th><th>O que ele entrega</th></tr></thead>
+    <thead><tr><th>O que o Cowork faz</th><th>O que ele NÃO faz</th></tr></thead>
     <tbody>
-      <tr><td>"Pesquisa meus concorrentes e monta um relatório comparativo"</td><td>Documento .docx com análise de 5 concorrentes, pontos fortes e fracos, tabela comparativa, recomendações. Salvo na sua pasta.</td></tr>
-      <tr><td>"Cria uma apresentação sobre [tema]"</td><td>PowerPoint (.pptx) com slides formatados, conteúdo estruturado, pronto pra apresentar.</td></tr>
-      <tr><td>"Analisa essas 3 propostas de fornecedor e me diz qual escolher"</td><td>Excel com tabela comparativa, critérios ponderados, recomendação final com justificativa.</td></tr>
-      <tr><td>"Cria uma página de vendas pra esse produto"</td><td>Arquivo HTML completo com copy, design, responsivo, pronto pra abrir no navegador.</td></tr>
+      <tr><td>Cria arquivos (Excel, Word, PPT)</td><td>Não roda programas, não executa código</td></tr>
+      <tr><td>Pesquisa na web em tempo real</td><td>Não acessa terminal, não instala nada</td></tr>
+      <tr><td>Conecta em plugins oficiais</td><td>Não publica, não faz deploy</td></tr>
+      <tr><td>Trabalha de forma autônoma</td><td>MCPs limitados aos oficiais do desktop</td></tr>
     </tbody>
   </table></div>
 
-  <h3>Como ativar o Cowork</h3>
-  <ol class="stepper">
-    <li class="step"><h4>Baixe o Claude Desktop App</h4><p>Em <a href="https://claude.ai/download" target="_blank">claude.ai/download</a>. É obrigatório — Cowork não funciona na web.</p></li>
-    <li class="step"><h4>Clique na aba "Cowork"</h4><p>Está no topo do app, ao lado de Chat e Code.</p></li>
-    <li class="step"><h4>Conceda acesso a uma pasta</h4><p>O Claude precisa acessar uma pasta no seu computador para salvar os arquivos que cria. Escolha uma pasta de trabalho.</p></li>
-    <li class="step"><h4>Mande a tarefa</h4><p>Descreva o que quer e deixe ele trabalhar.</p></li>
-  </ol>
+  <h2>O Claude Code faz tudo que o Cowork faz — e mais</h2>
+  <p>Quando você abre o Claude Code e pede "cria um relatório comparativo dos meus concorrentes", ele faz exatamente a mesma coisa que o Cowork faria. Pesquisa, analisa, cria o arquivo. Mas ele também pode rodar o arquivo, publicar, versionar, automatizar.</p>
+  <p><strong>Não existe motivo pra usar uma ferramenta inferior quando a completa funciona igual pro mesmo caso de uso.</strong></p>
 
-  <div class="callout callout-tip">
-    <strong>Cowork = plano Pro pra cima</strong>
-    Não funciona no gratuito. Mas se você tá pagando R$115/mês, é aqui que o investimento começa a valer.
-  </div>
-
-  <hr>
-
-  <h2>O que o Cowork ainda não faz</h2>
-  <p>O Cowork é poderoso. Mas tem limites que você vai sentir rápido:</p>
   <div class="table-wrap"><table>
-    <thead><tr><th>Limitação</th><th>Na prática</th></tr></thead>
+    <thead><tr><th>O que você pede</th><th>O que o Claude Code entrega</th></tr></thead>
     <tbody>
-      <tr><td><strong>Não roda programas</strong></td><td>Ele cria arquivos, mas não executa código no seu computador. Cria um script Python, mas não roda.</td></tr>
-      <tr><td><strong>Não acessa o terminal</strong></td><td>Não instala pacotes, não roda comandos, não interage com o sistema operacional.</td></tr>
-      <tr><td><strong>Não builda nem deploya</strong></td><td>Cria um site HTML, mas não publica. Faz um app, mas não coloca no ar.</td></tr>
-      <tr><td><strong>Não usa Git</strong></td><td>Não versiona código, não faz push, não cria branches.</td></tr>
-      <tr><td><strong>MCPs limitados</strong></td><td>Só os conectores oficiais do desktop. No terminal, você conecta o que quiser.</td></tr>
+      <tr><td>"Pesquisa meus concorrentes e monta um relatório"</td><td>Documento completo com análise, tabela comparativa, recomendações — salvo na pasta, com opção de exportar em qualquer formato.</td></tr>
+      <tr><td>"Cria uma apresentação sobre [tema]"</td><td>Apresentação pronta — e se quiser, publica direto num link compartilhável.</td></tr>
+      <tr><td>"Cria uma página de vendas pra esse produto"</td><td>HTML completo, responsivo — e se quiser, faz deploy em 10 segundos no Vercel.</td></tr>
+      <tr><td>"Analisa essas propostas e me diz qual escolher"</td><td>Excel com comparativo — e se quiser, manda por email direto do terminal.</td></tr>
     </tbody>
   </table></div>
 
   <div class="callout callout-warn">
-    <strong>Percebeu o padrão?</strong>
-    O Cowork faz coisas incríveis — mas dentro de uma caixa. Ele cria, mas não executa. Planeja, mas não publica. Analisa, mas não automatiza de verdade. Pra quebrar essas paredes, você precisa do próximo nível.
+    <strong>Resumo: Cowork é um subset do Claude Code.</strong>
+    Tudo que o Cowork faz, o Claude Code faz igual. Mas o Code também roda, publica, versiona, conecta em qualquer API, automatiza. Não faz sentido aprender uma ferramenta intermediária quando a completa já está disponível e funciona com a mesma linguagem natural. Vai direto pro Code.
   </div>
 </div>
 
@@ -1031,7 +1005,7 @@ Resumo executivo no final.</code></p></div>
 
   <div class="callout callout-tip">
     <strong>Não precisa instalar nada manualmente</strong>
-    No Cowork, os plugins oficiais já vêm disponíveis. Basta mencionar no prompt ("use o plugin de marketing") e o Claude ativa sozinho.
+    No Claude Desktop, os plugins oficiais já vêm disponíveis. No Claude Code, basta mencionar no prompt ("use o plugin de marketing") e ele ativa sozinho.
   </div>
 
   <h2>Os 11 plugins oficiais da Anthropic</h2>
@@ -1223,7 +1197,7 @@ Salva como .pptx.</code></p></div>
   <h2>Instalação dos conectores</h2>
   <div class="callout callout-tip">
     <strong>É simples</strong>
-    Peça ao Claude: <em>"instala o conector do Google Drive pra mim"</em>. Ele guia pela configuração. Uma vez instalado, funciona no Cowork e no Claude Code.
+    Peça ao Claude: <em>"instala o conector do Google Drive pra mim"</em>. Ele guia pela configuração. Uma vez instalado, funciona no Claude Code.
   </div>
 
   <div class="callout callout-warn">
@@ -1266,30 +1240,29 @@ https://bellavitaclinica.com.br/</code></p></div>
 
 <!-- ==================== BLOCO 6 — CLAUDE CODE ==================== -->
 <div class="section" data-section="b6">
-  <div class="section-kicker">Bloco 10 — Cowork &amp; Claude Code</div>
+  <div class="section-kicker">Bloco 10 — Claude Code</div>
   <div class="section-title">Claude Code: o terminal que substituiu tudo.</div>
   <div class="section-subtitle">Por que eu abandonei o chat, o desktop e o VS Code</div>
   <hr>
 
-  <h2>A peça que faltava</h2>
-  <p>Você viu o Cowork. Viu ele trabalhar sozinho, criar arquivos, executar tarefas complexas. Impressionante — mas você também viu os limites. Ele cria, mas não roda. Planeja, mas não publica. Analisa, mas não automatiza de ponta a ponta.</p>
+  <h2>A ferramenta completa</h2>
+  <p>O Claude Code é o chat, o modo autônomo e o editor — tudo numa interface só. Não é uma ferramenta diferente. É a mesma inteligência do Claude, com todas as camadas desbloqueadas.</p>
 
   <div class="card card-accent">
-    <h3>O que ganhamos saindo do Cowork pro Claude Code</h3>
+    <h3>O que o Claude Code faz</h3>
     <div class="table-wrap" style="margin-bottom:0;"><table>
-      <thead><tr><th>Cowork</th><th>Claude Code</th></tr></thead>
+      <thead><tr><th>Capacidade</th><th>Como funciona</th></tr></thead>
       <tbody>
-        <tr><td>Cria arquivos na pasta</td><td>Cria, edita, roda, testa e publica</td></tr>
-        <tr><td>Conectores oficiais do desktop</td><td>Conecta em qualquer MCP — sem limite</td></tr>
-        <tr><td>Trabalha na interface visual</td><td>Acesso total ao sistema operacional</td></tr>
-        <tr><td>Skills via upload de arquivo</td><td>Skills instaladas no projeto, com versionamento</td></tr>
-        <tr><td>Gera artefatos visuais</td><td>Gera, roda no localhost, faz deploy</td></tr>
-        <tr><td>Um modo separado do chat</td><td><strong>Chat + Cowork + Code = tudo junto</strong></td></tr>
+        <tr><td><strong>Chat</strong></td><td>Conversa em linguagem natural, igual ao chat web</td></tr>
+        <tr><td><strong>Trabalho autônomo</strong></td><td>Delega tarefa complexa e ele executa sozinho</td></tr>
+        <tr><td><strong>Criar arquivos</strong></td><td>Excel, Word, PPT, PDF, HTML — salvo na sua pasta</td></tr>
+        <tr><td><strong>Rodar e publicar</strong></td><td>Executa código, testa, faz deploy em produção</td></tr>
+        <tr><td><strong>MCPs ilimitados</strong></td><td>Conecta em qualquer API, serviço ou ferramenta</td></tr>
+        <tr><td><strong>Skills e agentes</strong></td><td>Instala no projeto, com versionamento</td></tr>
+        <tr><td><strong>Sistema operacional</strong></td><td>Acesso total: terminal, Git, pacotes, tudo</td></tr>
       </tbody>
     </table></div>
   </div>
-
-  <p><strong>O Claude Code é o chat, o Cowork e o editor de código — tudo numa interface só.</strong> Não é uma ferramenta diferente. É a mesma inteligência, com todas as camadas desbloqueadas.</p>
 
   <hr>
 
@@ -1299,8 +1272,8 @@ https://bellavitaclinica.com.br/</code></p></div>
 
   <div class="card card-accent">
     <h3>Meu racional: por que eu só uso o terminal hoje</h3>
-    <p>Eu comecei como todo mundo: ChatGPT, depois Claude no chat, depois Cowork. Testei o Claude Code por curiosidade — e nunca mais voltei.</p>
-    <p>O Claude Code faz <strong>tudo</strong> que o chat faz, tudo que o Cowork faz, e tudo que um editor de código (VS Code) faria. Em um lugar só. Em linguagem natural. Sem trocar de ferramenta.</p>
+    <p>Eu comecei como todo mundo: ChatGPT, depois Claude no chat. Testei o Claude Code e nunca mais voltei.</p>
+    <p>O Claude Code faz <strong>tudo</strong> que o chat faz, tudo que o desktop faz, e tudo que um editor de código (VS Code) faria. Em um lugar só. Em linguagem natural. Sem trocar de ferramenta.</p>
     <p style="margin-bottom:0;">Sim, às vezes é overkill pra uma pergunta rápida. Mas eu unifiquei tudo num lugar — um fluxo, um contexto, um histórico. O terminal virou o meu Claude.</p>
   </div>
 
@@ -1311,8 +1284,8 @@ https://bellavitaclinica.com.br/</code></p></div>
     <tbody>
       <tr><td><strong>1. ChatGPT</strong></td><td>Chat + GPTs + Canvas</td><td>Conversar, gerar imagem, criar GPTs</td></tr>
       <tr><td><strong>2. Claude Free</strong></td><td>Chat + Projetos + Artefatos</td><td>Tudo do ChatGPT (menos imagem) + projetos com contexto real</td></tr>
-      <tr><td><strong>3. Claude Pro</strong></td><td>Chat + Opus + Cowork</td><td>Trabalho autônomo, plugins, arquivos reais</td></tr>
-      <tr><td style="color:var(--accent);font-weight:800">4. Claude Code</td><td>Terminal — tudo junto</td><td>Chat + Cowork + editor + skills + agentes + squads + MCPs ilimitados</td></tr>
+      <tr><td><strong>3. Claude Pro</strong></td><td>Chat + Opus</td><td>Modelo mais forte, mais contexto, mais uso</td></tr>
+      <tr><td style="color:var(--accent);font-weight:800">4. Claude Code</td><td>Terminal — tudo junto</td><td>Chat + autonomia + editor + skills + agentes + squads + MCPs ilimitados</td></tr>
     </tbody>
   </table></div>
 
@@ -1484,7 +1457,7 @@ Me faz as perguntas que precisar pra criar uma skill completa.</code></p></div>
   <hr>
 
   <h2>Skills nativas — já vêm dentro do Claude</h2>
-  <p>Essas skills já estão embutidas no Claude (chat, Cowork e Code). Você <strong>não precisa instalar nada</strong> — basta mencionar no prompt que ele ativa sozinho.</p>
+  <p>Essas skills já estão embutidas no Claude. Você <strong>não precisa instalar nada</strong> — basta mencionar no prompt que ele ativa sozinho.</p>
 
   <div class="table-wrap"><table>
     <thead><tr><th>Skill nativa</th><th>O que faz</th><th>Como usar</th></tr></thead>
@@ -1493,7 +1466,7 @@ Me faz as perguntas que precisar pra criar uma skill completa.</code></p></div>
       <tr><td><strong>Artefatos</strong></td><td>Gera conteúdo visual direto na conversa — HTML, React, SVG, código</td><td>"Cria um gráfico de pizza com esses dados como artefato"</td></tr>
       <tr><td><strong>Escrita longa</strong></td><td>Escreve documentos extensos mantendo coerência — artigos, relatórios, manuais</td><td>"Escreve um relatório completo de 10 páginas sobre [tema]"</td></tr>
       <tr><td><strong>Análise de imagem</strong></td><td>Lê e interpreta imagens — prints, fotos de documentos, wireframes, gráficos</td><td>Suba a imagem e pergunte: "O que está nessa imagem? Extrai os dados"</td></tr>
-      <tr><td><strong>Pesquisa web</strong></td><td>Busca na internet em tempo real com fontes (Cowork/Code)</td><td>"Pesquisa as últimas notícias sobre [tema] e me faz um resumo com fontes"</td></tr>
+      <tr><td><strong>Pesquisa web</strong></td><td>Busca na internet em tempo real com fontes</td><td>"Pesquisa as últimas notícias sobre [tema] e me faz um resumo com fontes"</td></tr>
       <tr><td><strong>Leitura de PDF</strong></td><td>Lê PDFs inteiros — contratos, relatórios, manuais — até 500 páginas</td><td>Suba o PDF e pergunte: "Resume os pontos principais desse documento"</td></tr>
       <tr><td><strong>Geração de código</strong></td><td>Escreve, explica e corrige código em qualquer linguagem</td><td>"Cria um script em Python que organiza os arquivos da minha pasta por data"</td></tr>
       <tr><td><strong>Raciocínio estendido</strong></td><td>Pensa mais devagar e profundo pra problemas complexos (Opus)</td><td>"Pensa passo a passo: qual a melhor estratégia pra [problema complexo]?"</td></tr>
@@ -1725,7 +1698,7 @@ O HTML deve ser um arquivo único (CSS e JS embutidos), sem dependências extern
 
 <!-- ==================== BLOCO 8 — AGENTES ==================== -->
 <div class="section" data-section="b8">
-  <div class="section-kicker">Bloco 12 — Cowork &amp; Claude Code</div>
+  <div class="section-kicker">Bloco 12 — Claude Code</div>
   <div class="section-title">Agentes: o funcionário que trabalha sozinho.</div>
   <div class="section-subtitle">A diferença entre skill, plugin, conector e agente — de uma vez por todas</div>
   <hr>
@@ -1822,7 +1795,7 @@ Regras:
 
 <!-- ==================== BLOCO 9 — SQUADS & SQUAD BUILDER ==================== -->
 <div class="section" data-section="b9">
-  <div class="section-kicker">Bloco 13 — Cowork &amp; Claude Code</div>
+  <div class="section-kicker">Bloco 13 — Claude Code</div>
   <div class="section-title">Squads &amp; Squad Builder: times inteiros de I.A.</div>
   <div class="section-subtitle">De funcionário individual a departamento completo</div>
   <hr>
@@ -2558,7 +2531,7 @@ Supabase  &larr; banco de dados (o site lê/escreve dados)</p></div>
   <p>Manus é basicamente um <strong>navegador controlado por IA + gerador de arquivos</strong>. Ele abre sites, lê conteúdo, processa, e exporta. É isso. Não tem memória entre sessões, não conhece seu projeto, não se conecta nas suas ferramentas. Começa do zero toda vez.</p>
 
   <h3>O que eu construí no lugar</h3>
-  <p>Isso é o <strong>Cowork</strong> — o modo do Claude que trabalha sozinho em segundo plano. Ele faz exatamente isso: pesquisa, processa, entrega. Mas com uma diferença brutal: ele conhece meu projeto, minhas preferências, meu histórico. Não começa do zero.</p>
+  <p>Isso é o <strong>Claude Code</strong> trabalhando sozinho em segundo plano. Ele faz exatamente isso: pesquisa, processa, entrega. Mas com uma diferença brutal: ele conhece meu projeto, minhas preferências, meu histórico. Não começa do zero.</p>
   <p>E quando preciso de mais poder, vou pro <strong>Claude Code no terminal</strong>. Aí não é só navegação — é acesso real ao sistema. O Claude lê meus arquivos, edita código, commita no GitHub, deploya no Vercel. O Manus não chega perto disso.</p>
   <p>Pra pesquisa e scraping, tenho <strong>Firecrawl</strong> — que não só navega como baixa código fonte inteiro de sites, extrai design systems, preenche formulários. E o <strong>Rube</strong> conecta em 1000+ apps (Slack, Gmail, Notion, Jira, Google Sheets) direto no Claude — sem precisar de um "agente" separado navegando pela web.</p>
 
@@ -2629,7 +2602,7 @@ Supabase  &larr; banco de dados (o site lê/escreve dados)</p></div>
   <div class="table-wrap"><table>
     <thead><tr><th style="width:30%;">Serviço</th><th style="width:15%;">Preço</th><th style="width:55%;">O que construí no lugar</th></tr></thead>
     <tbody>
-      <tr><td><strong>Manus</strong></td><td>$20/mês</td><td>Cowork + Claude Code + Firecrawl + Rube</td></tr>
+      <tr><td><strong>Manus</strong></td><td>$20/mês</td><td>Claude Code + Firecrawl + Rube + autonomia total</td></tr>
       <tr><td><strong>Lovable</strong></td><td>$20/mês</td><td>Claude Code + shadcn + 21st.dev + Vercel</td></tr>
       <tr><td><strong>Emergent</strong></td><td>$20/mês</td><td>Claude Code + contexto de projeto + deploy direto</td></tr>
       <tr><td><strong>Cursor / Windsurf</strong></td><td>$20/mês</td><td>Claude Code + ecossistema completo</td></tr>
@@ -2726,7 +2699,7 @@ Entrega: texto de cada slide + legenda + 15 hashtags relevantes</code></p></div>
    - Coluna E: Data de cadastro (DD/MM/AAAA)
    - Coluna F: Status (ativo/inativo)
 4. Gera a planilha limpa como arquivo Excel</code></p></div>
-  <p><strong>Funciona no:</strong> Cowork (gera o arquivo .xlsx direto) ou Claude Code.</p>
+  <p><strong>Funciona no:</strong> Claude Code (gera o arquivo .xlsx direto na sua pasta).</p>
   <p><strong>Tempo:</strong> o que levaria 2 horas na mão, sai em 1 minuto.</p>
 
   <hr>
@@ -2965,7 +2938,7 @@ Gera como HTML único que eu abro no navegador.</code></p></div>
   </div>
 
   <p><strong>Isso tudo saiu de 7 linhas de planilha.</strong> O Claude leu, cruzou, calculou margem, identificou tendências, e montou visual. Você abriu no navegador e apresentou. Tempo total: 30 segundos.</p>
-  <p><strong>Funciona no:</strong> Cowork (gera HTML), Claude Code, ou no gratuito (gera como artefato visual na conversa).</p>
+  <p><strong>Funciona no:</strong> Claude Code (gera HTML completo) ou no gratuito (gera como artefato visual na conversa).</p>
 
   <hr>
 
@@ -2996,7 +2969,7 @@ Gera como HTML único que eu abro no navegador.</code></p></div>
 
 Cria uma visualização bonita desse fluxo em HTML com design profissional. Quero ver cada etapa, tempo estimado, e status.</code></p></div>
   <p><strong>No gratuito:</strong> pede como "artefato" e ele gera visual direto na conversa (no claude.ai).</p>
-  <p><strong>No Cowork/Code:</strong> gera arquivo HTML que você abre no navegador — mais bonito e completo.</p>
+  <p><strong>No Claude Code:</strong> gera arquivo HTML que você abre no navegador — mais bonito e completo.</p>
 
   <hr>
 
@@ -3078,7 +3051,7 @@ Me entrega:
 3. 3 ideias de colaboração/abordagem que fariam sentido
 4. Perguntas inteligentes pra fazer na reunião
 5. O que NÃO fazer (baseado no estilo da pessoa)</code></p></div>
-  <p><strong>Funciona no:</strong> Cowork (pesquisa web nativa) ou Claude Code com conector de pesquisa web. O Claude navega em todos os links, processa o conteúdo e te entrega tudo organizado.</p>
+  <p><strong>Funciona no:</strong> Claude Code com pesquisa web nativa. O Claude navega em todos os links, processa o conteúdo e te entrega tudo organizado.</p>
 
   <hr>
 
@@ -3131,7 +3104,7 @@ Design bonito, profissional, responsivo.</code></p></div>
 
   <!-- ====== FLUXO 12 — CONTEÚDO PROGRAMADO ====== -->
   <h2>12. Conteúdo programado no automático</h2>
-  <p>No Cowork ou Claude Code, você pode agendar tarefas. Configure pra <strong>toda vez que abrir o computador</strong>, o Claude roda uma rotina:</p>
+  <p>No Claude Code, você pode agendar tarefas. Configure pra <strong>toda vez que abrir o computador</strong>, o Claude roda uma rotina:</p>
   <ul>
     <li>Checa seus e-mails e lista os que precisam de resposta.</li>
     <li>Atualiza seu Notion com tarefas do dia.</li>
@@ -4081,7 +4054,7 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
   <div class="section-kicker">FAQ</div>
   <div class="section-title">Perguntas frequentes.</div>
   <hr>
-  <details class="toggle"><summary>Preciso pagar pra começar?</summary><div class="toggle-content"><p>Não. O gratuito já resolve muita coisa — tradução, análise, brainstorming, conteúdo. O Pro (R$115/mês) libera Cowork e Claude Code.</p></div></details>
+  <details class="toggle"><summary>Preciso pagar pra começar?</summary><div class="toggle-content"><p>Não. O gratuito já resolve muita coisa — tradução, análise, brainstorming, conteúdo. O Pro (R$115/mês) libera o Claude Code e o modelo mais forte (Opus).</p></div></details>
   <details class="toggle"><summary>Preciso saber programar?</summary><div class="toggle-content"><p>Não. Skills são texto puro. Você conversa em português. Se sabe escrever um manual, sabe criar uma skill.</p></div></details>
   <details class="toggle"><summary>Funciona no Windows?</summary><div class="toggle-content"><p>Sim. Desktop App no Windows 10+. Claude Code em Mac, Windows e Linux.</p></div></details>
   <details class="toggle"><summary>Qual a diferença entre Plugin e Skill?</summary><div class="toggle-content"><p><strong>Plugin</strong> = pacote de ferramentas pronto (como um app). <strong>Skill</strong> = manual de instruções pra uma tarefa (como uma receita).</p></div></details>
@@ -4722,7 +4695,7 @@ const SECTION_LABELS = {
   'b5':'06 — Conectores (MCP)',
   'b4':'07 — Plugins',
   'wow':'08 — Na prática: Lead Gen',
-  'b3':'09 — Cowork',
+  'b3':'09 — Cowork vs Code',
   'b6':'10 — Claude Code',
   'pratica':'11 — Claude Code na prática',
   'b8':'12 — Agentes',
@@ -4831,7 +4804,7 @@ const SEARCH_INDEX = [
   { section:'b5', title:'Podcast → apresentação', tags:'podcast transcrever transcrição apresentação powerpoint slide audio video', desc:'Fluxo: transcreve podcast → analisa → gera apresentação elite' },
   { section:'b5', title:'Windsor AI — Meta Ads', tags:'windsor meta ads facebook anúncio campanha roas cpa tráfego', desc:'Análise segura de campanhas Meta Ads via Windsor AI' },
   { section:'b5', title:'Google Drive / Notion / Slack', tags:'google drive docs sheets notion slack gmail calendar', desc:'Conectores pra Google Workspace, Notion e Slack' },
-  { section:'b3', title:'O que é Cowork', tags:'cowork autônomo funcionário delegação tarefa sozinho trabalha', desc:'O modo onde Claude trabalha sozinho, sem ping-pong' },
+  { section:'b3', title:'Cowork vs Code', tags:'cowork code terminal autônomo delegação tarefa sozinho', desc:'Por que ir direto pro Claude Code e pular o intermediário' },
   { section:'b6', title:'Claude Code — terminal', tags:'claude code terminal instalação instalar comando', desc:'O Claude rodando no terminal com poder total' },
   { section:'b6', title:'Instalação Claude Code', tags:'instalar instalação mac windows linux powershell terminal curl', desc:'Passo a passo pra instalar o Claude Code' },
   { section:'b8', title:'O que é agente', tags:'agente autônomo funcionário missão delegação autonomia', desc:'Funcionário autônomo que executa missão do início ao fim' },
@@ -5060,7 +5033,7 @@ function showAdminMsg(text, type) {
   setTimeout(() => el.style.display = 'none', 5000);
 }
 
-const DEFAULT_PASS = 'Im3rs4oclaud3$$-saul';
+const DEFAULT_PASS = 'Im3rs4oclaud3$-saul';
 
 async function adminCreateUser() {
   const emailInput = document.getElementById('adminNewEmail');
@@ -5076,19 +5049,24 @@ async function adminCreateUser() {
     const data = await res.json();
     if (data.error) throw new Error(data.error.message || data.error);
     const userId = data.id || data.user?.id;
-    if (userId) {
-      // Ensure profile exists (trigger may not fire)
-      await sb.rpc('admin_ensure_profile', { target_id: userId, target_email: email });
-      await sb.rpc('admin_set_approved', { target_id: userId, is_approved: true });
-      showAdminMsg('Conta criada e aprovada: ' + email, 'success');
-      emailInput.value = '';
-      toggleAdminInvite();
-      await loadAdminUsers();
-    } else if (data.identities && data.identities.length === 0) {
+    if (!userId && data.identities && data.identities.length === 0) {
       showAdminMsg('Este email ja esta cadastrado', 'error');
-    } else {
-      showAdminMsg('Resposta inesperada do servidor', 'error');
+      return;
     }
+    if (!userId) {
+      showAdminMsg('Erro: resposta inesperada — ' + JSON.stringify(data).slice(0, 100), 'error');
+      return;
+    }
+    // Ensure profile exists and auto-approve
+    try {
+      await sb.rpc('admin_ensure_profile', { target_id: userId, target_email: email });
+    } catch(e) { console.warn('ensure_profile:', e); }
+    try {
+      await sb.rpc('admin_set_approved', { target_id: userId, is_approved: true });
+    } catch(e) { console.warn('set_approved:', e); }
+    showAdminMsg('Conta criada e aprovada: ' + email, 'success');
+    emailInput.value = '';
+    await loadAdminUsers();
   } catch (err) {
     showAdminMsg(err.message || 'Erro ao criar conta', 'error');
   }
