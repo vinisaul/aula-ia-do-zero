@@ -315,7 +315,8 @@ a:hover { color: var(--accent-hover); }
   </div>
   <div class="sidebar-group">
     <div class="sidebar-group-title">Extras</div>
-    <div class="sidebar-item" data-target="conectores" onclick="goToSection('conectores')"><span class="sidebar-item-num">25</span> Conectores — Lista completa</div>
+    <div class="sidebar-item" data-target="studio" onclick="goToSection('studio')"><span class="sidebar-item-num">25</span> Studio de imagem</div>
+    <div class="sidebar-item" data-target="conectores" onclick="goToSection('conectores')"><span class="sidebar-item-num">26</span> Conectores — Lista completa</div>
     <div class="sidebar-item" data-target="faq" onclick="goToSection('faq')"><span class="sidebar-item-num">FAQ</span> Perguntas frequentes</div>
     <div class="sidebar-item" data-target="troubleshooting" onclick="goToSection('troubleshooting')"><span class="sidebar-item-num">+</span> Troubleshooting</div>
   </div>
@@ -396,6 +397,7 @@ a:hover { color: var(--accent-hover); }
     <div class="day-card" onclick="goToSection('assistant')"><div class="day-card-num">22</div><div class="day-card-title">Assistente Pessoal.</div><div class="day-card-desc">Claude gerencia sua vida inteira.</div></div>
     <div class="day-card" onclick="goToSection('b15')"><div class="day-card-num">23</div><div class="day-card-title">Leeven: o megazord.</div><div class="day-card-desc">Como construí um sistema inteiro sozinho.</div></div>
     <div class="day-card" onclick="goToSection('b16')"><div class="day-card-num">24</div><div class="day-card-title">PocketSafe &amp; mais.</div><div class="day-card-desc">Outras aplicações reais.</div></div>
+    <div class="day-card" onclick="goToSection('studio')"><div class="day-card-num">25</div><div class="day-card-title">Studio de produção de imagem.</div><div class="day-card-desc">Ensaio fotográfico profissional 100% por IA.</div></div>
   </div>
   <hr>
   <h2>Pré-requisitos</h2>
@@ -3486,6 +3488,145 @@ Quer que eu rascunhe a resposta da proposta do cliente X?</code></p></div>
   </div>
 </div>
 
+<!-- ==================== BLOCO STUDIO — PRODUÇÃO DE IMAGEM ==================== -->
+<div class="section" data-section="studio">
+  <div class="section-kicker">Bloco 25 — Na prática</div>
+  <div class="section-title">Studio de produção de imagem: ensaio fotográfico profissional por IA.</div>
+  <div class="section-subtitle">Um agente coordena câmera, iluminação, cenário e composição — e o resultado parece editorial</div>
+  <hr>
+
+  <p>Um ensaio fotográfico profissional de produto custa entre <strong>R$2.000 e R$8.000</strong>. Fotógrafo, estúdio, iluminação, direção de arte, pós-produção. 10 a 20 fotos finais, 1 a 2 semanas de prazo.</p>
+  <p>Eu gero o equivalente em <strong>minutos</strong>. Sem estúdio, sem fotógrafo, sem esperar. E o resultado? Veja você:</p>
+
+  <!-- GALERIA PRINCIPAL -->
+  <h2>O resultado</h2>
+  <p style="color:var(--text-sec); margin-bottom:24px;">Todas as imagens abaixo foram geradas por IA. Nenhuma câmera real foi usada.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-bottom:32px;">
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/hero-produto.png" alt="Produto flutuando — studio shot" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/flatlay-desk.png" alt="Flat lay em mesa de madeira" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/lifestyle-cafe.png" alt="Lifestyle — café com latte art" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/lifestyle-aeroporto.png" alt="Lifestyle — aeroporto com Rimowa" style="width:100%; display:block;" loading="lazy">
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:32px;">
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/macro-bolso.png" alt="Macro — produto no bolso do jeans" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/lifestyle-bolsa.png" alt="Lifestyle — bolsa de couro em café" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/lifestyle-cachorro.png" alt="Lifestyle — golden retriever no parque" style="width:100%; display:block;" loading="lazy">
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:40px;">
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/flatlay-jeans.png" alt="Flat lay — jeans raw denim" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/flatlay-carteira.png" alt="Flat lay — carteira e café" style="width:100%; display:block;" loading="lazy">
+    </div>
+    <div style="border-radius:var(--radius); overflow:hidden;">
+      <img src="img/studio/lifestyle-carro.png" alt="Lifestyle — porta-luvas do carro" style="width:100%; display:block;" loading="lazy">
+    </div>
+  </div>
+
+  <div class="callout callout-warn" style="margin-bottom:32px;">
+    <strong>Isso não é "imagem de IA".</strong> Não é aquela estética artificial, brilhante, com mãos estranhas. É fotografia de produto com iluminação natural, grão de filme, reflexos reais, pessoas desfocadas no fundo. Parece editorial de revista — porque o processo simula um ensaio real.
+  </div>
+
+  <!-- COMO FUNCIONA -->
+  <h2>Como funciona por baixo</h2>
+  <p>O segredo não é o gerador de imagem — é o <strong>agente que coordena o ensaio</strong>. Funciona assim:</p>
+
+  <h3>1. Briefing de ensaio</h3>
+  <p>Eu descrevo o que preciso como faria com um diretor de arte: "Preciso de 10 fotos do PocketSafe pra landing page e Instagram. Quero lifestyle premium — café, viagem, dia a dia. Tom editorial, não publicitário."</p>
+
+  <h3>2. O agente monta o set</h3>
+  <p>O Claude não manda um prompt genérico pro gerador. Ele <strong>pensa como fotógrafo</strong>:</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th style="width:25%;">Decisão</th><th style="width:75%;">O que o agente define</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Câmera</strong></td><td>Sony A7III com 85mm f/1.4 pra retratos, Fuji X100V pra flat lay, Leica Q2 pra street. Cada cena tem a câmera certa.</td></tr>
+      <tr><td><strong>Lente</strong></td><td>35mm pra contexto ambiental, 50mm pra natural, 85mm pra produto isolado, macro pra detalhe.</td></tr>
+      <tr><td><strong>Iluminação</strong></td><td>Golden hour pra lifestyle outdoor, luz de janela lateral pra flat lay, iluminação de estúdio com softbox pra hero shots.</td></tr>
+      <tr><td><strong>Filme / Grão</strong></td><td>Simula Kodak Portra 400 pra tons quentes, Fuji Pro 400H pra tons frios, grão real pra evitar a "cara de IA".</td></tr>
+      <tr><td><strong>Composição</strong></td><td>Regra dos terços, leading lines, negative space. Cada enquadramento é pensado — não é "coloca o produto no centro".</td></tr>
+      <tr><td><strong>Cenário</strong></td><td>Props reais: café com latte art, Rimowa com adesivos, carteira de couro, jeans raw denim. Contexto que vende.</td></tr>
+      <tr><td><strong>Anti-IA</strong></td><td>Pessoas cortadas (sem rosto completo), reflexos em superfícies, imperfeições naturais, profundidade de campo real. Tudo pra não parecer gerado.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3. Geração com Nano Banana</h3>
+  <p>O conector <strong>Nano Banana</strong> gera a imagem direto no terminal. Sem abrir site, sem copiar prompt, sem fazer download manual. O arquivo já cai na pasta do projeto.</p>
+
+  <h3>4. Curadoria e iteração</h3>
+  <p>Gero 3-4 variações de cada cena. Escolho a melhor, peço ajustes ("mais grão", "muda o ângulo", "tira a pessoa do fundo"). Em 2-3 iterações, tenho a foto final.</p>
+
+  <!-- O PROMPT REAL -->
+  <h2>O prompt real que gera isso</h2>
+  <p>Não é "foto de um produto branco". É isso:</p>
+
+  <div class="code-block" style="margin-bottom:24px;">
+    <div class="code-block-header"><span>Prompt do agente (exemplo real)</span></div>
+    <pre style="white-space:pre-wrap; font-size:12.5px;">Medium shot, woman reaching into a camel leather tote bag on a rustic café counter.
+PocketSafe tag clipped to the bag's key ring, bulldog logo facing camera.
+Shot on Fuji X100V, f/2.0, natural window light from the left.
+Kodak Portra 400 film simulation, warm tones, visible grain.
+Background: blurred patrons, potted plants, exposed brick.
+No direct eye contact, hand slightly motion-blurred.
+Editorial lifestyle photography, not advertisement.</pre>
+  </div>
+
+  <p>Repara: tem câmera, lente, abertura, tipo de luz, filme, composição, e instruções anti-IA. Isso não é um prompt — é uma <strong>ficha técnica de ensaio fotográfico</strong>. E o agente gera isso sozinho a partir do briefing.</p>
+
+  <!-- COMPARAÇÃO DE CUSTO -->
+  <h2>A conta</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th style="width:40%;"></th><th style="width:30%;">Ensaio tradicional</th><th style="width:30%;">Studio IA</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Custo</strong></td><td>R$2.000 — R$8.000</td><td>R$0 (incluso no Claude Pro)</td></tr>
+      <tr><td><strong>Prazo</strong></td><td>1-2 semanas</td><td>30 minutos</td></tr>
+      <tr><td><strong>Fotos finais</strong></td><td>10-20</td><td>Sem limite</td></tr>
+      <tr><td><strong>Iterações</strong></td><td>1-2 (caro refazer)</td><td>Ilimitadas</td></tr>
+      <tr><td><strong>Cenários</strong></td><td>1-2 sets</td><td>Aeroporto, café, carro, parque — qualquer um</td></tr>
+      <tr><td><strong>Consistência de marca</strong></td><td>Depende do fotógrafo</td><td>100% — o agente conhece a brand guideline</td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- O STACK -->
+  <h2>O que compõe o studio</h2>
+  <ol>
+    <li><strong>Claude Code</strong> — o agente que coordena tudo. Ele é o "diretor de arte" que decide câmera, luz, composição.</li>
+    <li><strong>Nano Banana (MCP)</strong> — o gerador de imagem conectado direto no terminal.</li>
+    <li><strong>Skills de imagem</strong> — instruções que ensinam o agente a pensar como fotógrafo (anti-IA, simulação de filme, composição).</li>
+    <li><strong>Brand guideline no contexto</strong> — o agente sabe como é o produto, a logo, a paleta. Não precisa re-explicar.</li>
+    <li><strong>Cérebro (Obsidian)</strong> — referências visuais, moodboards, exemplos de fotografia que eu gostei.</li>
+  </ol>
+
+  <p>Nenhuma peça sozinha faz isso. O Nano Banana sozinho gera imagem genérica. O Claude sozinho não gera imagem. A skill sozinha é só texto. <strong>É a combinação que cria o studio.</strong></p>
+
+  <div class="callout callout-tip">
+    <strong>Isso é montável.</strong> Você não precisa saber fotografia. O agente sabe. Você só precisa descrever o que quer — "fotos do meu produto pra Instagram, estilo premium" — e ele monta o set, escolhe a câmera, e gera.
+  </div>
+
+  <div style="text-align:center; padding: 48px 0;">
+    <p style="font-size: 22px; font-weight: 800; margin-bottom: 12px;">Um ensaio fotográfico inteiro. Zero câmeras. Zero estúdio.</p>
+    <p style="color: var(--text-sec); font-size: 17px;">Só um agente que pensa como fotógrafo.</p>
+  </div>
+</div>
+
 <!-- ==================== FAQ ==================== -->
 <div class="section" data-section="faq">
   <div class="section-kicker">FAQ</div>
@@ -3530,7 +3671,7 @@ Quer que eu rascunhe a resposta da proposta do cliente X?</code></p></div>
 
 <!-- ==================== CONECTORES — LISTA COMPLETA ==================== -->
 <div class="section" data-section="conectores">
-  <div class="section-kicker">Bloco 25 — Referência</div>
+  <div class="section-kicker">Bloco 26 — Referência</div>
   <div class="section-title">Conectores.</div>
   <div class="section-subtitle">278 integrações oficiais — conecte e nunca mais exporte planilha</div>
   <hr>
@@ -4082,7 +4223,7 @@ Quer que eu rascunhe a resposta da proposta do cliente X?</code></p></div>
 </footer>
 
 <script>
-const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','conectores','faq','troubleshooting'];
+const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','conectores','faq','troubleshooting'];
 const SECTION_LABELS = {
   'home':'Início',
   'b1':'01 — Engenharia de prompt morreu',
@@ -4109,7 +4250,8 @@ const SECTION_LABELS = {
   'assistant':'22 — Assistente Pessoal',
   'b15':'23 — Leeven: o megazord',
   'b16':'24 — PocketSafe & mais',
-  'conectores':'25 — Conectores: lista completa',
+  'studio':'25 — Studio de produção de imagem',
+  'conectores':'26 — Conectores: lista completa',
   'faq':'FAQ',
   'troubleshooting':'Troubleshooting'
 };
@@ -4236,6 +4378,7 @@ const SEARCH_INDEX = [
   { section:'b1', title:'Skills, Plugins, Conectores, Agentes', tags:'vocabulário conceito skill plugin conector agente diferença', desc:'O vocabulário essencial explicado com analogias simples' },
   { section:'b13', title:'Meu setup completo', tags:'setup ferramentas uso diário obsidian github supabase vercel skills conectores', desc:'Todas as ferramentas que uso no dia a dia' },
   { section:'versus', title:'Por que não pago nenhum SaaS de IA', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago copy.ai windsurf', desc:'Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar' },
+  { section:'studio', title:'Studio de produção de imagem', tags:'studio imagem foto fotografia produto ensaio nano banana câmera iluminação geração ia lifestyle flat lay editorial', desc:'Ensaio fotográfico profissional 100% por IA — agente coordena câmera, luz e cenário' },
   { section:'faq', title:'Perguntas frequentes', tags:'faq pergunta dúvida preciso pagar programar windows dados treinar', desc:'Respostas pras dúvidas mais comuns' },
   { section:'troubleshooting', title:'Problemas comuns', tags:'erro problema instalação não funciona bug command not found', desc:'Soluções pra erros comuns de instalação e uso' },
 ];
