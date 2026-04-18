@@ -1,0 +1,29 @@
+NOTA FISCAL DE SAÍDA - PERMUTA PUBLICITÁRIA
+NF-e: 9.165
+Série: 1
+Data emissão: 18/07/2025
+
+Emitente:
+  CONEXAO DIGITAL LTDA ME
+  CNPJ: 45.123.456/0001-89
+
+Destinatário:
+  BEATRIZ SANTOS OLIVEIRA
+  CPF: 234.***.**7-12
+
+Produtos:
+  2x Fone TWS X3 Branco (FON-X3-WHT)    R$ 149,90 cada = R$ 299,80
+  3x Capinha iPhone 15 Clear (CAP-IP15-CLR) R$ 29,90 cada = R$  89,70
+
+  TOTAL NF: R$ 389,50
+  Natureza: REMESSA EM BONIFICAÇÃO (CFOP 5.910)
+
+---
+@biatechreviews - 23k seguidores (micro influencer)
+Acordo: permuta, sem pagamento em dinheiro
+Custo real dos produtos (preço de custo): ~R$ 120,00
+Entrega: 1 reels + stories
+89 cliques, 5 vendas
+ROI (sobre custo): 1150/120 = 9.58x
+ROI (sobre NF): 1150/389 = 2.95x
+OBS: micro influencer mas ROI excelente considerando custo zero de caixa

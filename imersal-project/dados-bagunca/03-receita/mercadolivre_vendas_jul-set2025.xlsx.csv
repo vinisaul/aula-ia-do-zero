@@ -1,0 +1,26 @@
+ID Venda;Data;Produto;Variação;Quantidade;Preço Unitário;Frete Comprador;Tarifa ML;Frete Vendedor;Receita Líquida;Comprador;Estado;Status
+ML-78901;03/07/2025;Capinha iPhone 15 Transparente Premium;Transparente;1;34,90;0,00;5,58;8,20;21,12;c***o;RJ;Entregue
+ML-78902;03/07/2025;Fone Bluetooth TWS X3;Preto;1;169,90;0,00;27,18;12,90;129,82;m***s;SP;Entregue
+ML-78903;05/07/2025;Película Vidro Temperado 9H iPhone 15;-;2;24,90;0,00;7,97;8,20;33,63;a***r;MG;Entregue
+ML-78904;07/07/2025;Cabo USB-C 2 Metros Reforçado;-;3;29,90;0,00;14,35;8,20;67,15;j***a;RJ;Entregue
+ML-78905;10/07/2025;Carregador Turbo 65W USB-C;-;1;99,90;0,00;15,98;12,90;71,02;r***n;PR;Entregue
+ML-78910;12/07/2025;Fone TWS X5 PRO Cancelamento Ruído;Preto;1;279,90;0,00;44,78;12,90;222,22;l***s;SP;Entregue
+ML-78911;15/07/2025;Suporte Veicular Magnético Premium;-;1;59,90;0,00;9,58;8,20;42,12;f***a;RJ;Entregue
+ML-78912;18/07/2025;Power Bank 20000mAh Carregamento Rápido;-;1;209,90;0,00;33,58;15,60;160,72;d***o;SP;Entregue
+ML-78915;20/07/2025;Capinha Samsung S24 Couro Premium;Marrom;1;79,90;0,00;12,78;8,20;58,92;p***s;RS;Entregue
+ML-78916;22/07/2025;Película Vidro Samsung S24;-;3;27,90;0,00;13,40;8,20;62,10;v***a;RJ;Entregue
+ML-79001;02/08/2025;Fone TWS X3;Branco;2;169,90;0,00;54,37;12,90;272,53;g***z;SP;Entregue
+ML-79002;05/08/2025;Capinha iPhone 15 Pro Max Premium;Couro Preto;1;89,90;0,00;14,38;8,20;67,32;t***a;RJ;Entregue
+ML-79003;08/08/2025;Carregador Wireless 15W;-;1;89,90;0,00;14,38;12,90;62,62;b***o;MG;Entregue
+ML-79004;10/08/2025;Cabo Lightning MFi 1.5m;-;2;39,90;0,00;12,77;8,20;58,83;s***l;SP;Entregue
+ML-79005;12/08/2025;Power Bank Solar 10000mAh;-;1;179,90;0,00;28,78;15,60;135,52;n***e;RJ;Entregue
+ML-79010;15/08/2025;Fone TWS X5 PRO;Branco;1;279,90;0,00;44,78;12,90;222,22;c***a;SP;Entregue
+ML-79011;18/08/2025;Kit Capinha + Película iPhone 15;-;1;44,90;0,00;7,18;8,20;29,52;m***r;RJ;Devolução - reembolso
+ML-79012;20/08/2025;Suporte Tablet Escritório;-;1;79,90;0,00;12,78;12,90;54,22;a***s;SP;Entregue
+ML-79050;01/09/2025;Fone TWS X5 PRO;Preto;2;279,90;0,00;89,57;12,90;457,33;e***o;RJ;Entregue
+ML-79051;03/09/2025;Capinha iPhone 15 Transparente;Clear;3;34,90;0,00;16,76;8,20;79,74;l***a;MG;Entregue
+ML-79052;05/09/2025;Carregador Turbo 65W;-;2;99,90;0,00;31,97;12,90;155,03;r***s;SP;Entregue
+ML-79053;08/09/2025;Power Bank 20000mAh;-;1;209,90;0,00;33,58;15,60;160,72;j***m;RJ;Entregue
+ML-79054;10/09/2025;Cabo USB-C 2m;-;4;29,90;0,00;19,14;8,20;92,26;f***o;PR;Entregue
+ML-79055;12/09/2025;Capinha Samsung S24 Couro;Navy;1;79,90;0,00;12,78;8,20;58,92;d***a;SP;Entregue
+ML-79056;15/09/2025;Película 9H iPhone 15;-;5;24,90;0,00;19,92;8,20;96,38;g***s;RJ;Entregue

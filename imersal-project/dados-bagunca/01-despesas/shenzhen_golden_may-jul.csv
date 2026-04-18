@@ -1,0 +1,24 @@
+SHENZHEN GOLDEN ELECTRONICS CO. LTD
+深圳金辉电子有限公司
+Invoice Summary - May to July 2025
+Customer: CONEXAO DIGITAL BRAZIL
+
+invoice_no;date;product;qty;unit_price_usd;total_usd;payment_status;shipping
+GE-2025-0501;2025-05-02;TWS Earbuds Model X3 (white);500;4.20;2100.00;Settled;DHL Express
+GE-2025-0502;2025-05-02;USB-C Fast Charger 65W;300;3.80;1140.00;Settled;DHL Express
+GE-2025-0515;2025-05-15;Phone Case TPU Clear - iPhone 15 series;2000;0.85;1700.00;Settled;Sea Freight
+GE-2025-0515B;2025-05-15;Screen Protector 9H Tempered;3000;0.35;1050.00;Settled;Sea Freight
+GE-2025-0601;2025-06-01;TWS Earbuds Model X3 (black);800;4.20;3360.00;Settled;Sea Freight
+GE-2025-0601;2025-06-01;Magnetic Car Mount v2;400;2.10;840.00;Settled;Sea Freight
+GE-2025-0620;2025-06-20;Power Bank 20000mAh PD;200;8.50;1700.00;Partial - $850 pending;Sea Freight
+GE-2025-0620B;2025-06-20;Lightning Cable MFi Certified 1.5m;1000;1.20;1200.00;Settled;Sea Freight
+GE-2025-0705;2025-07-05;TWS Earbuds Model X5 PRO (new);300;6.80;2040.00;Settled;Air Freight
+GE-2025-0705B;2025-07-05;Wireless Charger Pad 15W;500;3.20;1600.00;Settled;Air Freight
+GE-2025-0718;2025-07-18;Phone Case Leather Premium - Samsung S24;1000;1.90;1900.00;Outstanding;Sea Freight
+GE-2025-0718B;2025-07-18;Packaging materials & labels;1;320.00;320.00;Settled;included
+GE-2025-0730;2025-07-30;CREDIT - Defective batch X3 white (ref 0501);-50;4.20;-210.00;Credit Note;n/a
+
+TOTAL INVOICED: $18,740.00
+TOTAL SETTLED: $15,880.00
+OUTSTANDING: $2,650.00
+CREDITS: $210.00

@@ -1,0 +1,37 @@
+Order Number,Date,Customer Name,Customer Email,Product,SKU,Variant,Qty,Unit Price,Discount Code,Discount Amount,Subtotal,Shipping,Tax,Total,Payment Method,Fulfillment Status,Channel
+#10234,2025-05-03,Ana Paula Ribeiro,ana.ribeiro92@gmail.com,Capinha iPhone 15 Transparente,CAP-IP15-CLR,Clear,2,29.90,,0.00,59.80,9.90,0.00,69.70,PIX,Fulfilled,Online Store
+#10235,2025-05-03,Carlos Eduardo Martins,carlosedu_m@hotmail.com,Fone TWS X3 Branco,FON-X3-WHT,White,1,149.90,,0.00,149.90,12.90,0.00,162.80,Credit Card,Fulfilled,Online Store
+#10236,2025-05-04,Fernanda Costa Silva,fernanda.css@gmail.com,Película 9H iPhone 15,PEL-IP15-9H,,3,19.90,,0.00,59.70,9.90,0.00,69.60,PIX,Fulfilled,Online Store
+#10237,2025-05-04,João Victor Almeida,jv.almeida@outlook.com,Carregador Turbo USB-C 65W,CAR-USBC-65W,,1,89.90,BEMVINDO10,8.99,80.91,12.90,0.00,93.81,Credit Card,Fulfilled,Online Store
+#10238,2025-05-05,Maria Luiza Pereira,malu_pereira@yahoo.com.br,Capinha iPhone 15 Pro Max Premium,CAP-IP15PM-PRM,Black Leather,1,79.90,,0.00,79.90,9.90,0.00,89.80,PIX,Fulfilled,Online Store
+#10239,2025-05-06,Rafael Santos,rafaelsantos.rj@gmail.com,Fone TWS X3 Branco,FON-X3-WHT,White,1,149.90,,0.00,149.90,0.00,0.00,149.90,PIX,Fulfilled,Instagram
+#10240,2025-05-06,Beatriz Oliveira,bia.oliveira@gmail.com,Suporte Veicular Magnético,SUP-VEI-MAG,,1,49.90,,0.00,49.90,12.90,0.00,62.80,Credit Card,Fulfilled,Online Store
+#10241,2025-05-07,Lucas Gabriel Ferreira,lucasgf_97@gmail.com,Cabo USB-C 2m,CAB-USBC-2M,,2,24.90,,0.00,49.80,9.90,0.00,59.70,PIX,Fulfilled,Online Store
+#10242,2025-05-07,Juliana Mendes,ju.mendes@hotmail.com,Power Bank 20000mAh,PWR-20K-PD,,1,189.90,FRETEGRATIS,0.00,189.90,0.00,0.00,189.90,Credit Card,Fulfilled,Online Store
+#10243,2025-05-08,Pedro Henrique Costa,phcosta@gmail.com,Capinha Samsung S24 Premium,CAP-S24-PRM,Navy,1,69.90,,0.00,69.90,12.90,0.00,82.80,PIX,Fulfilled,Online Store
+#10301,2025-06-02,Ana Paula Ribeiro,ana.ribeiro92@gmail.com,Película 9H iPhone 15,PEL-IP15-9H,,5,19.90,,0.00,99.50,9.90,0.00,109.40,PIX,Fulfilled,Online Store
+#10302,2025-06-03,Thiago Rocha,thiago.rocha.rj@gmail.com,Fone TWS X3 Preto,FON-X3-BLK,Black,2,149.90,,0.00,299.80,0.00,0.00,299.80,Credit Card,Fulfilled,Instagram
+#10303,2025-06-04,Camila Nascimento,camila.nasc@outlook.com,Carregador Wireless 15W,CAR-WIR-15W,,1,79.90,,0.00,79.90,12.90,0.00,92.80,PIX,Fulfilled,Online Store
+#10304,2025-06-05,Gabriel Souza,gabriel.souza.sp@gmail.com,Cabo Lightning MFi 1.5m,CAB-LIG-MFI,,3,34.90,,0.00,104.70,9.90,0.00,114.60,Credit Card,Fulfilled,Online Store
+#10305,2025-06-06,Larissa Martins,lari.martins@gmail.com,Capinha iPhone 15 Transparente,CAP-IP15-CLR,Clear,1,29.90,INFLUENCER15,4.49,25.41,9.90,0.00,35.31,PIX,Fulfilled,Instagram
+#10306,2025-06-08,Marcos Vinícius,marcos.v.lima@hotmail.com,Fone TWS X5 PRO,FON-X5-PRO,Black,1,249.90,,0.00,249.90,0.00,0.00,249.90,Credit Card,Fulfilled,Online Store
+#10307,2025-06-10,Patricia Alves,patricia.alves@gmail.com,Suporte Tablet Escritório,SUP-TAB-ESC,,2,69.90,,0.00,139.80,12.90,0.00,152.70,PIX,Fulfilled,Online Store
+#10350,2025-07-01,Roberto Carlos Neto,robertocn@gmail.com,Fone TWS X5 PRO,FON-X5-PRO,Black,1,249.90,,0.00,249.90,12.90,0.00,262.80,Credit Card,Fulfilled,Online Store
+#10351,2025-07-02,Amanda Rodrigues,amanda.rod@outlook.com,Capinha iPhone 15 Transparente,CAP-IP15-CLR,Clear,3,29.90,JULHOQUENTE,13.47,76.23,0.00,0.00,76.23,PIX,Fulfilled,Online Store
+#10352,2025-07-03,Diego Fernandes,diegofernandes@gmail.com,Carregador Turbo USB-C 65W,CAR-USBC-65W,,2,89.90,,0.00,179.80,9.90,0.00,189.70,PIX,Fulfilled,Online Store
+#10353,2025-07-05,Isabela Santos,isa.santos.rj@gmail.com,Power Bank Solar,PWR-SOL-10K,,1,159.90,,0.00,159.90,12.90,0.00,172.80,Credit Card,Fulfilled,Online Store
+#10354,2025-07-07,Felipe Gomes,felipegomes@hotmail.com,Película 9H Samsung S24,PEL-S24-9H,,2,22.90,,0.00,45.80,9.90,0.00,55.70,PIX,Fulfilled,Online Store
+#10355,2025-07-10,Vanessa Lima,vanessa.lima@gmail.com,Fone TWS X3 Preto,FON-X3-BLK,Black,1,149.90,INFLUENCER15,22.49,127.41,0.00,0.00,127.41,PIX,Fulfilled,Instagram
+#10356,2025-07-12,Anderson Oliveira,anderson.o@gmail.com,Capinha Samsung S24 Premium,CAP-S24-PRM,Brown,1,69.90,,0.00,69.90,12.90,0.00,82.80,Credit Card,Fulfilled,Online Store
+#10400,2025-08-01,Priscila Ramos,priscila.ramos@gmail.com,Fone TWS X5 PRO,FON-X5-PRO,White,2,249.90,,0.00,499.80,0.00,0.00,499.80,Credit Card,Fulfilled,Online Store
+#10401,2025-08-03,Renato Barbosa,renato.b@outlook.com,Carregador Wireless 15W,CAR-WIR-15W,,1,79.90,,0.00,79.90,9.90,0.00,89.80,PIX,Fulfilled,Online Store
+#10402,2025-08-05,Tatiane Souza,tati.souza@gmail.com,Capinha iPhone 15 Transparente,CAP-IP15-CLR,Clear,4,29.90,AGOSTO20,23.92,95.68,0.00,0.00,95.68,PIX,Fulfilled,Online Store
+#10403,2025-08-07,Bruno Nascimento,bruno.nasc.tech@gmail.com,Cabo USB-C 2m,CAB-USBC-2M,,5,24.90,,0.00,124.50,9.90,0.00,134.40,Credit Card,Fulfilled,Online Store
+#10404,2025-08-10,Aline Costa,aline.costa.rj@gmail.com,Power Bank 20000mAh,PWR-20K-PD,,1,189.90,FRETEGRATIS,0.00,189.90,0.00,0.00,189.90,PIX,Fulfilled,Online Store
+#10405,2025-08-12,Eduardo Lima,edu.lima@hotmail.com,Suporte Veicular Magnético,SUP-VEI-MAG,,2,49.90,,0.00,99.80,12.90,0.00,112.70,Credit Card,Fulfilled,Online Store
+#10450,2025-09-01,Carolina Almeida,carol.almeida@gmail.com,Fone TWS X5 PRO,FON-X5-PRO,Black,1,249.90,,0.00,249.90,12.90,0.00,262.80,PIX,Fulfilled,Online Store
+#10451,2025-09-03,Gustavo Pereira,gustavo.p@gmail.com,Capinha iPhone 15 Pro Max Premium,CAP-IP15PM-PRM,Brown Leather,2,79.90,,0.00,159.80,0.00,0.00,159.80,Credit Card,Fulfilled,Online Store
+#10452,2025-09-05,Natália Ferreira,natalia.f@outlook.com,Carregador Turbo USB-C 65W,CAR-USBC-65W,,1,89.90,SETEMBROTOP,13.49,76.41,9.90,0.00,86.31,PIX,Fulfilled,Online Store
+#10453,2025-09-07,Rodrigo Mendes,rodrigo.m@gmail.com,Película 9H iPhone 15,PEL-IP15-9H,,6,19.90,,0.00,119.40,9.90,0.00,129.30,PIX,Fulfilled,Online Store
+#10454,2025-09-10,Daniela Rocha,dani.rocha@gmail.com,Power Bank Solar,PWR-SOL-10K,,1,159.90,,0.00,159.90,12.90,0.00,172.80,Credit Card,Fulfilled,Online Store
+#10455,2025-09-12,Matheus Santos,matheus.s.rj@gmail.com,Fone TWS X3 Branco,FON-X3-WHT,White,1,149.90,INFLUENCER15,22.49,127.41,0.00,0.00,127.41,PIX,Fulfilled,Instagram

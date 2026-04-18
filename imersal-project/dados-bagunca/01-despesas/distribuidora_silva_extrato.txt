@@ -1,0 +1,40 @@
+============================================
+  DISTRIBUIDORA SILVA & FILHOS EIRELI
+  CNPJ: 28.445.912/0001-73
+  EXTRATO DE MOVIMENTAÇÃO
+  Ref: Maio/2025 a Agosto/2025
+============================================
+
+CLIENTE: LOJA CONEXÃO DIGITAL LTDA
+
+05/mai  NF 8.821   Lote capinhas iPhone 15 (500un)        R$ 7.500,00   ✓ pago
+05/mai  NF 8.822   Lote películas vidro sortidas (1000un)  R$ 3.200,00   ✓ pago
+12/mai  NF 8.856   Fones bluetooth genéricos (200un)       R$ 4.800,00   ✓ pago
+28/mai  NF 8.901   Carregadores turbo USB-C (300un)        R$ 5.100,00   ✓ pago
+28/mai  FRETE       Entrega lotes maio                     R$   420,00   ✓ pago
+
+10/jun  NF 8.955   Lote capinhas Samsung S24 (400un)       R$ 5.200,00   ✓ pago
+10/jun  NF 8.956   Cabos tipo-C 1m (500un)                 R$ 2.750,00   ✓ pago
+25/jun  NF 9.010   Reposição películas (800un)              R$ 2.560,00   ✓ pago
+25/jun  NF 9.011   Suportes veicular magnético (150un)      R$ 2.250,00   EM ABERTO
+30/jun  FRETE       Entrega lotes junho                    R$   380,00   ✓ pago
+
+08/jul  NF 9.102   Lote fones TWS (100un) - AMOSTRA        R$ 3.400,00   ✓ pago
+22/jul  NF 9.158   Capinhas iPhone 15 Pro Max (600un)       R$ 10.200,00  ✓ pago
+22/jul  NF 9.159   Power banks 10000mAh (200un)             R$ 7.600,00   EM ABERTO
+31/jul  FRETE       Entrega lotes julho                    R$   450,00   ✓ pago
+
+05/ago  NF 9.220   Lote misto - reposição geral            R$ 12.300,00  ✓ pago
+05/ago  NF 9.221   Películas premium (500un)                R$ 2.800,00   ✓ pago
+19/ago  NF 9.289   Carregadores wireless (100un)            R$ 4.500,00   EM ABERTO
+19/ago  NF 9.290   Cabos lightning (300un)                  R$ 2.100,00   ✓ pago
+28/ago  FRETE       Entrega lotes agosto                   R$   410,00   ✓ pago
+28/ago  DEVOLUÇÃO  Ref NF 8.856 - 15un defeituosas         -R$   360,00  CRÉDITO
+
+============================================
+TOTAL FATURADO:     R$ 77.260,00
+TOTAL PAGO:         R$ 60.210,00
+TOTAL EM ABERTO:    R$ 14.350,00
+CRÉDITOS:           R$    360,00
+SALDO DEVEDOR:      R$ 16.690,00
+============================================

@@ -1,0 +1,24 @@
+COMPROVANTE DE TRANSFERÊNCIA PIX
+Banco: Itaú Unibanco S.A.
+
+Data: 22/08/2025 14:55
+ID transação: E60746948202508221455mN8r6tX
+
+Pagador:
+  CONEXAO DIGITAL LTDA ME
+  CNPJ: 45.123.456/0001-89
+
+Recebedor:
+  MARIANA LOPES DE SOUZA
+  CPF: 098.***.**1-34
+  Chave PIX: (21) 99234-5678
+
+Valor: R$ 2.200,00
+Descrição: PGTO PUBLI AGO - RENEGOCIADO
+
+---
+@casesemais - 82k seg
+Valor renegociado: de R$ 2.800 pra R$ 2.200
+Entrega: 1 reels
+345 cliques, 18 vendas
+ROI: 1.88x — melhorou um pouco vs julho (1.58x) mas ainda abaixo de maio (2.3x)

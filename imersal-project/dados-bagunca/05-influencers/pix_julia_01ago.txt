@@ -1,0 +1,24 @@
+COMPROVANTE DE TRANSFERÊNCIA PIX
+Banco: Itaú Unibanco S.A.
+
+Data: 01/08/2025 08:30
+ID transação: E60746948202508010830jK5n3wP
+
+Pagador:
+  CONEXAO DIGITAL LTDA ME
+  CNPJ: 45.123.456/0001-89
+
+Recebedor:
+  JULIA FERREIRA PRODUÇÕES DE CONTEÚDO LTDA
+  CNPJ: 52.891.034/0001-56
+  Chave PIX: 52891034000156
+
+Valor: R$ 4.000,00
+Descrição: PACOTE TRIMESTRAL - PARCELA 1/2
+
+---
+@gadgetsdaju - 128k seg
+Contrato: pacote trimestral ago-out
+Entrega: 1 vídeo YT + 3 reels + 5 stories/mês
+Valor total: R$ 8.000,00 (2x de R$ 4.000)
+2a parcela: 01/09/2025

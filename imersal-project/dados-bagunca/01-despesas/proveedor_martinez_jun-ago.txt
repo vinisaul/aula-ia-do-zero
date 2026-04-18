@@ -1,0 +1,35 @@
+───────────────────────────────────────────
+ MARTINEZ IMPORTACIONES S.A. DE C.V.
+ RFC: MIM-180923-QR5
+ Estado de Cuenta - Cliente #BR-0042
+ Período: Junio - Agosto 2025
+───────────────────────────────────────────
+
+CLIENTE: CONEXÃO DIGITAL (BRASIL)
+CONTACTO: Vinícius
+
+Fecha       | Factura    | Concepto                              | Monto (MXN)  | Estado
+------------|------------|---------------------------------------|-------------|--------
+02/06/2025  | F-4401     | Fundas silicona iPhone (1500 pz)      | 45,000.00   | PAGADO
+02/06/2025  | F-4402     | Audífonos inalámbricos lote A (200pz) | 28,000.00   | PAGADO
+15/06/2025  | F-4418     | Cables datos USB-C 2m (800 pz)        | 12,800.00   | PAGADO
+15/06/2025  | F-4419     | Envío internacional DHL               |  3,200.00   | PAGADO
+30/06/2025  | F-4440     | Protectores pantalla mixtos (2000 pz) | 18,000.00   | PAGADO
+10/07/2025  | F-4461     | Fundas premium cuero Samsung (500 pz) | 35,000.00   | PAGADO
+10/07/2025  | F-4462     | Soportes tablet escritorio (100 pz)   |  8,500.00   | PENDIENTE
+25/07/2025  | F-4488     | Reposición audífonos lote B (300 pz)  | 42,000.00   | PAGADO
+25/07/2025  | F-4489     | Envío internacional Fedex             |  4,100.00   | PAGADO
+08/08/2025  | F-4510     | Cargadores inalámbricos (250 pz)      | 22,500.00   | PENDIENTE
+08/08/2025  | F-4511     | Power banks solares (50 pz)           | 12,500.00   | PAGADO
+22/08/2025  | F-4538     | Lote mixto accesorios Q3              | 58,000.00   | PARCIAL (30k pagado)
+22/08/2025  | NOTA CRED  | Devolución fundas defectuosas ref 4401| -3,500.00   | CRÉDITO
+
+───────────────────────────────────────────
+TOTAL FACTURADO:    MXN  286,100.00
+TOTAL PAGADO:       MXN  196,600.00
+PENDIENTE:          MXN   59,000.00
+PARCIAL:            MXN   28,000.00
+CRÉDITOS:           MXN    3,500.00
+───────────────────────────────────────────
+Tipo de cambio referencia: 1 MXN ≈ 0.30 BRL
+───────────────────────────────────────────

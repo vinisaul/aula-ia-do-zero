@@ -1,0 +1,24 @@
+COMPROVANTE DE TRANSFERÊNCIA PIX
+Banco: Itaú Unibanco S.A.
+
+Data: 05/07/2025 16:22
+ID transação: E60746948202507051622cD7k4pW
+
+Pagador:
+  CONEXAO DIGITAL LTDA ME
+  CNPJ: 45.123.456/0001-89
+
+Recebedor:
+  MARIANA LOPES DE SOUZA
+  CPF: 098.***.**1-34
+  Chave PIX: (21) 99234-5678
+
+Valor: R$ 3.200,00
+Descrição: PGTO PUBLI JUL - CAMPANHA INVERNO
+
+---
+@casesemais - 82k seg
+Entrega: 2 reels + 5 stories (campanha inverno)
+489 cliques, 22 vendas
+ROI: 1.58x — CAIU em relação a maio (era 2.3x)
+OBS Juliana: renegociar valor, performance não justifica 3.2k

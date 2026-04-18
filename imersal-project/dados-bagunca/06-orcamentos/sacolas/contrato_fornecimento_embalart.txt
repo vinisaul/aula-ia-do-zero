@@ -1,0 +1,59 @@
+CONTRATO DE FORNECIMENTO DE EMBALAGENS
+CONTRATO Nº 2025/087
+
+CONTRATANTE: CONEXAO DIGITAL LTDA ME
+CNPJ: 45.123.456/0001-89
+
+CONTRATADA: EMBALART INDÚSTRIA E COMÉRCIO LTDA
+CNPJ: 28.901.234/0001-56
+
+Data de assinatura: 01/07/2025
+
+CLÁUSULA 1ª - OBJETO
+Fornecimento exclusivo de sacolas personalizadas para a CONTRATANTE.
+
+CLÁUSULA 2ª - PREÇOS E QUANTIDADES
+2.1 Sacola kraft personalizada pequena (20x15x8cm):
+    Preço unitário: R$ 0,68
+    Pedido mínimo trimestral: 3.000 unidades
+2.2 Sacola kraft personalizada média (25x20x10cm):
+    Preço unitário: R$ 0,92
+    Pedido mínimo trimestral: 1.000 unidades
+
+CLÁUSULA 3ª - VIGÊNCIA
+3.1 Este contrato tem vigência de 24 (vinte e quatro) meses a partir
+    da data de assinatura.
+3.2 O contrato será AUTOMATICAMENTE RENOVADO por igual período, salvo
+    manifestação contrária com antecedência mínima de 90 (noventa) dias
+    do término da vigência.
+
+CLÁUSULA 4ª - REAJUSTE
+4.1 Os preços serão reajustados a cada 6 (seis) meses pelo IGPM
+    acumulado do período, acrescido de 2% (dois por cento) de margem
+    de segurança.
+
+CLÁUSULA 5ª - EXCLUSIVIDADE
+5.1 A CONTRATANTE se compromete a adquirir sacolas EXCLUSIVAMENTE da
+    CONTRATADA durante a vigência deste contrato.
+5.2 A compra de sacolas de outros fornecedores configura quebra
+    contratual.
+
+CLÁUSULA 6ª - MULTA RESCISÓRIA
+6.1 Em caso de rescisão antecipada por parte da CONTRATANTE, será devida
+    multa equivalente ao valor dos pedidos mínimos restantes até o fim
+    da vigência.
+    Exemplo: se rescindir com 12 meses restantes, multa = 4 trimestres x
+    (3.000 x R$0,68 + 1.000 x R$0,92) = 4 x R$ 2.960 = R$ 11.840,00
+
+CLÁUSULA 7ª - PAGAMENTO
+7.1 Pagamento em até 15 dias após a entrega, via boleto bancário.
+7.2 Atraso superior a 5 dias: multa de 2% + juros de 1% ao mês.
+
+CLÁUSULA 8ª - ENTREGA
+8.1 Prazo de entrega: 20 dias úteis após confirmação do pedido.
+8.2 Frete por conta da CONTRATANTE.
+
+___________________________          ___________________________
+CONEXAO DIGITAL LTDA ME              EMBALART IND. E COM. LTDA
+Vinícius Saul                        Roberto Almeida
+CPF: xxx.xxx.xxx-xx                  CPF: xxx.xxx.xxx-xx

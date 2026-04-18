@@ -1,0 +1,62 @@
+CONEXÃO DIGITAL LTDA - ME
+CNPJ: 45.123.456/0001-89
+Simples Nacional - Anexo I (Comércio)
+
+CONTROLE TRIBUTÁRIO - 2025
+Responsável: Escritório Contábil Ferreira & Associados
+Contato: Dr. Marcelo (21) 3456-7890
+
+───────────────────────────────────────
+FATURAMENTO MENSAL E DAS
+───────────────────────────────────────
+
+Jan/2025  Fat: R$ 52.340,00  DAS: R$ 2.094,00  Venc: 20/02  ✓ pago 18/02
+Fev/2025  Fat: R$ 48.120,00  DAS: R$ 1.925,00  Venc: 20/03  ✓ pago 20/03
+Mar/2025  Fat: R$ 55.890,00  DAS: R$ 2.236,00  Venc: 20/04  ✓ pago 19/04
+Abr/2025  Fat: R$ 61.200,00  DAS: R$ 2.448,00  Venc: 20/05  ✓ pago 20/05
+Mai/2025  Fat: R$ 78.430,00  DAS: R$ 3.137,00  Venc: 20/06  ✓ pago 18/06
+Jun/2025  Fat: R$ 72.560,00  DAS: R$ 2.902,00  Venc: 20/07  ✓ pago 21/07 (1 dia atraso, multa R$ 29,02)
+Jul/2025  Fat: R$ 68.900,00  DAS: R$ 2.756,00  Venc: 20/08  ✓ pago 20/08
+Ago/2025  Fat: R$ 82.340,00  DAS: R$ 3.294,00  Venc: 20/09  ✓ pago 19/09
+Set/2025  Fat: R$ 85.210,00  DAS: R$ 3.408,00  Venc: 20/10  ✓ pago 17/10
+
+───────────────────────────────────────
+FATURAMENTO ACUMULADO 12 MESES: R$ 718.450,00
+Alíquota efetiva Simples: ~4.0%
+Faixa: 2a faixa Anexo I (de 360k a 720k)
+OBS: ATENÇÃO - próximo do limite da 3a faixa
+───────────────────────────────────────
+
+ICMS-ST (Substituição Tributária)
+Produtos importados: ICMS-ST recolhido na entrada
+Mai/2025: R$ 3.420,00 (ref importação Shenzhen)
+Jun/2025: R$ 2.890,00 (ref importação Shenzhen + Martinez)
+Jul/2025: R$ 4.150,00 (ref Pacific Trading container #442 e #443)
+Ago/2025: R$ 3.780,00 (ref Pacific Trading + Martinez)
+Set/2025: R$ 5.230,00 (ref Pacific Trading containers #447 e #448)
+
+───────────────────────────────────────
+DIFAL (Diferencial de Alíquota)
+Vendas interestaduais (Shopify para fora do RJ):
+Mai: R$ 412,00
+Jun: R$ 389,00
+Jul: R$ 356,00
+Ago: R$ 478,00
+Set: R$ 523,00
+───────────────────────────────────────
+
+ISS (não aplicável - comércio)
+
+───────────────────────────────────────
+TAXA DE LICENÇA MUNICIPAL: R$ 1.200,00/ano (pago jan/2025)
+ALVARÁ: vigente até 31/12/2025
+CERTIFICADO DIGITAL: e-CNPJ A1 vence 15/03/2026
+───────────────────────────────────────
+
+RESUMO CUSTOS TRIBUTÁRIOS MAI-SET/2025
+DAS:        R$ 15.497,00
+ICMS-ST:    R$ 19.470,00
+DIFAL:      R$  2.158,00
+Multas:     R$     29,02
+TOTAL:      R$ 37.154,02
+───────────────────────────────────────

@@ -1,0 +1,23 @@
+COMPROVANTE DE TRANSFERÊNCIA PIX
+Banco: Itaú Unibanco S.A.
+
+Data: 10/09/2025 13:20
+ID transação: E60746948202509101320sT4x9cF
+
+Pagador:
+  CONEXAO DIGITAL LTDA ME
+  CNPJ: 45.123.456/0001-89
+
+Recebedor:
+  BRUNO NASCIMENTO DA SILVA
+  CPF: 142.***.**9-90
+  Chave PIX: bruno.nasc.tech@gmail.com
+
+Valor: R$ 2.000,00
+Descrição: PGTO PUBLI SET - SEMANA CONSUMIDOR
+
+---
+@techdobruno - 45k seg
+Entrega: 2 reels (semana do consumidor)
+534 cliques, 24 vendas
+ROI: 2.76x — melhor mês dele
