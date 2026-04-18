@@ -403,30 +403,6 @@ a:hover { color: var(--accent-hover); }
   </div>
 </div>
 
-<!-- ADMIN MODAL -->
-<div class="admin-modal hidden" id="adminModal" onclick="if(event.target===this)this.classList.add('hidden')">
-  <div class="admin-panel">
-    <div class="admin-header">
-      <div>
-        <h2>Painel Admin</h2>
-        <div class="admin-header-sub">Controle de acesso e seguranca</div>
-      </div>
-      <button class="admin-close" onclick="document.getElementById('adminModal').classList.add('hidden')">&times;</button>
-    </div>
-    <div class="admin-body">
-      <div class="admin-invite-bar">
-        <span class="admin-count" id="adminCount">0 usuarios</span>
-        <button class="admin-invite-btn" id="adminInviteToggle" onclick="toggleAdminInvite()">+ Criar conta</button>
-      </div>
-      <div class="admin-invite-form" id="adminInviteForm" style="display:none;">
-        <input type="email" id="adminNewEmail" placeholder="email@participante.com">
-        <button onclick="adminCreateUser()">Criar</button>
-      </div>
-      <div id="adminMsg" style="display:none;"></div>
-      <div id="adminList"></div>
-    </div>
-  </div>
-</div>
 
 <!-- CHANGE PASSWORD MODAL -->
 <div class="pwd-modal hidden" id="pwdModal" onclick="if(event.target===this)this.classList.add('hidden')">
@@ -517,7 +493,7 @@ a:hover { color: var(--accent-hover); }
     <div class="header-auth" id="headerAuth">
       <span class="header-user" id="headerUser"></span>
       <button class="header-auth-btn" id="btnPwd" style="display:none" onclick="document.getElementById('pwdModal').classList.remove('hidden')">Senha</button>
-      <button class="header-auth-btn header-admin-btn" id="btnAdmin" style="display:none" onclick="openAdmin()">Admin</button>
+      <button class="header-auth-btn header-admin-btn" id="btnAdmin" style="display:none" onclick="goToSection('admin')">Admin</button>
       <button class="header-auth-btn" id="btnLogout" style="display:none" onclick="doLogout()">Sair</button>
     </div>
   </div>
@@ -3895,11 +3871,11 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
 <div class="section" data-section="kit">
   <div class="section-kicker">Bloco 27 — Setup</div>
   <div class="section-title">Kit de Ferramentas: tudo num ZIP.</div>
-  <div class="section-subtitle">156 arquivos. Baixou, descompactou, rodou. Pronto pra trabalhar.</div>
+  <div class="section-subtitle">430 arquivos. Baixou, descompactou, rodou. Pronto pra trabalhar.</div>
   <hr>
 
   <h2>O que vem no kit</h2>
-  <p>Um arquivo ZIP de 453KB com <strong>156 arquivos</strong> que transformam qualquer Claude Code numa máquina de trabalho profissional. Sem brincadeira — é o mesmo ferramental que eu uso todo dia.</p>
+  <p>Um arquivo ZIP de 1.2MB com <strong>430 arquivos</strong> que transformam qualquer Claude Code numa máquina de trabalho profissional. Sem brincadeira — é o mesmo ferramental que eu uso todo dia.</p>
 
   <div class="table-wrap"><table>
     <thead><tr><th>Pasta</th><th>Qtd</th><th>O que é</th></tr></thead>
@@ -3907,11 +3883,17 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
       <tr><td><strong>CLAUDE.md</strong></td><td>1</td><td>Instruções globais — o Claude Code lê automaticamente quando abre na pasta</td></tr>
       <tr><td><strong>skill-saul.md</strong></td><td>1</td><td>Skill mestre com TODO o conhecimento deste site — conceitos, ferramentas, fluxos, setup</td></tr>
       <tr><td><strong>setup.sh</strong></td><td>1</td><td>Script que instala plugins, verifica estrutura e mostra checklist de conectores</td></tr>
-      <tr><td><strong>.claude/agents/</strong></td><td>6</td><td>Agentes autônomos prontos: analista financeiro, pesquisador de leads, copywriter, designer, briefing executivo, analista de ads</td></tr>
+      <tr><td><strong>.claude/agents/</strong></td><td>6</td><td>Agentes autônomos: analista financeiro, pesquisador de leads, copywriter, designer, briefing executivo, analista de ads</td></tr>
+      <tr><td><strong>.claude/squads/</strong></td><td>4</td><td>Equipes coordenadas de múltiplos agentes: squad-marketing (copy+design+ads), squad-business (financeiro+leads+briefing), squad-ecommerce (time completo + 14 guias EDP), squad-growth (experimentos de crescimento)</td></tr>
       <tr><td><strong>.claude/commands/</strong></td><td>11</td><td>Slash commands: /analise-completa, /dashboard, /despesas, /receita, /leads, /ads, /influencers, /orcamentos, /briefing, /deploy, /setup</td></tr>
+      <tr><td><strong>plugins/superpowers/</strong></td><td>18</td><td>14 skills avançadas (brainstorming, subagentes paralelos, TDD, debugging sistemático, code review, git worktrees, planos de execução) + 1 agente (code-reviewer) + 3 comandos (/brainstorm, /execute-plan, /write-plan)</td></tr>
+      <tr><td><strong>plugins/vercel/</strong></td><td>3</td><td>3 agentes especializados: ai-architect (apps com IA), deployment-expert (CI/CD, deploy, rollback), performance-optimizer (Core Web Vitals, cache, edge)</td></tr>
+      <tr><td><strong>plugins/firecrawl/</strong></td><td>9</td><td>8 skills de web scraping/crawling/search (scrape, crawl, search, map, download, agent, instruct, CLI) + 1 comando (/skill-gen)</td></tr>
+      <tr><td><strong>plugins/skill-creator/</strong></td><td>5</td><td>Cria skills profissionais do zero + 3 agentes de análise (analyzer, comparator, grader) + schemas de referência</td></tr>
       <tr><td><strong>skills-essenciais/</strong></td><td>12</td><td>frontend-design, copywriting, UI/UX pro max, KPI dashboard, write-landing, content-strategy, sales-enablement, lead-magnets, customer-research, transcribe, skill-creator, web-design-guidelines</td></tr>
       <tr><td><strong>skills-custom/</strong></td><td>6</td><td>ads-analyst, ad-creative-analysis, meta-ads-extractor, landing-page-analysis, cortes-de-video, transcribe</td></tr>
       <tr><td><strong>skills-extras/</strong></td><td>26</td><td>marketing-psychology, pricing-strategy, SEO audit, email-sequence, brand-guidelines, mobile-design, PDF/DOCX/XLSX manipulation, web-search, firecrawl, e mais 16</td></tr>
+      <tr><td><strong>skills-global/</strong></td><td>102</td><td>CRO (5 skills), Supabase, Firecrawl (8), shadcn-ui, programmatic-seo, nano-banana (geração de imagem), WhatsApp, apresentações (12), Next.js, real-estate, product-photography, e mais 60+</td></tr>
       <tr><td><strong>agentes-edp/</strong></td><td>14</td><td>Guias de inteligência de e-commerce profissional: planejamento anual, ações comerciais, matriz criativa, tráfego estratégico, CRO/UX, social commerce, email marketing, funis, SEO/AEO, grupos VIP, CRM, automações, pesquisa de público</td></tr>
       <tr><td><strong>cerebro/</strong></td><td>29</td><td>Base de conhecimento curada: vendas, marketing, copy, growth, design, branding, IA — frameworks, scripts, checklists</td></tr>
       <tr><td><strong>dados-bagunca/</strong></td><td>47</td><td>Dados reais de empresa fictícia pra demo: 4 fornecedores em 3 idiomas/moedas, extrato bancário, tributos, vendas de 3 canais, leads, 12 comprovantes de influencers, relatórios de 3 plataformas de ads, 8 subpastas de orçamentos com problemas escondidos</td></tr>
@@ -4055,7 +4037,7 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
 
   <div class="card" style="text-align:center; padding: 28px 20px;">
     <p style="font-family:'SF Mono','Fira Code',monospace; font-size:13px; line-height:2.4; margin:0; color: var(--text-pri);">
-<strong style="color:var(--text-sec);">ZIP sozinho</strong> — 44 skills + 14 guias + 6 agentes + 11 comandos + cérebro<br>
+<strong style="color:var(--text-sec);">ZIP sozinho</strong> — 150+ skills + 4 plugins + 14 guias + 6 agentes + 4 squads + 11 comandos + cérebro<br>
 &darr;<br>
 <strong style="color:var(--accent);">+ Conectores</strong> — acessa Gmail, Drive, Notion, Slack, GitHub, Vercel, Supabase<br>
 &darr;<br>
@@ -4674,6 +4656,45 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
   </div>
 </div>
 
+<!-- ==================== ADMIN ==================== -->
+<div class="section" data-section="admin" id="adminSection" style="display:none;">
+  <div class="section-kicker">Admin</div>
+  <div class="section-title">Painel de controle.</div>
+  <div class="section-subtitle">Gestao de usuarios e seguranca</div>
+  <hr>
+
+  <!-- Stats -->
+  <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+    <div class="card" style="flex:1;min-width:140px;text-align:center;">
+      <div style="font-size:28px;font-weight:900;color:var(--accent);" id="adminStatTotal">0</div>
+      <div style="font-size:11px;font-weight:700;color:var(--text-ter);text-transform:uppercase;letter-spacing:1px;">Total</div>
+    </div>
+    <div class="card" style="flex:1;min-width:140px;text-align:center;">
+      <div style="font-size:28px;font-weight:900;color:#38a169;" id="adminStatActive">0</div>
+      <div style="font-size:11px;font-weight:700;color:var(--text-ter);text-transform:uppercase;letter-spacing:1px;">Ativos</div>
+    </div>
+    <div class="card" style="flex:1;min-width:140px;text-align:center;">
+      <div style="font-size:28px;font-weight:900;color:#d69e2e;" id="adminStatPending">0</div>
+      <div style="font-size:11px;font-weight:700;color:var(--text-ter);text-transform:uppercase;letter-spacing:1px;">Pendentes</div>
+    </div>
+  </div>
+
+  <!-- Create user -->
+  <h2>Criar conta</h2>
+  <div class="card" style="margin-bottom:24px;">
+    <p style="font-size:13px;color:var(--text-ter);margin-bottom:12px;">Senha padrao: <code>Im3rs4oclaud3$$-saul</code> — o participante troca depois.</p>
+    <div style="display:flex;gap:10px;">
+      <input type="email" id="adminNewEmail" placeholder="email@participante.com" style="flex:1;font-family:var(--font);font-size:14px;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);outline:none;">
+      <button onclick="adminCreateUser()" style="font-family:var(--font);font-size:13px;font-weight:700;padding:10px 22px;border:none;border-radius:var(--radius-sm);background:var(--accent);color:#fff;cursor:pointer;white-space:nowrap;">Criar conta</button>
+    </div>
+    <div id="adminMsg" style="display:none;margin-top:10px;"></div>
+  </div>
+
+  <!-- Users table -->
+  <h2>Usuarios</h2>
+  <div id="adminList"><div class="disc-empty">Carregando...</div></div>
+</div>
+
 </main>
 
 <!-- FOOTER NAV -->
@@ -4686,7 +4707,7 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
 </footer>
 
 <script>
-const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','discussions','faq','troubleshooting'];
+const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','discussions','faq','troubleshooting','admin'];
 const SECTION_LABELS = {
   'home':'Início',
   'b1':'01 — Engenharia de prompt morreu',
@@ -4718,7 +4739,8 @@ const SECTION_LABELS = {
   'conectores':'28 — Conectores: lista completa',
   'discussions':'Discussions',
   'faq':'FAQ',
-  'troubleshooting':'Troubleshooting'
+  'troubleshooting':'Troubleshooting',
+  'admin':'Admin'
 };
 let currentIdx = 0;
 
@@ -4735,7 +4757,10 @@ function render() {
   const id = SECTIONS[currentIdx];
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   const el = document.querySelector(`[data-section="${id}"]`);
-  if (el) el.classList.add('active');
+  if (el) {
+    el.style.display = 'block';
+    el.classList.add('active');
+  }
   document.querySelectorAll('.sidebar-item').forEach(s => s.classList.remove('active'));
   const si = document.querySelector(`.sidebar-item[data-target="${id}"]`);
   if (si) { si.classList.add('active'); si.scrollIntoView({ block: 'nearest' }); }
@@ -4746,6 +4771,9 @@ function render() {
   if (bc) bc.textContent = SECTION_LABELS[id] || '';
   updateProgress();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Load admin data when navigating to admin page
+  if (id === 'admin' && !adminLoaded) { adminLoaded = true; loadAdminUsers(); }
+  if (id === 'admin') loadAdminUsers();
 }
 
 function updateProgress() {
@@ -4844,7 +4872,7 @@ const SEARCH_INDEX = [
   { section:'b13', title:'Meu setup completo', tags:'setup ferramentas uso diário obsidian github supabase vercel skills conectores', desc:'Todas as ferramentas que uso no dia a dia' },
   { section:'versus', title:'Por que não pago nenhum SaaS de IA', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago copy.ai windsurf', desc:'Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar' },
   { section:'studio', title:'Studio de produção de imagem', tags:'studio imagem foto fotografia produto ensaio nano banana câmera iluminação geração ia lifestyle flat lay editorial', desc:'Ensaio fotográfico profissional 100% por IA — agente coordena câmera, luz e cenário' },
-  { section:'kit', title:'Kit de Ferramentas', tags:'kit zip download ferramentas skills agentes comandos cerebro setup instalar configurar poder conectar obsidian edp ecommerce', desc:'156 arquivos num ZIP — skills, agentes, comandos, guias EDP, cérebro, dados de demo' },
+  { section:'kit', title:'Kit de Ferramentas', tags:'kit zip download ferramentas skills agentes squads plugins subagentes comandos cerebro setup instalar configurar poder conectar obsidian edp ecommerce', desc:'430 arquivos num ZIP — 150+ skills, 4 plugins, 4 squads, 6 agentes, comandos, guias EDP, cérebro, dados de demo' },
   { section:'discussions', title:'Discussions', tags:'discussão comunidade fórum conversa participantes dúvida ideia troca', desc:'Espaço de troca entre participantes — dúvidas, ideias, descobertas' },
   { section:'faq', title:'Perguntas frequentes', tags:'faq pergunta dúvida preciso pagar programar windows dados treinar', desc:'Respostas pras dúvidas mais comuns' },
   { section:'troubleshooting', title:'Problemas comuns', tags:'erro problema instalação não funciona bug command not found', desc:'Soluções pra erros comuns de instalação e uso' },
@@ -5019,19 +5047,7 @@ async function doLogout() {
 }
 
 // ===== ADMIN =====
-async function openAdmin() {
-  document.getElementById('adminModal').classList.remove('hidden');
-  await loadAdminUsers();
-}
-
-let adminInviteOpen = false;
-function toggleAdminInvite() {
-  adminInviteOpen = !adminInviteOpen;
-  document.getElementById('adminInviteForm').style.display = adminInviteOpen ? 'flex' : 'none';
-  const btn = document.getElementById('adminInviteToggle');
-  if (adminInviteOpen) { btn.textContent = 'Cancelar'; btn.classList.add('secondary'); }
-  else { btn.textContent = '+ Criar conta'; btn.classList.remove('secondary'); }
-}
+let adminLoaded = false;
 
 function showAdminMsg(text, type) {
   const el = document.getElementById('adminMsg');
@@ -5084,15 +5100,20 @@ function fmtDate(d) {
 async function loadAdminUsers() {
   const { data: users, error } = await sb.rpc('get_all_profiles_admin');
   const container = document.getElementById('adminList');
-  const countEl = document.getElementById('adminCount');
 
   if (error || !users || users.length === 0) {
-    container.innerHTML = '<div class="admin-empty">Nenhum usuario cadastrado.</div>';
-    countEl.textContent = '0 usuarios';
+    container.innerHTML = '<div class="disc-empty">Nenhum usuario cadastrado.</div>';
+    document.getElementById('adminStatTotal').textContent = '0';
+    document.getElementById('adminStatActive').textContent = '0';
+    document.getElementById('adminStatPending').textContent = '0';
     return;
   }
 
-  countEl.textContent = users.length + ' usuario' + (users.length !== 1 ? 's' : '');
+  const active = users.filter(u => u.approved);
+  const pending = users.filter(u => !u.approved);
+  document.getElementById('adminStatTotal').textContent = users.length;
+  document.getElementById('adminStatActive').textContent = active.length;
+  document.getElementById('adminStatPending').textContent = pending.length;
 
   container.innerHTML = `<div class="admin-table">
     <div class="admin-table-head">
