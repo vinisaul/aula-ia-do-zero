@@ -4759,7 +4759,7 @@ function prevSection() { if (currentIdx > 0) { currentIdx--; render(); } }
 
 function render() {
   const id = SECTIONS[currentIdx];
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.section').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
   const el = document.querySelector(`[data-section="${id}"]`);
   if (el) {
     el.style.display = 'block';
