@@ -4914,21 +4914,9 @@ async function checkSession() {
 
   currentUser = session.user;
 
-  // Fetch profile (try direct fetch, fallback to RPC if RLS blocks)
-  let profile = null;
-  const { data: profileData, error: profileErr } = await sb.from('profiles').select('*').eq('id', currentUser.id).single();
-  profile = profileData;
-
-  // If RLS blocked the read, try fetching by email via REST
-  if (!profile && profileErr) {
-    console.warn('Profile fetch error:', profileErr);
-    // Retry with a fresh token
-    const { data: { session: freshSession } } = await sb.auth.getSession();
-    if (freshSession) {
-      const retryRes = await sb.from('profiles').select('*').eq('id', freshSession.user.id).maybeSingle();
-      profile = retryRes.data;
-    }
-  }
+  // Fetch profile via SECURITY DEFINER function (bypasses RLS)
+  const { data: profile, error: profileErr } = await sb.rpc('get_my_profile');
+  if (profileErr) console.warn('Profile fetch error:', profileErr);
 
   currentProfile = profile;
 
