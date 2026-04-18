@@ -293,25 +293,64 @@ a:hover { color: var(--accent-hover); }
 .header-admin-btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
 
 /* ===== ADMIN MODAL ===== */
+/* ===== ADMIN MODAL ===== */
 .admin-modal { position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
 .admin-modal.hidden { display: none; }
-.admin-panel { background: var(--bg); border-radius: var(--radius); max-width: 600px; width: 95%; max-height: 80vh; overflow-y: auto; padding: 32px; }
-.admin-panel h2 { margin-top: 0; margin-bottom: 20px; }
-.admin-user { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
-.admin-user:last-child { border-bottom: none; }
-.admin-user-info { display: flex; flex-direction: column; gap: 2px; }
-.admin-user-email { font-size: 14px; font-weight: 600; }
-.admin-user-date { font-size: 11px; color: var(--text-ter); }
-.admin-user-status { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-.admin-user-status.pending { color: #d69e2e; }
-.admin-user-status.approved { color: #38a169; }
-.admin-actions { display: flex; gap: 8px; }
-.admin-actions button { font-family: var(--font); font-size: 11px; font-weight: 700; padding: 6px 14px; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all 0.2s; }
+.admin-panel { background: var(--bg); border-radius: 16px; max-width: 720px; width: 95%; max-height: 85vh; overflow-y: auto; padding: 0; }
+.admin-header { padding: 24px 28px 0; display: flex; align-items: center; justify-content: space-between; }
+.admin-header h2 { font-size: 22px; font-weight: 800; margin: 0; }
+.admin-header-sub { font-size: 12px; color: var(--text-ter); margin-top: 2px; }
+.admin-close { font-family: var(--font); font-size: 18px; background: none; border: none; cursor: pointer; color: var(--text-ter); padding: 4px; line-height: 1; }
+.admin-close:hover { color: var(--text-pri); }
+.admin-body { padding: 20px 28px 28px; }
+.admin-invite-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.admin-count { font-size: 13px; color: var(--text-ter); }
+.admin-invite-btn { font-family: var(--font); font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: var(--radius-sm); border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; transition: all 0.2s; }
+.admin-invite-btn:hover { background: var(--accent-hover); }
+.admin-invite-btn.secondary { background: transparent; color: var(--text-sec); border-color: var(--border); }
+.admin-invite-form { display: flex; gap: 8px; padding: 14px 16px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; }
+.admin-invite-form input { flex: 1; font-family: var(--font); font-size: 13px; padding: 9px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text-pri); outline: none; }
+.admin-invite-form input:focus { border-color: var(--accent); }
+.admin-invite-form button { font-family: var(--font); font-size: 12px; font-weight: 700; padding: 9px 18px; border: none; border-radius: var(--radius-sm); background: var(--accent); color: #fff; cursor: pointer; white-space: nowrap; }
+.admin-msg { font-size: 12px; padding: 10px 14px; border-radius: var(--radius-sm); margin-bottom: 14px; }
+.admin-msg.success { background: rgba(56,161,105,0.08); border: 1px solid rgba(56,161,105,0.2); color: #38a169; }
+.admin-msg.error { background: rgba(229,62,62,0.08); border: 1px solid rgba(229,62,62,0.2); color: #e53e3e; }
+.admin-table { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.admin-table-head { display: flex; align-items: center; gap: 8px; padding: 10px 16px; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-ghost); background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+.admin-table-row { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.admin-table-row:last-child { border-bottom: none; }
+.admin-table-row:hover { background: var(--bg-alt); }
+.admin-col-name { flex: 1; min-width: 0; }
+.admin-col-name .name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.admin-col-name .email { font-size: 11px; color: var(--text-ter); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.admin-col-status { width: 80px; text-align: center; }
+.admin-badge { font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px; display: inline-block; }
+.admin-badge.active { background: rgba(56,161,105,0.1); color: #38a169; }
+.admin-badge.pending { background: rgba(214,158,46,0.1); color: #d69e2e; }
+.admin-badge.admin-tag { background: rgba(227,107,46,0.1); color: var(--accent); font-size: 9px; margin-left: 6px; }
+.admin-col-date { width: 90px; text-align: center; font-size: 11px; color: var(--text-ter); }
+.admin-col-actions { width: 90px; display: flex; justify-content: flex-end; gap: 4px; }
+.admin-col-actions button { font-family: var(--font); font-size: 10px; font-weight: 700; padding: 5px 10px; border-radius: 6px; border: none; cursor: pointer; transition: all 0.2s; }
 .btn-approve { background: #38a169; color: #fff; }
 .btn-approve:hover { background: #2f855a; }
 .btn-revoke { background: var(--card); color: var(--text-sec); }
-.btn-revoke:hover { background: #e53e3e; color: #fff; }
-.admin-close { float: right; font-family: var(--font); font-size: 12px; font-weight: 700; background: var(--card); border: none; padding: 6px 16px; border-radius: var(--radius-sm); cursor: pointer; color: var(--text-sec); }
+.btn-revoke:hover { background: rgba(229,62,62,0.1); color: #e53e3e; }
+.btn-delete { background: transparent; color: var(--text-ghost); }
+.btn-delete:hover { color: #e53e3e; }
+.admin-empty { padding: 40px; text-align: center; color: var(--text-ter); font-size: 13px; }
+/* ===== CHANGE PASSWORD MODAL ===== */
+.pwd-modal { position: fixed; inset: 0; z-index: 10001; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+.pwd-modal.hidden { display: none; }
+.pwd-box { background: var(--bg); border-radius: 16px; max-width: 400px; width: 95%; padding: 28px; }
+.pwd-box h3 { font-size: 18px; font-weight: 800; margin: 0 0 16px; }
+.pwd-box input { width: 100%; font-family: var(--font); font-size: 14px; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text-pri); outline: none; margin-bottom: 10px; }
+.pwd-box input:focus { border-color: var(--accent); }
+.pwd-box .auth-btn { width: 100%; font-family: var(--font); font-size: 14px; font-weight: 700; padding: 11px; border: none; border-radius: var(--radius-sm); background: var(--accent); color: #fff; cursor: pointer; margin-bottom: 10px; }
+.pwd-box .auth-btn:hover { background: var(--accent-hover); }
+.pwd-box .pwd-cancel { width: 100%; font-family: var(--font); font-size: 13px; font-weight: 600; padding: 9px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: transparent; color: var(--text-sec); cursor: pointer; }
+.pwd-msg { font-size: 12px; padding: 8px 12px; border-radius: var(--radius-sm); margin-bottom: 10px; }
+.pwd-msg.success { background: rgba(56,161,105,0.08); color: #38a169; }
+.pwd-msg.error { background: rgba(229,62,62,0.08); color: #e53e3e; }
 
 /* ===== DISCUSSIONS ===== */
 .disc-compose { background: var(--card); border-radius: var(--radius); padding: 20px; margin-bottom: 24px; }
@@ -361,25 +400,44 @@ a:hover { color: var(--accent-hover); }
     </form>
     <p class="auth-toggle" id="authToggle">Não tem conta? <a onclick="toggleAuthMode()">Criar conta</a></p>
     <p class="auth-toggle" id="authForgot"><a onclick="forgotPassword()">Esqueceu a senha?</a></p>
-    <!-- Reset password form (hidden by default) -->
-    <div id="resetForm" style="display:none;">
-      <input type="password" id="resetNewPass" placeholder="Nova senha (mínimo 6 caracteres)" minlength="6">
-      <button class="auth-btn" onclick="submitNewPassword()">Definir nova senha</button>
-    </div>
   </div>
 </div>
 
 <!-- ADMIN MODAL -->
 <div class="admin-modal hidden" id="adminModal" onclick="if(event.target===this)this.classList.add('hidden')">
   <div class="admin-panel">
-    <button class="admin-close" onclick="document.getElementById('adminModal').classList.add('hidden')">Fechar</button>
-    <h2>Gerenciar Usuários</h2>
-    <div style="display:flex;gap:8px;margin-bottom:20px;">
-      <input type="email" id="adminNewEmail" placeholder="Email do novo participante" style="flex:1;font-family:var(--font);font-size:14px;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);outline:none;">
-      <button class="btn-approve" onclick="adminCreateUser()" style="white-space:nowrap;padding:10px 18px;">Criar conta</button>
+    <div class="admin-header">
+      <div>
+        <h2>Painel Admin</h2>
+        <div class="admin-header-sub">Controle de acesso e seguranca</div>
+      </div>
+      <button class="admin-close" onclick="document.getElementById('adminModal').classList.add('hidden')">&times;</button>
     </div>
-    <div id="adminCreateMsg" style="font-size:13px;margin-bottom:16px;display:none;"></div>
-    <div id="adminList">Carregando...</div>
+    <div class="admin-body">
+      <div class="admin-invite-bar">
+        <span class="admin-count" id="adminCount">0 usuarios</span>
+        <button class="admin-invite-btn" id="adminInviteToggle" onclick="toggleAdminInvite()">+ Criar conta</button>
+      </div>
+      <div class="admin-invite-form" id="adminInviteForm" style="display:none;">
+        <input type="email" id="adminNewEmail" placeholder="email@participante.com">
+        <button onclick="adminCreateUser()">Criar</button>
+      </div>
+      <div id="adminMsg" style="display:none;"></div>
+      <div id="adminList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHANGE PASSWORD MODAL -->
+<div class="pwd-modal hidden" id="pwdModal" onclick="if(event.target===this)this.classList.add('hidden')">
+  <div class="pwd-box">
+    <h3>Trocar senha</h3>
+    <div id="pwdMsg" style="display:none;"></div>
+    <input type="password" id="pwdOld" placeholder="Senha atual">
+    <input type="password" id="pwdNew" placeholder="Nova senha (min. 6 caracteres)">
+    <input type="password" id="pwdConfirm" placeholder="Confirmar nova senha">
+    <button class="auth-btn" onclick="changePassword()">Alterar senha</button>
+    <button class="pwd-cancel" onclick="document.getElementById('pwdModal').classList.add('hidden')">Cancelar</button>
   </div>
 </div>
 
@@ -458,6 +516,7 @@ a:hover { color: var(--accent-hover); }
     </div>
     <div class="header-auth" id="headerAuth">
       <span class="header-user" id="headerUser"></span>
+      <button class="header-auth-btn" id="btnPwd" style="display:none" onclick="document.getElementById('pwdModal').classList.remove('hidden')">Senha</button>
       <button class="header-auth-btn header-admin-btn" id="btnAdmin" style="display:none" onclick="openAdmin()">Admin</button>
       <button class="header-auth-btn" id="btnLogout" style="display:none" onclick="doLogout()">Sair</button>
     </div>
@@ -4940,13 +4999,15 @@ async function checkSession() {
   // User is approved — show content
   document.getElementById('authOverlay').classList.add('hidden');
   document.getElementById('btnLogout').style.display = 'inline-block';
+  document.getElementById('btnPwd').style.display = 'inline-block';
   document.getElementById('headerUser').textContent = profile.name || currentUser.email;
 
   if (profile.role === 'admin') {
     document.getElementById('btnAdmin').style.display = 'inline-block';
   }
 
-  // Load discussions
+  // Track login + load discussions
+  trackLogin();
   loadDiscussions();
 }
 
@@ -4963,37 +5024,29 @@ async function openAdmin() {
   await loadAdminUsers();
 }
 
-async function loadAdminUsers() {
-  const { data: users } = await sb.from('profiles').select('*').order('created_at', { ascending: false });
-  const container = document.getElementById('adminList');
-  if (!users || users.length === 0) {
-    container.innerHTML = '<p style="color:var(--text-ter)">Nenhum usuário cadastrado.</p>';
-    return;
-  }
-  container.innerHTML = users.map(u => `
-    <div class="admin-user">
-      <div class="admin-user-info">
-        <span class="admin-user-email">${u.name || '(sem nome)'} — ${u.email}</span>
-        <span class="admin-user-date">${new Date(u.created_at).toLocaleDateString('pt-BR')} · <span class="admin-user-status ${u.approved ? 'approved' : 'pending'}">${u.approved ? 'Aprovado' : 'Pendente'}</span>${u.role === 'admin' ? ' · Admin' : ''}</span>
-      </div>
-      <div class="admin-actions">
-        ${!u.approved ? `<button class="btn-approve" onclick="approveUser('${u.id}')">Aprovar</button>` : `<button class="btn-revoke" onclick="revokeUser('${u.id}')">Revogar</button>`}
-      </div>
-    </div>
-  `).join('');
+let adminInviteOpen = false;
+function toggleAdminInvite() {
+  adminInviteOpen = !adminInviteOpen;
+  document.getElementById('adminInviteForm').style.display = adminInviteOpen ? 'flex' : 'none';
+  const btn = document.getElementById('adminInviteToggle');
+  if (adminInviteOpen) { btn.textContent = 'Cancelar'; btn.classList.add('secondary'); }
+  else { btn.textContent = '+ Criar conta'; btn.classList.remove('secondary'); }
+}
+
+function showAdminMsg(text, type) {
+  const el = document.getElementById('adminMsg');
+  el.className = 'admin-msg ' + type;
+  el.textContent = text;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 5000);
 }
 
 const DEFAULT_PASS = 'Im3rs4oclaud3$$-saul';
 
 async function adminCreateUser() {
   const emailInput = document.getElementById('adminNewEmail');
-  const msg = document.getElementById('adminCreateMsg');
   const email = emailInput.value.trim();
   if (!email) return;
-
-  msg.style.display = 'block';
-  msg.style.color = 'var(--text-sec)';
-  msg.textContent = 'Criando...';
 
   try {
     const res = await fetch(SUPABASE_URL + '/auth/v1/signup', {
@@ -5002,30 +5055,94 @@ async function adminCreateUser() {
       body: JSON.stringify({ email, password: DEFAULT_PASS })
     });
     const data = await res.json();
-    if (data.error || data.msg) throw new Error(data.error?.message || data.msg || 'Erro');
-    if (data.id) {
-      // Auto-approve the new user
-      await sb.from('profiles').update({ approved: true }).eq('email', email);
-      msg.style.color = '#38a169';
-      msg.textContent = 'Conta criada e aprovada: ' + email;
+    if (data.error) throw new Error(data.error.message || data.error);
+    if (data.id || data.user?.id) {
+      // Auto-approve via RPC
+      const userId = data.id || data.user.id;
+      await sb.rpc('admin_set_approved', { target_id: userId, is_approved: true });
+      showAdminMsg('Conta criada e aprovada: ' + email, 'success');
+      emailInput.value = '';
+      toggleAdminInvite();
+      await loadAdminUsers();
+    } else if (data.identities && data.identities.length === 0) {
+      showAdminMsg('Este email ja esta cadastrado', 'error');
+    } else {
+      showAdminMsg('Conta criada: ' + email, 'success');
       emailInput.value = '';
       await loadAdminUsers();
-    } else {
-      throw new Error('Resposta inesperada');
     }
   } catch (err) {
-    msg.style.color = '#e53e3e';
-    msg.textContent = err.message || 'Erro ao criar conta';
+    showAdminMsg(err.message || 'Erro ao criar conta', 'error');
   }
 }
 
+function fmtDate(d) {
+  if (!d) return '—';
+  return new Date(d).toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'2-digit', hour:'2-digit', minute:'2-digit' });
+}
+
+async function loadAdminUsers() {
+  const { data: users, error } = await sb.rpc('get_all_profiles_admin');
+  const container = document.getElementById('adminList');
+  const countEl = document.getElementById('adminCount');
+
+  if (error || !users || users.length === 0) {
+    container.innerHTML = '<div class="admin-empty">Nenhum usuario cadastrado.</div>';
+    countEl.textContent = '0 usuarios';
+    return;
+  }
+
+  countEl.textContent = users.length + ' usuario' + (users.length !== 1 ? 's' : '');
+
+  container.innerHTML = `<div class="admin-table">
+    <div class="admin-table-head">
+      <div class="admin-col-name">Usuario</div>
+      <div class="admin-col-status">Status</div>
+      <div class="admin-col-date">Criado</div>
+      <div class="admin-col-date">Ultimo acesso</div>
+      <div class="admin-col-actions">Acoes</div>
+    </div>
+    ${users.map(u => {
+      const isAdmin = u.role === 'admin';
+      return `<div class="admin-table-row">
+        <div class="admin-col-name">
+          <div class="name">${escHtml(u.name || '(sem nome)')}${isAdmin ? '<span class="admin-badge admin-tag">Admin</span>' : ''}</div>
+          <div class="email">${escHtml(u.email)}</div>
+        </div>
+        <div class="admin-col-status">
+          <span class="admin-badge ${u.approved ? 'active' : 'pending'}">${u.approved ? 'Ativo' : 'Pendente'}</span>
+        </div>
+        <div class="admin-col-date">${fmtDate(u.created_at)}</div>
+        <div class="admin-col-date">${fmtDate(u.last_login)}</div>
+        <div class="admin-col-actions">
+          ${!isAdmin ? `
+            ${!u.approved
+              ? `<button class="btn-approve" onclick="approveUser('${u.id}')">Aprovar</button>`
+              : `<button class="btn-revoke" onclick="revokeUser('${u.id}')">Revogar</button>`}
+            <button class="btn-delete" onclick="deleteUser('${u.id}','${escHtml(u.email)}')" title="Remover">&#10005;</button>
+          ` : ''}
+        </div>
+      </div>`;
+    }).join('')}
+  </div>`;
+}
+
 async function approveUser(id) {
-  await sb.from('profiles').update({ approved: true }).eq('id', id);
+  await sb.rpc('admin_set_approved', { target_id: id, is_approved: true });
+  showAdminMsg('Usuario aprovado', 'success');
   await loadAdminUsers();
 }
 
 async function revokeUser(id) {
-  await sb.from('profiles').update({ approved: false }).eq('id', id);
+  await sb.rpc('admin_set_approved', { target_id: id, is_approved: false });
+  showAdminMsg('Acesso revogado', 'success');
+  await loadAdminUsers();
+}
+
+async function deleteUser(id, email) {
+  if (!confirm('Remover permanentemente ' + email + '?')) return;
+  await sb.rpc('admin_delete_user', { target_id: id });
+  showAdminMsg(email + ' removido', 'success');
   await loadAdminUsers();
 }
 
@@ -5037,7 +5154,7 @@ async function loadDiscussions() {
 
   const container = document.getElementById('discList');
   if (!posts || posts.length === 0) {
-    container.innerHTML = '<div class="disc-empty">Nenhuma discussão ainda. Seja o primeiro a postar!</div>';
+    container.innerHTML = '<div class="disc-empty">Nenhuma discussao ainda. Seja o primeiro a postar!</div>';
     return;
   }
 
@@ -5048,8 +5165,8 @@ async function loadDiscussions() {
       .eq('discussion_id', post.id)
       .order('created_at', { ascending: true });
 
-    const authorName = post.profiles?.name || post.profiles?.email || 'Anônimo';
-    const date = new Date(post.created_at).toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    const authorName = post.profiles?.name || post.profiles?.email || 'Anonimo';
+    const date = fmtDate(post.created_at);
     const isOwner = currentUser && post.user_id === currentUser.id;
     const isAdmin = currentProfile && currentProfile.role === 'admin';
     const replyCount = replies ? replies.length : 0;
@@ -5069,8 +5186,8 @@ async function loadDiscussions() {
       ${replyCount > 0 ? `<button class="disc-toggle-replies" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">${replyCount} resposta${replyCount>1?'s':''}</button>
       <div class="disc-replies" style="display:none">
         ${replies.map(r => {
-          const rName = r.profiles?.name || r.profiles?.email || 'Anônimo';
-          const rDate = new Date(r.created_at).toLocaleDateString('pt-BR', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+          const rName = r.profiles?.name || r.profiles?.email || 'Anonimo';
+          const rDate = fmtDate(r.created_at);
           const rOwner = currentUser && r.user_id === currentUser.id;
           return `<div class="disc-reply">
             <div class="disc-reply-header">
@@ -5101,7 +5218,6 @@ async function createDiscussion() {
   const title = document.getElementById('discTitle').value.trim();
   const content = document.getElementById('discContent').value.trim();
   if (!title || !content) return;
-
   await sb.from('discussions').insert({ title, content, user_id: currentUser.id });
   document.getElementById('discTitle').value = '';
   document.getElementById('discContent').value = '';
@@ -5112,14 +5228,13 @@ async function submitReply(discussionId) {
   const input = document.getElementById('reply-' + discussionId);
   const content = input.value.trim();
   if (!content) return;
-
   await sb.from('replies').insert({ discussion_id: discussionId, content, user_id: currentUser.id });
   input.value = '';
   await loadDiscussions();
 }
 
 async function deleteDiscussion(id) {
-  if (!confirm('Apagar esta discussão?')) return;
+  if (!confirm('Apagar esta discussao?')) return;
   await sb.from('discussions').delete().eq('id', id);
   await loadDiscussions();
 }
@@ -5130,72 +5245,72 @@ async function deleteReply(id) {
   await loadDiscussions();
 }
 
-// ===== FORGOT / RESET PASSWORD =====
+// ===== CHANGE PASSWORD (in-app, no email) =====
+async function changePassword() {
+  const oldPass = document.getElementById('pwdOld').value;
+  const newPass = document.getElementById('pwdNew').value;
+  const confirmPass = document.getElementById('pwdConfirm').value;
+  const msgEl = document.getElementById('pwdMsg');
+  msgEl.style.display = 'none';
+
+  if (!oldPass || !newPass || !confirmPass) {
+    msgEl.className = 'pwd-msg error'; msgEl.textContent = 'Preencha todos os campos'; msgEl.style.display = 'block'; return;
+  }
+  if (newPass.length < 6) {
+    msgEl.className = 'pwd-msg error'; msgEl.textContent = 'Nova senha precisa ter pelo menos 6 caracteres'; msgEl.style.display = 'block'; return;
+  }
+  if (newPass !== confirmPass) {
+    msgEl.className = 'pwd-msg error'; msgEl.textContent = 'Senhas nao conferem'; msgEl.style.display = 'block'; return;
+  }
+
+  try {
+    // Verify old password by re-authenticating
+    const { error: signInErr } = await sb.auth.signInWithPassword({
+      email: currentUser.email,
+      password: oldPass
+    });
+    if (signInErr) {
+      msgEl.className = 'pwd-msg error'; msgEl.textContent = 'Senha atual incorreta'; msgEl.style.display = 'block'; return;
+    }
+    // Update to new password
+    const { error: updateErr } = await sb.auth.updateUser({ password: newPass });
+    if (updateErr) throw updateErr;
+
+    msgEl.className = 'pwd-msg success'; msgEl.textContent = 'Senha alterada com sucesso!'; msgEl.style.display = 'block';
+    document.getElementById('pwdOld').value = '';
+    document.getElementById('pwdNew').value = '';
+    document.getElementById('pwdConfirm').value = '';
+    setTimeout(() => document.getElementById('pwdModal').classList.add('hidden'), 1500);
+  } catch (err) {
+    msgEl.className = 'pwd-msg error'; msgEl.textContent = err.message || 'Erro ao alterar senha'; msgEl.style.display = 'block';
+  }
+}
+
+// ===== FORGOT PASSWORD (login screen — sends email) =====
 async function forgotPassword() {
   const email = document.getElementById('authEmail').value.trim();
   const errEl = document.getElementById('authError');
   const succEl = document.getElementById('authSuccess');
-  errEl.style.display = 'none';
-  succEl.style.display = 'none';
-
-  if (!email) {
-    errEl.textContent = 'Digite seu email primeiro';
-    errEl.style.display = 'block';
-    return;
-  }
-
+  errEl.style.display = 'none'; succEl.style.display = 'none';
+  if (!email) { errEl.textContent = 'Digite seu email primeiro'; errEl.style.display = 'block'; return; }
   try {
-    const { error } = await sb.auth.resetPasswordForEmail(email, {
-      redirectTo: window.location.origin + window.location.pathname
-    });
+    const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + window.location.pathname });
     if (error) throw error;
-    succEl.textContent = 'Email enviado! Verifique sua caixa de entrada.';
-    succEl.style.display = 'block';
-  } catch (err) {
-    errEl.textContent = err.message || 'Erro ao enviar email';
-    errEl.style.display = 'block';
-  }
+    succEl.textContent = 'Email enviado! Verifique sua caixa de entrada.'; succEl.style.display = 'block';
+  } catch (err) { errEl.textContent = err.message || 'Erro ao enviar email'; errEl.style.display = 'block'; }
 }
 
-async function submitNewPassword() {
-  const pass = document.getElementById('resetNewPass').value;
-  const errEl = document.getElementById('authError');
-  const succEl = document.getElementById('authSuccess');
-  errEl.style.display = 'none';
-  succEl.style.display = 'none';
-
-  if (!pass || pass.length < 6) {
-    errEl.textContent = 'Senha precisa ter pelo menos 6 caracteres';
-    errEl.style.display = 'block';
-    return;
-  }
-
-  try {
-    const { error } = await sb.auth.updateUser({ password: pass });
-    if (error) throw error;
-    succEl.textContent = 'Senha alterada com sucesso!';
-    succEl.style.display = 'block';
-    document.getElementById('resetForm').style.display = 'none';
-    setTimeout(() => checkSession(), 1500);
-  } catch (err) {
-    errEl.textContent = err.message || 'Erro ao alterar senha';
-    errEl.style.display = 'block';
-  }
-}
-
-// Listen for password recovery event
-sb.auth.onAuthStateChange((event, session) => {
+// Listen for password recovery event (from email link)
+sb.auth.onAuthStateChange((event) => {
   if (event === 'PASSWORD_RECOVERY') {
-    // Show reset password form
-    document.getElementById('authOverlay').classList.remove('hidden');
-    document.getElementById('authForm').style.display = 'none';
-    document.getElementById('authToggle').style.display = 'none';
-    document.getElementById('authForgot').style.display = 'none';
-    document.getElementById('resetForm').style.display = 'block';
-    document.getElementById('authSuccess').textContent = 'Defina sua nova senha abaixo';
-    document.getElementById('authSuccess').style.display = 'block';
+    document.getElementById('pwdModal').classList.remove('hidden');
   }
 });
+
+// Track last login
+async function trackLogin() {
+  try { await sb.rpc('update_last_login'); } catch(e) {}
+}
 
 // Init auth check
 checkSession();
