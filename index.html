@@ -466,6 +466,7 @@ a:hover { color: var(--accent-hover); }
     <div class="sidebar-item" data-target="studio" onclick="goToSection('studio')"><span class="sidebar-item-num">25</span> Studio de imagem</div>
     <div class="sidebar-item" data-target="kit" onclick="goToSection('kit')"><span class="sidebar-item-num">27</span> Kit de Ferramentas</div>
     <div class="sidebar-item" data-target="conectores" onclick="goToSection('conectores')"><span class="sidebar-item-num">28</span> Conectores — Lista completa</div>
+    <div class="sidebar-item" data-target="case-imersal" onclick="goToSection('case-imersal')"><span class="sidebar-item-num">29</span> Case ao vivo: IMERSAL</div>
     <div class="sidebar-item" data-target="discussions" onclick="goToSection('discussions')"><span class="sidebar-item-num" style="color:var(--accent)">&#9679;</span> Discussions</div>
     <div class="sidebar-item" data-target="faq" onclick="goToSection('faq')"><span class="sidebar-item-num">FAQ</span> Perguntas frequentes</div>
     <div class="sidebar-item" data-target="troubleshooting" onclick="goToSection('troubleshooting')"><span class="sidebar-item-num">+</span> Troubleshooting</div>
@@ -4633,6 +4634,169 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
   </div>
 </div>
 
+<!-- ==================== CASE AO VIVO — IMERSAL (CONEXÃO DIGITAL) ==================== -->
+<div class="section" data-section="case-imersal">
+  <div class="section-kicker">Bloco 29 — Case ao vivo</div>
+  <div class="section-title">Case: IMERSAL — do zero ao sistema em uma tarde.</div>
+  <div class="section-subtitle">47 arquivos bagunçados → dashboard de gestão completo, em 5 fases</div>
+  <hr>
+
+  <p>Registro real da construção do <strong>IMERSAL</strong> (batizado inicialmente de Conexão Digital) no dia <strong>18/04/2026</strong> durante o workshop. São <strong>meus prompts reais, em ordem</strong>, com o que rolou em cada etapa. Zero curadoria — pra você ver que não é mágica: é briefing bom, spec escrita, plano detalhado, execução disciplinada e iteração em cima de feedback honesto.</p>
+
+  <p><strong>Resultado no ar:</strong> <a href="https://conexao-digital.vercel.app" target="_blank">conexao-digital.vercel.app</a></p>
+
+  <div class="card card-accent">
+    <h3>O que saiu dessa tarde</h3>
+    <ul>
+      <li>Sistema Next.js 15 com 7 páginas deployado na Vercel</li>
+      <li>Parsers pra 15 fontes (3 moedas, 3 idiomas, 6 formatos diferentes)</li>
+      <li>Motor de inteligência cruzando domínios — insights com valor em R$</li>
+      <li>Dashboard interativo: gráficos, filtros, WhatsApp/Instagram/email clicáveis nos leads</li>
+      <li>Página de plano consultivo nível McKinsey gerada em cima dos próprios dados</li>
+      <li>Schema SQL pronto pra migrar pra Supabase sem refatorar</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <h2>Fase 1 — Contexto & briefing</h2>
+  <p>Os amigos estavam com Claude Code recém instalado. Primeira missão do dia: pegar uma pasta de <strong>47 arquivos bagunçados</strong> (extratos de fornecedores em PT/ES/EN, ads Meta/Google/TikTok, receita Shopify/ML/PIX, leads duplicados, comprovantes de influencer) e transformar em sistema de gestão.</p>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Briefing zero</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">beleza, vamos criar um sistema em locahost PICA DE CACHORRO BRABO com back end bom, com front end, ui e ux, usa superpowers, usa planmode, vamos juntar tds os dados bagunca dessa empresa ai, e cria um sistemaco de gesao, crm, controle de custo etc, com funcionalidades e quero ganhar inteligencia... quero q vc calucle indicadores sem eu pedir, junta numero com outro, me da inteligencia, me da poder, quero uma parada FODA... vamos fazer</code></p>
+  </div>
+
+  <p>Briefing em 1 mensagem. A chave tá na frase do meio: <strong>"quero ganhar inteligência... não só agrupar dados"</strong>. Isso define o sistema inteiro.</p>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Path da pasta</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">/Users/viniciussaul/Downloads/kit-workshop-ia</code></p>
+  </div>
+
+  <hr>
+
+  <h2>Fase 2 — Spec + plano (Plan Mode + superpowers)</h2>
+  <p>Claude invocou o <code>brainstorming</code> do superpowers e fez 3 perguntas de escopo. Respostas curtas, alinhamento rápido:</p>
+
+  <div class="card">
+    <h4>3 perguntas → 3 respostas</h4>
+    <ul>
+      <li><strong>Escopo A/B/C?</strong> → <code>c</code> (híbrido: dashboard + base pra Supabase)</li>
+      <li><strong>Quais dos 5 módulos?</strong> → <code>tudo, bota pra fuder. me surpreenda</code></li>
+      <li><strong>Direção visual?</strong> → <code>faz que nem leeven</code></li>
+    </ul>
+  </div>
+
+  <p>Com isso ele gerou <strong>dois documentos antes de tocar uma linha de código</strong>:</p>
+  <ul>
+    <li><strong>Spec de 12 seções</strong> — propósito, stack, arquitetura (file tree), sistema de tipos com <code>Incerto&lt;T&gt;</code> (pra marcar dado não-confiável), motor de inteligência por domínio, regra sagrada de qualidade de dados, ponte pra Supabase</li>
+    <li><strong>Plano de 36 tasks em 7 fases</strong>, cada step com código já pronto</li>
+  </ul>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Aprovação do plano</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">aprova ai, sistema elite pega componentes do 21st dev, ui ux front end design etc. bota pra fuder quero acertar de primeira</code></p>
+  </div>
+
+  <div class="callout callout-tip">
+    <strong>Lição:</strong> "Acertar de primeira" não vem de prompt mágico. Vem de ter <em>spec + plano</em> revisado antes do 1º arquivo ser criado. Plan Mode do Claude Code é isso.
+  </div>
+
+  <hr>
+
+  <h2>Fase 3 — Build (subagent-driven)</h2>
+  <p>Em vez de executar as 36 tasks inline no chat principal, Claude disparou <strong>um subagent por fase</strong> (7 subagents). Cada um pega uma fase do plano, executa tudo, devolve diff. O chat principal só revisa entre fases. É isso que permite construir algo grande sem a conversa explodir de contexto.</p>
+
+  <div class="card">
+    <h4>O que cada fase entregou</h4>
+    <ul>
+      <li><strong>Fase 0 — Setup:</strong> Next.js 15 + shadcn + tokens de design herdados do Leeven + sidebar + layout</li>
+      <li><strong>Fase 1 — Tipos:</strong> sistema completo com <code>Incerto&lt;T&gt;</code> — a regra sagrada de nunca inventar dado</li>
+      <li><strong>Fase 2 — Parsers:</strong> 15 parsers (um por fonte) + orchestrator <code>normalize.ts</code> convertendo USD/MXN/CNY/EUR pra BRL</li>
+      <li><strong>Fase 3 — Data layer:</strong> shim pra trocar JSON estático por Supabase sem refatorar uma linha de página</li>
+      <li><strong>Fase 4 — Inteligência:</strong> 6 módulos (financeiro com breakeven, fornecedores com detecção de price-hike e cláusulas de contrato, produto-margem com BCG matrix, marketing com ROAS, comercial com scoring de leads, alertas)</li>
+      <li><strong>Fase 5 — Componentes:</strong> KpiCard, InsightCard expansível, IncertezaBadge (tooltip explicando incerteza), PipelineKanban</li>
+      <li><strong>Fase 6 — Páginas:</strong> Overview, Financeiro (3 tabs), Comercial (Kanban), Marketing, Fornecedores, Inteligência (flagship), Dados (transparência)</li>
+      <li><strong>Fase 7 — Deploy:</strong> Vercel em produção + <code>schema.sql</code> 1:1 com os tipos + <code>.env.example</code></li>
+    </ul>
+  </div>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Checkpoint</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">eai? ta pronto?</code></p>
+  </div>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Go deploy</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">manda</code></p>
+  </div>
+
+  <hr>
+
+  <h2>Fase 4 — Feedback crítico ("ta faltando mt coisa")</h2>
+  <p>Esse é o momento que separa quem aceita "ficou OK" de quem <strong>puxa a corda pro resultado real</strong>. Depois de olhar o primeiro deploy, o feedback:</p>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Feedback de dono</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">olha... ta faltando mt coisa... esqueleto ta bom, falta de dashboard interativo.. graficos... na parte de leads, coloca dados de contato, insta se for o caso, deixa @ ou link clicavel, numero de telefone pra clicar pra enviar wpp, sla... pensa ai como dono, oq vc ia querer ver? oq ta faltando? filtros? funcionalidades? etc? eu pensa em mais coisa de adicionar inteligencia... e nao so agrupar dados... quero melhorar tomada de decisao do dono, reduzir trabalho operacional, unificar sistema, etc..</code></p>
+  </div>
+
+  <p>Traduzindo: <strong>pensa como dono, não como dev</strong>. Não quero ver tabela — quero tomar decisão. Contato do lead tem que abrir WhatsApp direto, Instagram, email. Quero gráfico, filtro, cruzamento. Claude instalou Recharts + cmdk + date-fns e refez as páginas com BCG matrix, análise de breakeven, forecast linear e contatos clicáveis.</p>
+
+  <div class="callout callout-warn">
+    <strong>Verdade inconveniente:</strong> o primeiro deploy nunca é o produto. Feedback de dono no dia 1 economiza 2 semanas no dia 30.
+  </div>
+
+  <hr>
+
+  <h2>Fase 5 — Polish final (rename, McKinsey, fornecedores)</h2>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Rename + nav</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">Troca o nome pra IMERSAL. e ali no nome em cima na barra da esquerda quero que qnd clicar leva pra pag inicial</code></p>
+  </div>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Página consultiva nível McKinsey</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">ah, cria uma pagina ali de plano pratico sla.. plano de consultoria nivel mckinsey ali doq fazer, novas campanhas pra explorar com informacao, conteudo tecnico, muita inteligencia, meio em proposta de acoes... com dashboard tb... faz uma senhora pagina disso</code></p>
+  </div>
+
+  <div class="prompt-block">
+    <span class="code-block-label">Prompt — Perfil de fornecedor</span>
+    <button class="code-block-copy" onclick="copyCode(this)">Copiar</button>
+    <p><code class="code-text">e falta melhor gestao de fornecedores... com tipo perfil de cada... meio com portifolio e operacoes realizadas</code></p>
+  </div>
+
+  <hr>
+
+  <h2>O que fica dessa construção</h2>
+  <div class="card card-accent">
+    <h3>Lições aplicáveis em qualquer projeto</h3>
+    <ul>
+      <li><strong>Briefing &gt; prompt.</strong> A 1ª mensagem definiu o norte: "quero inteligência, não agrupamento". Todo o resto flui disso.</li>
+      <li><strong>Spec e plano antes de código.</strong> Os dois docs evitam retrabalho infinito no meio do build.</li>
+      <li><strong>Subagent por fase.</strong> Permite construir coisa grande sem o chat principal se perder em contexto.</li>
+      <li><strong>Regra sagrada de dados.</strong> O tipo <code>Incerto&lt;T&gt;</code> marca dado ilegível em vez de inventar. Dado errado é pior que dado faltando.</li>
+      <li><strong>Design com referência concreta.</strong> "faz que nem leeven" &gt; "moderno e bonito". Ponto de referência real evita template genérico.</li>
+      <li><strong>Feedback de dono no dia 1.</strong> Puxar a corda cedo poupa semanas depois.</li>
+      <li><strong>Respostas curtas funcionam.</strong> <code>c</code>, <code>tudo</code>, <code>manda</code> — quando o plano tá claro, a aprovação é uma palavra.</li>
+    </ul>
+  </div>
+
+  <div class="callout callout-tip">
+    <strong>Acesse o resultado:</strong> <a href="https://conexao-digital.vercel.app" target="_blank">conexao-digital.vercel.app</a>
+  </div>
+</div>
+
 <!-- ==================== ADMIN ==================== -->
 <div class="section" data-section="admin" id="adminSection" style="display:none;">
   <div class="section-kicker">Admin</div>
@@ -4684,7 +4848,7 @@ aeroporto com mala, academia. Usa as referências do banco. Salva tudo em /galle
 </footer>
 
 <script>
-const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','discussions','faq','troubleshooting','admin'];
+const SECTIONS = ['home','b1','b2','acoes','b7','b7b','b5','b4','wow','b3','b6','pratica','b8','b9','b10','b11','b12','b12b','b13','versus','b14','vibe','assistant','b15','b16','studio','kit','conectores','case-imersal','discussions','faq','troubleshooting','admin'];
 const SECTION_LABELS = {
   'home':'Início',
   'b1':'01 — Engenharia de prompt morreu',
@@ -4714,6 +4878,7 @@ const SECTION_LABELS = {
   'studio':'25 — Studio de produção de imagem',
   'kit':'27 — Kit de Ferramentas',
   'conectores':'28 — Conectores: lista completa',
+  'case-imersal':'29 — Case ao vivo: IMERSAL',
   'discussions':'Discussions',
   'faq':'FAQ',
   'troubleshooting':'Troubleshooting',
@@ -4849,6 +5014,11 @@ const SEARCH_INDEX = [
   { section:'versus', title:'Por que não pago nenhum SaaS de IA', tags:'manus devin cursor jasper lovable emergent bolt obsidian sync zapier assinatura saas comparação alternativa não pago copy.ai windsurf', desc:'Manus, Lovable, Emergent, Cursor, Zapier — o que são e o que construí no lugar' },
   { section:'studio', title:'Studio de produção de imagem', tags:'studio imagem foto fotografia produto ensaio nano banana câmera iluminação geração ia lifestyle flat lay editorial', desc:'Ensaio fotográfico profissional 100% por IA — agente coordena câmera, luz e cenário' },
   { section:'kit', title:'Kit de Ferramentas', tags:'kit zip download ferramentas skills agentes squads plugins subagentes comandos cerebro setup instalar configurar poder conectar obsidian edp ecommerce', desc:'430 arquivos num ZIP — 150+ skills, 4 plugins, 4 squads, 6 agentes, comandos, guias EDP, cérebro, dados de demo' },
+  { section:'case-imersal', title:'Case ao vivo: IMERSAL', tags:'case ao vivo imersal conexao digital construcao sistema dashboard workshop prompts reais nextjs vercel supabase subagent plano spec briefing', desc:'Construção completa do sistema IMERSAL durante o workshop — prompts reais em ordem, 5 fases do zero ao deploy' },
+  { section:'case-imersal', title:'Briefing + Plan Mode', tags:'briefing plan mode planmode superpowers brainstorming spec plano 36 tasks 7 fases', desc:'Como o briefing vira spec e plano antes de tocar código — Plan Mode na prática' },
+  { section:'case-imersal', title:'Regra Incerto<T>', tags:'incerto type typescript dado errado inventar qualidade dados sagrada nunca', desc:'Regra sagrada: dado errado é pior que dado faltando — marca incerteza em vez de inventar' },
+  { section:'case-imersal', title:'Subagent por fase', tags:'subagent subagent-driven fase execucao plano paralelo dispatch construir grande', desc:'Construir sistema grande sem o chat principal explodir de contexto' },
+  { section:'case-imersal', title:'Feedback de dono', tags:'feedback dono dashboard interativo graficos filtros whatsapp instagram contato clicavel recharts', desc:'O momento "ta faltando mt coisa" — puxar a corda pro resultado real' },
   { section:'discussions', title:'Discussions', tags:'discussão comunidade fórum conversa participantes dúvida ideia troca', desc:'Espaço de troca entre participantes — dúvidas, ideias, descobertas' },
   { section:'faq', title:'Perguntas frequentes', tags:'faq pergunta dúvida preciso pagar programar windows dados treinar', desc:'Respostas pras dúvidas mais comuns' },
   { section:'troubleshooting', title:'Problemas comuns', tags:'erro problema instalação não funciona bug command not found', desc:'Soluções pra erros comuns de instalação e uso' },
